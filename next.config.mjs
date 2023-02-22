@@ -20,5 +20,16 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'scontent-sjc3-1.cdninstagram.com',
+        port: '',
+        
+      },
+    ],
+  },
 };
+
 export default config;

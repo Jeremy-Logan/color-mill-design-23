@@ -26,7 +26,7 @@ export const Navigation = ({ toggle }: Props) => {
 			className='z-40 overflow-hidden w-screen absolute top-0 left-0 bottom-0'
 			variants={height}>
 			<motion.ul
-				className=' absolute top-0 bottom-0 md:left-0 -left-8'
+				className='absolute top-0 bottom-0 md:left-0 -left-8'
 				variants={transition}
 				onClick={toggle}>
 				{itemIds.map((id, i: number) => (

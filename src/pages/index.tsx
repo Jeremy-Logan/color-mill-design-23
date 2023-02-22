@@ -1,13 +1,27 @@
-import { type NextPage } from "next";
+import type { GetStaticProps } from "next";
 import PageLayout from "../components/PageLayout";
 import HexGrid from "../components/HexGrid";
 import Img from "next/image";
 import { motion } from "framer-motion";
 import WhatWeDoSection from "../components/WhatWeDoSection";
+import ProcessSection from "../components/ProcessSection";
+import InstagramSection from "../components/InstagramSection";
 
-const Home: NextPage = () => {
-  const outlineGradient =
-    "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(90deg, #0B6AEA 4.37%, #9B51E0 22.78%, #EB5757 35.37%, #B38E74 50.38%, #5F9261 57.65%, #219653 62.97%, #F2994A 79.92%, #7107D5 96.39%)";
+interface Feed {
+  feed: {
+    data: {
+      id: string;
+      caption: string;
+      media_url: string;
+      timestamp: string;
+      media_type: string;
+      permalink: string;
+    }[];
+  };
+}
+
+const Home = ({ feed }: Feed) => {
+  const images = feed.data;
 
   return (
     <>
@@ -15,28 +29,33 @@ const Home: NextPage = () => {
         title="Color Mill Design"
         description="Maximize your impact with Color Mill Design."
       >
-        <main className="mt-24 flex flex-col items-center justify-start bg-white sm:mt-[160px]">
-          <div className="container flex flex-col items-center justify-center px-4 sm:py-16 md:gap-12 ">
-            <h1 className="font-serif font-black text-2xl tracking-tight text-black sm:text-[3rem] 2xl:mb-12 lg:text-[4rem] xl:text-[5rem] 2xl:text-[6rem]">
-              Maximize your impact
-            </h1>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.55, ease: "easeIn" }}
-              className="relative mb-12 min-h-[80px] w-[95vw] sm:min-h-[200px] md:mb-24  2xl:w-[75vw]"
-            >
-              <Img
-                src="/gradientIndexHeader.svg"
-                alt="Color Mill Design"
-                fill
-                style={{ objectFit: "contain" }}
-              />
-            </motion.div>
-            
-            <HexGrid />
-            <WhatWeDoSection />
-          </div>
+        <main className="oveflow-hidden mt-16 md:mt-12 bg-white sm:mt-[100px]">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.55, ease: "easeIn" }}
+            className="relative mx-auto min-h-[80px] w-[90vw] sm:min-h-[200px] 2xl:w-[75vw]"
+          >
+            <Img
+              src="/gradientIndexHeader.svg"
+              alt="Color Mill Design"
+              fill
+              style={{ objectFit: "contain" }}
+            />
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.1, duration: 0.55, ease: "easeIn" }}
+            className=" 2xl:6xl mx-auto mb-36 w-10/12 sm:w-2/3 lg:w-1/2 text-left md:text-center font-serif text-2xl font-black text-black sm:text-3xl lg:text-4xl xl:text-4xl"
+          >
+            A purpose driven boutique design agency working for people who make
+            a difference.
+          </motion.h1>
+          <HexGrid />
+          <WhatWeDoSection />
+          <ProcessSection />
+          <InstagramSection images={images} />
         </main>
       </PageLayout>
     </>
@@ -44,3 +63,19 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${
+    process.env.INSTAGRAM_KEY as string
+  }`;
+  const data = await fetch(url);
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const feed: Feed = await data.json();
+
+  return {
+    props: {
+      feed,
+    },
+  };
+};

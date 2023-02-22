@@ -7,19 +7,24 @@ const outlineGradient =
 export default function HexGrid() {
   const delayArray: number[] = [];
   for (let i = 0; i <= 24; i++) {
-    delayArray.push(i * 0.02);
+    delayArray.push(i * 0.04);
   }
   return (
-    <div className="relative flex h-[500px] w-[300vw] items-start overflow-hidden sm:w-[385vw] md:w-[300vw] lg:w-[245vw] xl:w-[225vw] 2xl:w-[150vw]">
-      <div className="flex w-full items-center justify-center gap-16">
+    <div className="">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{  duration: 0.3, ease: "easeIn" }}
+        className="absolute flex w-full flex-col items-center justify-center gap-12 overflow-hidden sm:flex-row"
+      >
         <div
-          className="relative z-30 origin-top rounded-tl-3xl rounded-br-3xl p-0.5 transition-all duration-200 ease-in-out hover:scale-105 hover:p-1 cursor-pointer"
+          className="relative z-30 origin-top cursor-pointer rounded-tl-3xl rounded-br-3xl p-0.5 transition-all duration-200 ease-in-out hover:scale-[103%] hover:p-1 hover:shadow-lg"
           style={{
             background: outlineGradient,
           }}
         >
-          <div className=" w-full origin-top rounded-tl-3xl rounded-br-3xl bg-white py-14 px-12 ">
-            <h2 className="text-center text-4xl font-medium">
+          <div className=" w-full origin-top rounded-tl-3xl rounded-br-3xl bg-white py-4 px-6 sm:py-14 sm:px-12 ">
+            <h2 className="h-full w-full text-center text-3xl font-medium sm:text-4xl">
               NON-PROFIT
               <br />
               SPECIALISTS
@@ -27,37 +32,38 @@ export default function HexGrid() {
           </div>
         </div>
         <div
-          className="relative z-30 origin-top rounded-tr-3xl rounded-bl-3xl p-0.5 transition-all duration-200 ease-in-out hover:scale-105 hover:p-1 cursor-pointer"
+          className="relative z-30 origin-top cursor-pointer rounded-tr-3xl rounded-bl-3xl p-0.5 transition-all duration-200 ease-in-out hover:scale-[103%] hover:p-1 hover:shadow-lg"
           style={{
             background: outlineGradient,
           }}
         >
-          <div className=" w-full rounded-tr-3xl rounded-bl-3xl bg-white py-14 px-12">
-            <h2 className="text-center text-4xl font-medium">
+          <div className=" w-full origin-top rounded-tr-3xl rounded-bl-3xl bg-white py-4 px-6 sm:mx-0 sm:py-14 sm:px-12">
+            <h2 className="h-full w-full text-center text-3xl font-medium sm:text-4xl">
               BRAND
               <br />
               INNOVATORS
             </h2>
           </div>
         </div>
-      </div>
-
-      <div className="absolute my-auto h-[500px] w-full">
-        <motion.div className="absolute flex">
-          {delayArray.map((delay, i) => (
-            <Hexagon delay={delay} key={i} />
-          ))}
-        </motion.div>
-        <motion.div className="absolute -mt-0 flex translate-y-[100%] translate-x-[-2.1%] transform">
-          {delayArray.map((delay, i) => (
-            <Hexagon delay={delay} key={i} />
-          ))}
-        </motion.div>
-        <motion.div className="absolute -mt-0 flex translate-y-[200%] transform">
-          {delayArray.map((delay, i) => (
-            <Hexagon delay={delay} key={i} />
-          ))}
-        </motion.div>
+      </motion.div>
+      <div className="relative flex h-[450px] w-[300vw] items-start justify-center overflow-hidden sm:w-[385vw] md:w-[300vw] lg:w-[245vw] xl:w-[225vw] 2xl:w-[150vw]">
+        <div className="absolute my-auto h-[500px] w-full sm:mt-0">
+          <motion.div className="absolute flex">
+            {delayArray.map((delay, i) => (
+              <Hexagon delay={delay} key={i} />
+            ))}
+          </motion.div>
+          <motion.div className="absolute -mt-0 flex translate-y-[100%] translate-x-[-2.1%] transform">
+            {delayArray.map((delay, i) => (
+              <Hexagon delay={delay} key={i} />
+            ))}
+          </motion.div>
+          <motion.div className="absolute -mt-0 flex translate-y-[200%] transform">
+            {delayArray.map((delay, i) => (
+              <Hexagon delay={delay} key={i} />
+            ))}
+          </motion.div>
+        </div>
       </div>
       {/* <motion.div className='flex absolute transform translate-y-[300%] translate-x-[-2.4%] -mt-1'>
 				{delayArray.map(delay=> <Hexagon delay={delay} key={delay}/>)}

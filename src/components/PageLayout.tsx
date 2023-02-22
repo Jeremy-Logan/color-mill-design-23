@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
+import Footer from './Footer';
 
 type Props = {
 	title: string
@@ -40,13 +41,13 @@ const PageLayout = (props: Props) => {
 					site_name: 'Point Arena Lighthouse',
 				}}
 			/>
-			<div className='h-full overflow-x-hidden'>
+			<div className='h-full overflow-hidden'>
 				<Header/>
 				<div className="">
 					{props.children}
 				
 				</div>
-				
+				<Footer/>
 			</div>
 		</>
 	)

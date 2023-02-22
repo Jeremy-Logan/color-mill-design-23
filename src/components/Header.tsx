@@ -53,7 +53,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="z-50 h-12 w-full overflow-hidden bg-white md:h-36 ">
+      <div className="z-50 h-12 overflow-hidden bg-white md:h-36 ">
         
         <motion.div>
           <motion.nav
