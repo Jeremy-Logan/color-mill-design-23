@@ -2,7 +2,7 @@ type Props={
     color: string;
 }
 
-const Discover = ({ color }:Props) => {
+const DiscoverIcon = ({ color }:Props) => {
     return (
       <svg
         version="1.1"
@@ -96,5 +96,5 @@ const Discover = ({ color }:Props) => {
     );
   };
   
-  export default Discover;
+  export default DiscoverIcon;
   

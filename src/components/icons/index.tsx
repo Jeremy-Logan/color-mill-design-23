@@ -1,7 +1,8 @@
-import { default as Define } from "./Define";
-import { default as Discover } from "./Discover";
-import { default as Do } from "./Do";
-import { default as Deliver } from "./Deliver";
+import { default as DefineIcon } from "./DefineIcon";
+import { default as DiscoverIcon } from "./DiscoverIcon";
+import { default as DoIcon } from "./DoIcon";
+import { default as DeliverIcon } from "./DeliverIcon";
+import { default as InstagramIcon } from "./InstagramIcon";
 
-export { Define, Discover, Do, Deliver };
+export { DefineIcon, DiscoverIcon, DoIcon, DeliverIcon, InstagramIcon };
 

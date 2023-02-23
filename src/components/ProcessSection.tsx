@@ -1,6 +1,6 @@
 import Img from "next/image";
 import ProcessCard from "./ProcessCard";
-import {Define, Deliver, Discover, Do } from "./icons"
+import {DefineIcon, DeliverIcon, DiscoverIcon, DoIcon } from "./icons"
 
 // type Props = {}
 
@@ -8,7 +8,7 @@ const categoryProperties = [
   {
     color: "#0A99B9",
     name: "DISCOVER",
-    icon: <Discover color='#0A99B9'/>,
+    icon: <DiscoverIcon color='#0A99B9'/>,
     arrow: true,
     description:
       "We start with an in-depth discovery phase to immerse ourselves in your business. What we get from this is an action plan on executing a holistic brand and user experience.",
@@ -16,7 +16,7 @@ const categoryProperties = [
   {
     color: "#F37B10",
     name: "DEFINE",
-    icon: <Define color='#F37B10'/>,
+    icon: <DefineIcon color='#F37B10'/>,
     arrow: true,
     description:
       "Based on the discovery & research results, we create a static prototype that will allow you to see the aesthetics and flow before we start production—this lets us make changes easily before we start programming.",
@@ -24,7 +24,7 @@ const categoryProperties = [
   {
     color: "#C10682",
     name: "DO",
-    icon: <Do color='#C10682'/>,
+    icon: <DoIcon color='#C10682'/>,
     arrow: true,
     description:
       "Our full-stack team provides front-end and back-end development services working closely with our designers. This ensures the websites we create are completely custom, easy to use, look great, and represent your brand in the best way possible.",
@@ -32,7 +32,7 @@ const categoryProperties = [
   {
     color: "#EB5757",
     name: "DELIVER",
-    icon: <Deliver color='#EB5757'/>,
+    icon: <DeliverIcon color='#EB5757'/>,
     arrow: false,
     description:
       "Once we have everything designed and functioning perfectly, we check it again. In this phase, we do thorough quality testing on the site. Once any issues have been addressed, we then launch the site to the public.",

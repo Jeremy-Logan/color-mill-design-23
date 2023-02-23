@@ -47,7 +47,7 @@ const Home = ({ feed }: Feed) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1, duration: 0.55, ease: "easeIn" }}
-            className=" 2xl:6xl mx-auto mb-36 w-10/12 sm:w-2/3 lg:w-1/2 text-left md:text-center font-serif text-2xl font-black text-black sm:text-3xl lg:text-4xl xl:text-4xl"
+            className=" 2xl:6xl mx-auto mb-36 w-10/12 sm:w-2/3 lg:w-1/2 xl:w-1/3 text-left md:text-center font-serif text-2xl font-black text-black sm:text-3xl lg:text-4xl xl:text-4xl"
           >
             A purpose driven boutique design agency working for people who make
             a difference.

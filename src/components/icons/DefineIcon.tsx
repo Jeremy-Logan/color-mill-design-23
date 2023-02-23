@@ -2,7 +2,7 @@ type Props={
     color: string;
 }
 
-const Define = ({ color }:Props) => {
+const DefineIcon = ({ color }:Props) => {
   return (
     <svg
       version="1.1"
@@ -50,4 +50,4 @@ const Define = ({ color }:Props) => {
   );
 };
 
-export default Define;
+export default DefineIcon;
