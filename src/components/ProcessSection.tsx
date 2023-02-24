@@ -53,7 +53,7 @@ const ProcessSection = () => {
           style={{ objectFit: "contain" }}
         />
       </div>
-      <div className="flex justify-center gap-2 max-w-[1600px] px-10 mx-auto mt-12">
+      <div className="flex flex-col sm:flex-row justify-center gap-2 max-w-[1600px] px-10 mx-auto mt-12">
         {categoryProperties.map((category, index) => 
           <ProcessCard key={index} props={category} />
         )}

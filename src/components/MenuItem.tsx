@@ -8,7 +8,7 @@ type Props = { i: number };
 export const MenuItem = ({ i }: Props) => {
   const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
   const rotate = [0.001, 15, 30, 46, 60];
-  const links: links = ["/home", "/contact", "/non-profits", "/", "/"];
+  const links: links = ["/home", "/contact", "/non-profits", "/about", "/"];
   const names = ["Home", "Non-Profits", "Businesses", "Contact", "News"];
   // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
   const menuLink = `${links[i]}`;

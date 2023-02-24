@@ -11,7 +11,7 @@ type Props = {
 const ProcessCard = ({ props }: Props) => {
   return (
     <div
-      className="flex h-auto w-1/4 flex-col items-center border-4"
+      className="flex h-auto sm:w-1/4 flex-col items-center border-4"
       style={{ borderColor: props.color }}
     >
       <div className="relative mt-4 h-36 w-36">{props.icon}</div>
