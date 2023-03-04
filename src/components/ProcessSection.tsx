@@ -11,7 +11,7 @@ const categoryProperties = [
     icon: <DiscoverIcon color='#0A99B9'/>,
     arrow: true,
     description:
-      "We start with an in-depth discovery phase to immerse ourselves in your business. What we get from this is an action plan on executing a holistic brand and user experience.",
+      "We start with a deep dive into your organization. Through close collaboration, we’ll ask a bunch of questions about your audience, strategic goals and desired outcomes. We’ll gather valuable information about your long term goals and what you do best. We may even discover a few things you didn’t know about yourself.",
   },
   {
     color: "#F37B10",
@@ -19,7 +19,7 @@ const categoryProperties = [
     icon: <DefineIcon color='#F37B10'/>,
     arrow: true,
     description:
-      "Based on the discovery & research results, we create a static prototype that will allow you to see the aesthetics and flow before we start production—this lets us make changes easily before we start programming.",
+      "We take all that insight from our discovery phase and explore how to use it to best express your brand personality. Whether we’re building an interactive prototype of your website design or creating a stylescape to begin the branding process, this is the phase that sets the foundation for everything we do next.",
   },
   {
     color: "#C10682",
@@ -27,7 +27,7 @@ const categoryProperties = [
     icon: <DoIcon color='#C10682'/>,
     arrow: true,
     description:
-      "Our full-stack team provides front-end and back-end development services working closely with our designers. This ensures the websites we create are completely custom, easy to use, look great, and represent your brand in the best way possible.",
+      "This is the time when your brand really comes to life. All that intangible inspiration turns into reality through a well executed website, an inspiring logo or a gorgeous annual report (just to name a few.) Throughout this process, we constantly refer back to our foundation, keep a consistent message.",
   },
   {
     color: "#EB5757",
@@ -35,7 +35,7 @@ const categoryProperties = [
     icon: <DeliverIcon color='#EB5757'/>,
     arrow: false,
     description:
-      "Once we have everything designed and functioning perfectly, we check it again. In this phase, we do thorough quality testing on the site. Once any issues have been addressed, we then launch the site to the public.",
+      "The most successful brands are more than just a mission or a product. They are a well told story; one that draws people in on an emotional level. We now get to see that story come to life, reflected in the website, the logo or that gorgeous annual report. And the rest of the world gets to see it too.",
   },
 ];
 

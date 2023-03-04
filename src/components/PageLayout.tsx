@@ -1,4 +1,4 @@
-import Header from './Header'
+import NewHeader from './NewHeader'
 import type { ReactNode } from 'react';
 
 import Head from 'next/head'
@@ -42,8 +42,8 @@ const PageLayout = (props: Props) => {
 				}}
 			/>
 			<div className='h-full overflow-hidden'>
-				<Header/>
-				<div className="">
+				<NewHeader/>
+				<div className="min-h-screen">
 					{props.children}
 				
 				</div>

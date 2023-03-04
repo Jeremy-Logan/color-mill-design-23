@@ -6,12 +6,12 @@ const outlineGradient =
 
 export default function HexGrid() {
   const delayArray: number[] = [];
-  for (let i = 0; i <= 24; i++) {
+  for (let i = 0; i <= 48; i++) {
     delayArray.push(i * 0.04);
   }
   return (
     <div className="">
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{  duration: 0.3, ease: "easeIn" }}
@@ -45,7 +45,7 @@ export default function HexGrid() {
             </h2>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
       <div className="relative flex h-[450px] w-[300vw] items-start justify-center overflow-hidden sm:w-[385vw] md:w-[300vw] lg:w-[245vw] xl:w-[225vw] 2xl:w-[105vw]">
         <div className="absolute my-auto h-[500px] w-full sm:mt-0">
           <motion.div className="absolute flex">
@@ -53,7 +53,7 @@ export default function HexGrid() {
               <Hexagon delay={delay} key={i} />
             ))}
           </motion.div>
-          <motion.div className="absolute -mt-0 flex translate-y-[100%] translate-x-[-2.1%] transform">
+          <motion.div className="absolute -mt-0 flex translate-y-[100%] translate-x-[-1%] transform">
             {delayArray.map((delay, i) => (
               <Hexagon delay={delay} key={i} />
             ))}

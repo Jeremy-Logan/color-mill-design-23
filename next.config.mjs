@@ -21,14 +21,8 @@ const config = {
     defaultLocale: "en",
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'scontent-sjc3-1.cdninstagram.com',
-        port: '',
-        
-      },
-    ],
+    formats: ['image/avif', 'image/webp'],
+    domains: ['res.cloudinary.com'],
   },
 };
 

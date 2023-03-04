@@ -8,30 +8,31 @@ const categoryProperties = [
     color: "#0A99B9",
     name: "WEB DESIGN",
     heading: "Web Design and Development",
-    subHeading: "Custom built for you",
+    subHeading: "Custom web solutions built for effective results.",
     description:
-      "We build beautiful, responsive websites that are lightning fast, inherently secure and require virtually zero monthly maintenance.",
+      "A great website shows off what makes you unique. We take the time to understand just what this means: who you are, what your goals are and who your target audience is. This lays a foundation for solid, custom solutions that in turn, get you the best results for your organization. ",
+  },
+ 
+  {
+    color: "#219653",
+    name: "BRAND STRATEGY",
+    heading: "Brand Strategy",
+    subHeading: "Your organization is unique. Your brand should be too.",
+    description:
+      "Your brand is more than your logo: it’s how your audience perceives you and it’s what they say about you when you’re not in the room. Through strategic thinking and collaborative workshops, we'll define a brand that carries your organization successfully into the future. ",
   },
   {
     color: "#F2994A",
     name: "GRAPHIC DESIGN",
     heading: "Graphic Design",
-    subHeading: "Custom built for you",
+    subHeading: "Great design grows your brand by continuing your story.",
     description:
-      "We build beautiful, responsive websites that are lightning fast, inherently secure and require virtually zero monthly maintenance.",
-  },
-  {
-    color: "#219653",
-    name: "BRANDING",
-    heading: "Branding",
-    subHeading: "Custom built for you",
-    description:
-      "We build beautiful, responsive websites that are lightning fast, inherently secure and require virtually zero monthly maintenance.",
+      "People interact with your brand in many different ways so it’s more important than ever to maintain a consistent brand experience from channel to channel. From business cards and brochures to annual reports to trade show displays and banners, great design creates a lasting, unified image that carries your brand through everything it touches. ",
   },
   {
     color: "#EB5757",
-    name: "MESSAGING",
-    heading: "Messaging",
+    name: "PRINT DESIGN",
+    heading: "Print Design",
     subHeading: "Custom built for you",
     description:
       "We build beautiful, responsive websites that are lightning fast, inherently secure and require virtually zero monthly maintenance.",

@@ -78,7 +78,6 @@ export default function Header() {
           <div className="bg-gradient-to-r from-[#C10682] to-[#0A99B9] w-screen h-3 "></div>
           <motion.button
             initial={{ opacity: 1 }}
-            animate={isOpen ? "hidden" : "visible"}
             variants={logo}
             className="absolute top-4 right-2 z-10 ml-24 flex flex-col items-center justify-center outline-none focus:outline-none sm:right-4 "
           >

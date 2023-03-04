@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import WhatWeDoSection from "../components/WhatWeDoSection";
 import ProcessSection from "../components/ProcessSection";
 import InstagramSection from "../components/InstagramSection";
+import AppreciationSection from "../components/AppreciationSection";
 
 interface Feed {
   feed: {
@@ -21,7 +22,7 @@ interface Feed {
 }
 
 const Home = ({ feed }: Feed) => {
-  const images = feed.data;
+  
 
   return (
     <>
@@ -29,7 +30,7 @@ const Home = ({ feed }: Feed) => {
         title="Color Mill Design"
         description="Maximize your impact with Color Mill Design."
       >
-        <main className="oveflow-hidden mt-16 md:mt-12 bg-white sm:mt-[100px]">
+        <main className="oveflow-hidden lg:mt-16 md:mt-12 bg-white sm:mt-[100px]">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -47,7 +48,7 @@ const Home = ({ feed }: Feed) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1, duration: 0.55, ease: "easeIn" }}
-            className=" 2xl:6xl mx-auto mb-36 w-10/12 sm:w-2/3 lg:w-1/2 xl:w-1/3 text-left md:text-center font-serif text-2xl font-black text-black sm:text-3xl lg:text-4xl xl:text-4xl"
+            className=" 2xl:6xl mx-auto mt-8 xl:mt-24 mb-36 w-10/12 sm:w-2/3 lg:w-7/12 xl:w-1/2  text-left md:text-center font-serif text-2xl font-black text-black sm:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl"
           >
             A purpose driven boutique design agency working for people who make
             a difference.
@@ -55,7 +56,8 @@ const Home = ({ feed }: Feed) => {
           <HexGrid />
           <WhatWeDoSection />
           <ProcessSection />
-          <InstagramSection images={images} />
+          <AppreciationSection />
+          {/* <InstagramSection images={images} /> */}
         </main>
       </PageLayout>
     </>
