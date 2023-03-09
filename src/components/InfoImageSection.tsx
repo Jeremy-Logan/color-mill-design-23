@@ -11,7 +11,7 @@ type Props = {
   description: string;
 };
 
-function InfoImageBlock(props: Props) {
+function InfoImageSection(props: Props) {
   const { primaryColor, imageUrl, imageAlt, title, subHeading, description } =
     props;
   return (
@@ -26,13 +26,13 @@ function InfoImageBlock(props: Props) {
         <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide text-white md:text-2xl lg:text-4xl">
           {subHeading}
         </h2>
-        <div className="mx-2 my-6 md:my-16 flex flex-col md:flex-row md:mx-12">
-          <div className="md:w-[40%] self-center hidden md:block">
-            <p className="text-left w-[327px] md:w-full mb-8  md:text-2xl leading-relaxed tracking-wide text-white">
+        <div className=" my-6 lg:my-16 flex flex-col lg:flex-row lg:mx-12">
+          <div className="lg:w-[40%] self-center hidden lg:block">
+            <p className="text-left w-[327px] lg:w-full mb-8  md:text-2xl leading-relaxed tracking-wide text-white">
               {description}
             </p>
           </div>
-          <div className="relative mx-auto h-[204px] w-[327px] md:h-[444px] md:w-[713px]">
+          <div className="relative mx-auto mb-4 lg:mb-0 h-[204px] w-[327px] md:h-[444px] md:w-[535px] lg:h-[444px] lg:w-[713px]">
             <Image
               src={getCloudinaryImageUrl(imageUrl)}
               alt={imageAlt}
@@ -42,8 +42,8 @@ function InfoImageBlock(props: Props) {
               blurDataUrl={getCloudinaryImageUrl(`/t_placeholder${imageUrl}`)}
             />
           </div>
-          <div className="md:w-1/3 self-center md:hidden">
-            <p className="text-left w-[327px] md:w-full mb-8  md:text-2xl leading-relaxed tracking-wide text-white">
+          <div className="md:w-[535px] w-[327px] self-center lg:hidden">
+            <p className="text-left mb-8 lg:text-2xl leading-relaxed tracking-wide text-white">
               {description}
             </p>
           </div>
@@ -53,4 +53,4 @@ function InfoImageBlock(props: Props) {
   );
 }
 
-export default InfoImageBlock;
+export default InfoImageSection;
