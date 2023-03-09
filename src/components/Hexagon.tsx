@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-type Props = { delay: number };
+type Props = { delay: number, isInView: boolean };
 
-export default function Hexagon({ delay }: Props) {
+export default function Hexagon({ delay, isInView }: Props) {
   const [fillColor, setFillColor] = useState<string>("");
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function Hexagon({ delay }: Props) {
       {fillColor && (
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          animate={{ scale: isInView ? 1 : 0, opacity: isInView ? 1 : 0}}
           transition={{ delay: delay, duration: 0.55, ease: "easeIn" }}
           className="mx-1 flex"
         >

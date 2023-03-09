@@ -22,7 +22,7 @@ const config = {
   },
   images: {
     formats: ['image/avif', 'image/webp'],
-    domains: ['res.cloudinary.com'],
+    domains: ['res.cloudinary.com', 'scontent-sjc3-1.cdninstagram.com'],
   },
 };
 

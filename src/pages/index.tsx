@@ -57,7 +57,7 @@ const Home = ({ feed }: Feed) => {
           <WhatWeDoSection />
           <ProcessSection />
           <AppreciationSection />
-          {/* <InstagramSection images={images} /> */}
+          <InstagramSection {...feed} />
         </main>
       </PageLayout>
     </>

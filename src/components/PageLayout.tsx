@@ -1,5 +1,6 @@
-import NewHeader from './NewHeader'
+import Header from './Header'
 import type { ReactNode } from 'react';
+import {motion} from 'framer-motion';
 
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
@@ -40,15 +41,18 @@ const PageLayout = (props: Props) => {
 					],
 					site_name: 'Point Arena Lighthouse',
 				}}
-			/>
-			<div className='h-full overflow-hidden'>
-				<NewHeader/>
+			/><div className="absolute top-0 z-50 h-3 w-full bg-gradient-to-r from-[#C10682] to-[#0A99B9] "></div>
+			<motion.div className='h-full overflow-hidden'
+			// initial={{ opacity: 0 }}
+			// animate={{ opacity: 1, transition:{duration: 0.5} }}
+			>
+				<Header/>
 				<div className="min-h-screen">
 					{props.children}
 				
 				</div>
 				<Footer/>
-			</div>
+			</motion.div>
 		</>
 	)
 }

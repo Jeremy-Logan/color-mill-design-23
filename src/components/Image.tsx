@@ -1,5 +1,4 @@
 import Img from "next/image";
-import { buildUrl } from 'cloudinary-build-url';
 
 interface ImageProps {
   sizes: string | undefined;

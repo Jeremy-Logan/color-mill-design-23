@@ -12,7 +12,7 @@ const categoryProperties = [
     description:
       "A great website shows off what makes you unique. We take the time to understand just what this means: who you are, what your goals are and who your target audience is. This lays a foundation for solid, custom solutions that in turn, get you the best results for your organization. ",
   },
- 
+
   {
     color: "#219653",
     name: "BRAND STRATEGY",
@@ -51,41 +51,57 @@ function WhatWeDoSection({}) {
 
   return (
     <>
-      <div className="mt-36  mx-auto">
-        <h3 className="mb-6 font-sans w-full text-center text-4xl sm:text-6xl font-medium">WHAT WE DO</h3>
+      <div className="mx-auto">
+        <h3 className="mb-6 w-full text-center font-sans text-4xl font-medium sm:text-6xl">
+          WHAT WE DO
+        </h3>
       </div>
       <div
-        className="relative mx-auto h-[550px] w-[90vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] rounded-bl-3xl rounded-tr-3xl p-0.5"
+        className="relative mx-auto w-[90vw] rounded-bl-3xl rounded-tr-3xl p-0.5 md:w-[70vw] lg:w-[60vw] xl:w-[50vw]"
         style={{ background: outlineGradient }}
       >
-        <div className="relative h-full w-full rounded-bl-3xl rounded-tr-3xl bg-white">
-          <div className="absolute top-0 left-[5%] sm:left-[0%] md:-left-[20%] lg:-left-40 flex h-full flex-row md:flex-col md:justify-start md:mt-12 justify-center gap-4 md:gap-6 md:rotate-0 -rotate-90">
+        <div className="relative flex h-full min-h-[500px] w-full items-start rounded-bl-3xl rounded-tr-3xl bg-white py-8">
+          <div className="-ml-[6%] flex w-2/12 flex-col items-center justify-center self-center md:-ml-[10%] md:w-4/12 2xl:w-3/12 ">
             {categoryProperties.map((button, index) => (
-              <CurvyButton
-                color={button.color}
+              <div
+                className="my-9 -rotate-90 md:my-2 md:w-full md:rotate-0"
                 key={index}
-                onClick={() => handleButtonClick(index)}
-                isActive={activeButtonIndex === index}
               >
-                {button.name}
-              </CurvyButton>
+                <CurvyButton
+                  color={button.color}
+                  onClick={() => handleButtonClick(index)}
+                  isActive={activeButtonIndex === index}
+                >
+                  {button.name}
+                </CurvyButton>
+              </div>
             ))}
           </div>
-          {categoryProperties.map((category, index) => (
-            <div key={index}>
-              {activeButtonIndex === index && (
-               
-                  <div key={index} className="flex h-full pt-12 flex-col pl-[20%] md:pl-[30%] lg:pl-[25%] pr-[10%] md:pr-[10%] md:items-center justify-start gap-4">
-                    <h3 className="text-left sm:text-center text-2xl md:text-4xl font-medium" style={{color: category.color}}>{category.heading}</h3>
-                    <h4 className="text-left sm:text-center text-xl md:text-2xl lg:text-3xl font-medium">
+          <div className="flex h-full w-11/12 items-start md:w-10/12">
+            {categoryProperties.map((category, index) => (
+              <div key={index}>
+                {activeButtonIndex === index && (
+                  <div
+                    key={index}
+                    className="mx-8 flex h-full flex-col items-start justify-center gap-4 md:my-8 sm:mx-12 md:items-center xl:mx-24 2xl:mx-36"
+                  >
+                    <h3
+                      className="text-left text-2xl font-medium sm:text-center sm:text-4xl"
+                      style={{ color: category.color }}
+                    >
+                      {category.heading}
+                    </h3>
+                    <h4 className="text-left text-lg font-medium sm:text-center sm:text-2xl lg:text-3xl">
                       {category.subHeading}
                     </h4>
-                    <p className="text-lg md:text-xl mt-4">{category.description}</p>{" "}
+                    <p className="text-sm sm:mt-4 md:text-xl">
+                      {category.description}
+                    </p>{" "}
                   </div>
-                
-              )}
-            </div >
-          ))}
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

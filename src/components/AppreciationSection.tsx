@@ -1,12 +1,13 @@
+import React, { useRef } from "react";
 import Image from "./Image";
 import Img from "next/image";
 import { getCloudinaryImageUrl } from "../utils/cloudinary";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 // type Props = {}
 const delayArray: number[] = [];
 for (let i = 0; i <= 6; i++) {
-  delayArray.push(i * 0.04);
+  delayArray.push(i * 0.05);
 }
 
 const colors = [
@@ -18,11 +19,10 @@ const colors = [
   "#013C81",
   "#77CAE4",
 ];
-const Hexagon = ({ delay, color }: { delay: number; color?: string }) => {
+const Hexagon = ({ delay, color, isInView }: { delay: number; color?: string, isInView: boolean }) => {
   return (
     <motion.div
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
+      animate={{ scale: isInView ? 1 : 0, opacity: isInView ? 1 : 0}}
       transition={{ delay: delay, duration: 0.55, ease: "easeIn" }}
       className=" flex"
     >
@@ -41,16 +41,25 @@ const Hexagon = ({ delay, color }: { delay: number; color?: string }) => {
   );
 };
 const HexRow = () => {
+    const ref = useRef(null)
+    const isInView = useInView(ref)
+
+    
   return (
-    <motion.div className="flex">
+    <motion.div className="flex" ref={ref} >
       {delayArray.map((delay, i) => (
-        <Hexagon delay={delay} key={i} color={colors[i]} />
+        <Hexagon delay={delay} key={i} color={colors[i]} isInView={isInView}/>
       ))}
     </motion.div>
   );
 };
 
-const ProcessSection = () => {
+
+
+const AppreciationSection = () => {
+   
+
+
   return (
     <div className="mt-36">
       <h3 className="mb-8 text-center font-serif text-6xl font-black">
@@ -104,4 +113,4 @@ const ProcessSection = () => {
   );
 };
 
-export default ProcessSection;
+export default AppreciationSection;
