@@ -3,12 +3,14 @@ import Image from "./Image";
 import { getCloudinaryImageUrl } from "../utils/cloudinary";
 import { motion, useInView } from "framer-motion";
 
+
 type Props = {
     hexagonColors: string[];
     imageUrl: string;
     imageAlt: string;
     heading: string;
     attribution: string;
+    primaryColor: string;
   };
 const delayArray: number[] = [];
 for (let i = 0; i <= 6; i++) {
@@ -53,39 +55,49 @@ const HexRow = ({ colors }: { colors: string[] }) => {
 
 
 const TestimonialSection = (props: Props) => {
-    const {imageUrl, imageAlt, heading, hexagonColors, attribution} = props;
-
+    const {imageUrl, imageAlt, heading, hexagonColors, attribution, primaryColor} = props;
+    
 
   return (
-    <div className="mt-36">
+    <div className="mt-12 md:mt-36">
       
-      <div className="mt-24 w-[20vw]">
+      <div className="md:mt-24 w-[75vw] md:w-[20vw]">
         <HexRow colors={hexagonColors}/>
       </div>
-      <div className="mx-auto  flex max-w-[1600px] flex-col justify-center gap-2 px-10 sm:flex-row">
-        <div className="flex flex-col items-center justify-center sm:flex-row">
-          <div className="w-2/3 text-left">
-            <h3 className="mb-4 text-5xl font-semibold italic text-[#002856]">
+      <div className="mx-auto  flex max-w-[1600px] flex-col justify-center gap-2 px-6 md:px-10 md:flex-row">
+        <div className="flex flex-col items-center justify-center md:flex-row">
+          <div className="w-2/3 text-left hidden md:block">
+            <h3 className="mb-4 text-5xl font-semibold italic" style={{color: primaryColor}}>
               {heading}
             </h3>
-            <h4 className="text-xl italic">
+            <h4 className="md:text-xl italic">
              {attribution}
             </h4>
           </div>
-          <div className="relative aspect-square h-[400px] shadow-xl">
+          <div className="relative my-6 md:my-0 aspect-square h-[400px] shadow-xl">
             <Image
-              src={getCloudinaryImageUrl(imageUrl)}
+              src={getCloudinaryImageUrl(`/q_1,f_auto${imageUrl}`)}
               alt={imageAlt}
               fill
               style={{ objectFit: "cover" }}
-              sizes="(max-width: 768px) 45vw,"
-              blurDataURL={getCloudinaryImageUrl(`/thumbnail_${imageUrl}`)}
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1024px) 25vw,
+                "
+              
             />
+          </div>
+          <div className=" text-left md:hidden">
+            <h3 className="mb-2 text-2xl font-semibold italic" style={{color: primaryColor}}>
+              {heading}
+            </h3>
+            <h4 className=" italic">
+             {attribution}
+            </h4>
           </div>
         </div>
       </div>
       <div className="flex w-full justify-end">
-        <div className="mt-16 w-[20vw] transform rotate-180">
+        <div className="mt-6 md:mt-16 w-[75vw] md:w-[20vw] transform rotate-180">
           <HexRow colors={hexagonColors}/>
         </div>
       </div>

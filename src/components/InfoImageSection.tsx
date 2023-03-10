@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "./Image";
 import { getCloudinaryImageUrl } from "../utils/cloudinary";
+import { CldImage } from 'next-cloudinary';
 
 type Props = {
   primaryColor: string;
@@ -33,18 +34,17 @@ function InfoImageSection(props: Props) {
             </p>
           </div>
           <div className="relative mx-auto mb-4 lg:mb-0 h-[204px] w-[327px] md:h-[444px] md:w-[535px] lg:h-[444px] lg:w-[713px]">
+          
             <Image
-              src={getCloudinaryImageUrl(imageUrl)}
+              src={getCloudinaryImageUrl(`${imageUrl}`)}
               alt={imageAlt}
               fill
               style={{ objectFit: "cover" }}
               sizes="(max-width: 768px) 45vw,"
-              blurDataURL={getCloudinaryImageUrl(`/thumbnail_${imageUrl}`)}
-              
             />
           </div>
           <div className="md:w-[535px] w-[327px] self-center lg:hidden">
-            <p className="text-left mb-8 lg:text-2xl leading-relaxed tracking-wide text-white">
+            <p className="text-left mb-8 text-sm md:text-base lg:text-2xl leading-relaxed tracking-wide text-white">
               {description}
             </p>
           </div>

@@ -68,7 +68,7 @@ function WhatWeDoSection({}) {
                 key={index}
               >
                 <CurvyButton
-                  color={button.color}
+                  color={activeButtonIndex === index ? button.color : "gray"}
                   onClick={() => handleButtonClick(index)}
                   isActive={activeButtonIndex === index}
                 >

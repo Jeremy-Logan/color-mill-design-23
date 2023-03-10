@@ -81,8 +81,8 @@ function CaseStudyHeader(props: Props) {
           {subHeading}
         </h2>
       </div>
-      <div className="mx-2 my-12 flex flex-col justify-around sm:flex-row  max-w-[1600px] md:mx-auto">
-        <div className="w-full  md:w-[40%]">
+      <div className="mx-4 my-12 flex flex-col justify-around sm:flex-row  max-w-[1600px] md:mx-auto">
+        <div className="w-full md:w-[40%]">
           <p className="md:text-xl font-medium tracking-wide leading-relaxed mb-8">{description}</p>
         </div>
         <div className="w-full md:w-[40%]">

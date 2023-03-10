@@ -29,18 +29,19 @@ function WebsiteSection(props: Props) {
          
           <div className="relative mx-auto h-[200px] w-[95vw] sm:h-[300px] md:h-[400px] xl:h-[600px] 2xl:h-[800px]">
             <Image
-              src={getCloudinaryImageUrl(imageUrl)}
+              src={getCloudinaryImageUrl(`/q_auto,f_auto${imageUrl}`)}
               alt={imageAlt}
               fill
+              quality={60}
               style={{ objectFit: "contain" }}
               sizes="(max-width: 768px) 100vw,
                 (max-width: 1200px) 90vw,
                 80vw"
-                blurDataURL={getCloudinaryImageUrl(`/thumbnail_${imageUrl}`)}
+                
             />
           </div>
           <div className=" self-center mt-4">
-            <p className="text-left max-w-[1440px] w-[90vw] xl:w-[80vw] mb-8 md:text-2xl leading-relaxed tracking-wide text-gray-900">
+            <p className="text-left max-w-[1440px] w-[90vw] xl:w-[80vw] mb-8 text-sm md:text-2xl leading-relaxed tracking-wide text-gray-900">
               {description}
             </p>
           </div>

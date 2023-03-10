@@ -1,4 +1,5 @@
 import Img from "next/image";
+import { CldImage } from "next-cloudinary";
 
 interface ImageProps {
   sizes: string | undefined;
@@ -6,18 +7,20 @@ interface ImageProps {
   alt: string;
   fill: boolean;
   style?: React.CSSProperties;
-  blurDataURL?: string;
+ 
+  quality?: number;
 }
 
 const Image = (props:ImageProps) => {
   return (
-      <Img
+      <CldImage
         src={props.src}
         alt={props.alt}
         fill={props.fill}
         style={props.style}
-        placeholder="blur"
-        blurDataURL={props.blurDataURL}
+        quality={props.quality}
+       
+        
         sizes={
           props.fill
             ? props.sizes

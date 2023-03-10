@@ -11,7 +11,7 @@ type Props = {
 const ProcessCard = ({ props }: Props) => {
   return (
     <div
-      className="flex h-auto sm:w-1/4 flex-col items-center border-4"
+      className="flex h-auto w-full sm:w-1/4 flex-col items-center border-4"
       style={{ borderColor: props.color }}
     >
       <div className="relative mt-4 h-36 w-36">{props.icon}</div>
@@ -26,12 +26,12 @@ const ProcessCard = ({ props }: Props) => {
             height="100%"
             width="100%"
             viewBox="0 0 200 200"
-            className="absolute top-[35%] left-[98%] z-10 overflow-visible"
+            className="absolute top-[35%] left-[98%] z-10 overflow-visible hidden md:block"
           >
             <polygon style={{ fill: props.color }} points="0,0 25,25 0,50" />
           </svg>
         )}
-        <p className="text-lg font-medium text-white">{props.description}</p>
+        <p className="text-base md:text-lg font-medium text-white">{props.description}</p>
       </div>
     </div>
   );

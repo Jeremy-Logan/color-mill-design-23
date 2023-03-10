@@ -6,7 +6,7 @@ import { getCloudinaryImageUrl } from "../utils/cloudinary";
 
 const images = [
   {
-    src: "v1678240470/Color%20Mill%20Design%202023/Food-Bank-Landing-Image_n17ako.png",
+    src: "v1678240470/color-mill-design-2023/Food-Bank-Landing-Image_n17ako.png",
     alt: "Fort Bragg Food Bank",
     title: "Fort Bragg Food Bank",
     description:
@@ -14,7 +14,7 @@ const images = [
       url: '/fort-bragg-food-bank'
   },
   {
-    src: "v1678240470/Color%20Mill%20Design%202023/RCS-Landing-Image_nln6uo.png",
+    src: "v1678240470/color-mill-design-2023/RCS-Landing-Image_nln6uo.png",
     alt: "Redwood Coast Seniors",
     title: "Redwood Coast Seniors",
     description:
@@ -22,7 +22,7 @@ const images = [
       url: '/redwood-coast-seniors'
   },
   {
-    src: "v1678240471/Color%20Mill%20Design%202023/MendoParks-Landing_nmbmil.png",
+    src: "v1678240471/color-mill-design-2023/MendoParks-Landing_nmbmil.png",
     alt: "MendoParks",
     title: "MendoParks",
     description:
@@ -30,7 +30,7 @@ const images = [
       url: '/mendo-parks'
   },
   {
-    src: "v1678240470/Color%20Mill%20Design%202023/Point_Arena-Landing-Image_vdppyv.png",
+    src: "v1678240470/color-mill-design-2023/Point_Arena-Landing-Image_vdppyv.png",
     alt: "Point Arena Lighthouse",
     title: "Point Arena Lighthouse",
     description:
@@ -69,7 +69,7 @@ const NonProfits = () => {
                 fill
                 style={{ objectFit: "cover" }}
                 sizes="(max-width: 768px) 45vw,"
-                blurDataURL={getCloudinaryImageUrl(`/thumbnail_${image.src}`)}
+                
               />
             </div>
             <div className="mt-2 md:mt-4 w-[327px] sm:w-[480px] md:w-[600px]">

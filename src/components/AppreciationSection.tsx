@@ -61,11 +61,11 @@ const AppreciationSection = () => {
 
 
   return (
-    <div className="mt-36">
-      <h3 className="mb-8 text-center font-serif text-6xl font-black">
+    <div className="mt-12 md:mt-36">
+      <h3 className="md:mb-8 text-center font-serif text-3xl md:text-4xl xl:text-6xl font-black">
         Performance
       </h3>
-      <div className="oveflow-hidden relative h-24 w-screen">
+      <div className="oveflow-hidden relative h-20 md:h-24 w-11/12 mx-auto">
         <Img
           src="/appreciation.svg"
           alt="Appreciation"
@@ -74,36 +74,44 @@ const AppreciationSection = () => {
           sizes="100vw"
         />
       </div>
-      <div className="mt-24 w-[20vw]">
+      <div className="md:mt-24 w-[75vw] md:w-[20vw]">
         <HexRow />
       </div>
       <div className="mx-auto  flex max-w-[1600px] flex-col justify-center gap-2 px-10 sm:flex-row">
-        <div className="flex flex-col items-center justify-center sm:flex-row">
-          <div className="w-2/3 text-left">
+        <div className="flex flex-col items-center justify-center md:flex-row">
+          <div className="w-2/3 text-left hidden md:block">
             <h3 className="mb-4 text-5xl font-semibold italic text-[#002856]">
               &quot;The Color Mill&apos;s work increased donations and added
               vibrancy to our entire organization.&quot;
             </h3>
-            <h4 className="text-xl italic">
+            <h4 className="md:text-xl italic">
               Amanda Friscia - Executive Director, Fort Bragg Food Bank
             </h4>
           </div>
-          <div className="relative aspect-square h-[400px] shadow-xl">
+          <div className="relative my-6 md:my-0 aspect-square h-[400px] shadow-xl">
             <Image
-              src={getCloudinaryImageUrl(
-                "/v1677804674/Color%20Mill%20Design%202023/Amanda_Friscia-Headshot_ra712c.png"
+              src={getCloudinaryImageUrl(`/q_1,f_auto/v1677804674/color-mill-design-2023/Amanda_Friscia-Headshot_ra712c.png`
               )}
               alt="Amanda Friscia"
               fill
               style={{ objectFit: "cover" }}
-              sizes="(max-width: 768px) 45vw,"
-              blurDataURL={getCloudinaryImageUrl('/thumbnail_/v1677804674/Color%20Mill%20Design%202023/Amanda_Friscia-Headshot_ra712c.png')}
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1024px) 25vw,"
             />
+          </div>
+          <div className=" text-left md:hidden">
+            <h3 className="mb-2 text-2xl  font-semibold italic text-[#002856]">
+            &quot;The Color Mill&apos;s work increased donations and added
+              vibrancy to our entire organization.&quot;
+            </h3>
+            <h4 className=" italic">
+            Amanda Friscia - Executive Director, Fort Bragg Food Bank
+            </h4>
           </div>
         </div>
       </div>
       <div className="flex w-full justify-end">
-        <div className="mt-16 w-[20vw] transform rotate-180">
+        <div className="mt-6 md:mt-16 w-[75vw] md:w-[20vw] transform rotate-180">
           <HexRow />
         </div>
       </div>

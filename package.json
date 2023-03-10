@@ -15,9 +15,11 @@
     "cloudinary-build-url": "^0.2.4",
     "framer-motion": "^9.0.4",
     "next": "13.1.6",
+    "next-cloudinary": "^4.0.0",
     "next-seo": "^5.15.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sharp": "^0.31.3",
     "tailwindcss-text-border": "^1.0.4",
     "zod": "^3.20.2"
   },
