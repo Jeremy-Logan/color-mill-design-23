@@ -86,7 +86,7 @@ const giveawaysSectionContent = {
 
 const testimonialSectionContent = {
   imageUrl:
-    "/v1677804674/Color%20Mill%20Design%202023/FB-Collateral_nmqg1d.png",
+    "/v1677804674/Color%20Mill%20Design%202023/Amanda_Friscia-Headshot_ra712c.png",
   primaryColor: primaryColor,
   hexagonColors: ["#04C3FF", "#0696E8", "#0378FF", "#0061D0", "#01489A", "#013C81", "#002856"],
   imageAlt: "Amanda Friscia - Executive Director, Fort Bragg Food Bank",

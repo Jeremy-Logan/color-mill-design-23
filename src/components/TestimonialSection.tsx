@@ -53,7 +53,7 @@ const HexRow = ({ colors }: { colors: string[] }) => {
 
 
 const TestimonialSection = (props: Props) => {
-    const { heading, hexagonColors, attribution} = props;
+    const {imageUrl, imageAlt, heading, hexagonColors, attribution} = props;
 
 
   return (
@@ -74,16 +74,12 @@ const TestimonialSection = (props: Props) => {
           </div>
           <div className="relative aspect-square h-[400px] shadow-xl">
             <Image
-              src={getCloudinaryImageUrl(
-                "/v1677804674/Color Mill Design 2023/Amanda_Friscia-Headshot_ra712c.png"
-              )}
-              alt="Amanda Friscia"
+              src={getCloudinaryImageUrl(imageUrl)}
+              alt={imageAlt}
               fill
               style={{ objectFit: "cover" }}
               sizes="(max-width: 768px) 45vw,"
-              blurDataUrl={getCloudinaryImageUrl(
-                "/t_placeholder/v1677804674/Color Mill Design 2023/Amanda_Friscia-Headshot_ra712c.png"
-              )}
+              blurDataUrl={getCloudinaryImageUrl(`/t_placeholder${imageUrl}`)}
             />
           </div>
         </div>

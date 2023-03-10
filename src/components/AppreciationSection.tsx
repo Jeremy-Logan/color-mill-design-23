@@ -91,14 +91,15 @@ const AppreciationSection = () => {
           <div className="relative aspect-square h-[400px] shadow-xl">
             <Image
               src={getCloudinaryImageUrl(
-                "/v1677804674/Color Mill Design 2023/Amanda_Friscia-Headshot_ra712c.png"
+                "/v1677804674/Color%20Mill%20Design%202023/Amanda_Friscia-Headshot_ra712c.png"
               )}
               alt="Amanda Friscia"
               fill
               style={{ objectFit: "cover" }}
               sizes="(max-width: 768px) 45vw,"
+              
               blurDataUrl={getCloudinaryImageUrl(
-                "/t_placeholder/v1677804674/Color Mill Design 2023/Amanda_Friscia-Headshot_ra712c.png"
+                "/t_placeholder/v1677804674/Color%20Mill%20Design%202023/Amanda_Friscia-Headshot_ra712c.png"
               )}
             />
           </div>
