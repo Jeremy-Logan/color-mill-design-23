@@ -1,11 +1,11 @@
 import PageLayout from "../components/PageLayout";
-import Image from "../components/Image";
 import CaseStudyHeader from "../components/CaseStudyHeader";
 import InfoImageSection from "../components/InfoImageSection";
 import WebsiteSection from "../components/WebsiteSection";
 import FullScreenImageSection from "../components/FullScreenImageSection";
 import TestimonialSection from "../components/TestimonialSection";
-import { getCloudinaryImageUrl } from "../utils/cloudinary";
+import StylescapeSection from "../components/StylescapeSection";
+
 
 const primaryColor = "#450265";
 
@@ -44,8 +44,8 @@ const yearEndAppealContent = {
 };
 
 const websiteSectionContent = {
-  imageUrl: "/v1678396053/color-mill-design-2023/Website-on-Devices_wp0haf.png",
-  imageAlt: "Fort Bragg Food Bank Website",
+  imageUrl: "/v1678484500/color-mill-design-2023/RCSwebsiteComp_yysynz.png",
+  imageAlt: "Redwood Coast Seniors Website",
   title: "Website",
   subHeading: "Say Something Here",
   description:
@@ -64,7 +64,7 @@ const collateralDesignSectionContent = {
 
 const logoSectionContent = {
   imageUrl:
-    "/v1678397306/color-mill-design-2023/FB-Donation-Infographic_x65ukn.png",
+    "/v1678484188/color-mill-design-2023/logosComp_a9s4m7.png",
   imageAlt: "A New Logo for the Redwood Coast Seniors",
   title: "Logo Design",
   subHeading: "Say Something Here",
@@ -101,7 +101,7 @@ const RedwoodCoastSeniors = () => {
         description={`${headerContent.title} Case Study`}
       >
         <CaseStudyHeader {...headerContent} />
-        {/* <InfoImageSection {...brandStrategySectionContent} /> */}
+        <StylescapeSection {...brandStrategySectionContent} />
         <FullScreenImageSection {...logoSectionContent} />
         <InfoImageSection {...yearEndAppealContent} />
         <WebsiteSection {...websiteSectionContent} />

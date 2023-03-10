@@ -61,10 +61,10 @@ const TestimonialSection = (props: Props) => {
   return (
     <div className="mt-12 md:mt-36">
       
-      <div className="md:mt-24 w-[75vw] md:w-[20vw]">
+      <div className="md:mt-24 2xl:mb-10 w-[75vw] md:w-[20vw] 2xl:w-[25vw]">
         <HexRow colors={hexagonColors}/>
       </div>
-      <div className="mx-auto  flex max-w-[1600px] flex-col justify-center gap-2 px-6 md:px-10 md:flex-row">
+      <div className="mx-auto flex max-w-[1600px] flex-col justify-center gap-2 px-6 md:px-10 md:flex-row">
         <div className="flex flex-col items-center justify-center md:flex-row">
           <div className="w-2/3 text-left hidden md:block">
             <h3 className="mb-4 text-5xl font-semibold italic" style={{color: primaryColor}}>
@@ -74,7 +74,7 @@ const TestimonialSection = (props: Props) => {
              {attribution}
             </h4>
           </div>
-          <div className="relative my-6 md:my-0 aspect-square h-[400px] shadow-xl">
+          <div className="relative my-6 md:my-0 aspect-square h-[340px] md:h-[400px] shadow-xl">
             <Image
               src={getCloudinaryImageUrl(`/q_1,f_auto${imageUrl}`)}
               alt={imageAlt}
@@ -97,7 +97,7 @@ const TestimonialSection = (props: Props) => {
         </div>
       </div>
       <div className="flex w-full justify-end">
-        <div className="mt-6 md:mt-16 w-[75vw] md:w-[20vw] transform rotate-180">
+        <div className="mt-6 md:mt-16 2xl:mt-24 w-[75vw] md:w-[20vw] 2xl:w-[25vw] transform rotate-180">
           <HexRow colors={hexagonColors}/>
         </div>
       </div>

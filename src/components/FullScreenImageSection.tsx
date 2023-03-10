@@ -15,7 +15,7 @@ function FullScreenImageSection(props: Props) {
     props;
   return (
     <div
-      className="relative flex bg-white h-auto w-screen flex-col justify-center gap-4 py-2 md:py-12 text-center"
+      className="relative flex bg-white h-auto w-full flex-col justify-center gap-4 py-2 md:py-12 text-center"
       
     >
       <div className="mx-auto">
@@ -27,7 +27,7 @@ function FullScreenImageSection(props: Props) {
         </h2>
         <div className="mx-2 my-6 md:my-16 flex flex-col ">
          
-          <div className="relative mx-auto h-[300px] w-[95vw] sm:h-[500px] md:h-[600px] xl:h-[800px] 2xl:h-[1000px]">
+          <div className="relative mx-auto h-[300px] w-[90vw] 2xl:w-[85vw] sm:h-[500px] md:h-[600px] xl:h-[800px] 2xl:h-[900px] max-w-[1440px]">
             <Image
               src={getCloudinaryImageUrl(`/q_auto,f_auto${imageUrl}`)}
               alt={imageAlt}
@@ -40,7 +40,7 @@ function FullScreenImageSection(props: Props) {
             />
           </div>
           <div className=" self-center md:mt-4">
-            <p className="text-left max-w-[1440px] w-[90vw] xl:w-[80vw] mb-8 text-sm md:text-2xl leading-relaxed tracking-wide text-gray-900">
+            <p className="text-left max-w-[1440px] w-[85vw] xl:w-[80vw] mb-8 text-sm md:text-2xl leading-relaxed tracking-wide text-gray-900">
               {description}
             </p>
           </div>
