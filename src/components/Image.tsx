@@ -6,7 +6,7 @@ interface ImageProps {
   alt: string;
   fill: boolean;
   style?: React.CSSProperties;
-  blurDataUrl: string
+  blurDataURL?: string;
 }
 
 const Image = (props:ImageProps) => {
@@ -17,7 +17,7 @@ const Image = (props:ImageProps) => {
         fill={props.fill}
         style={props.style}
         placeholder="blur"
-        blurDataURL={props.blurDataUrl}
+        blurDataURL={props.blurDataURL}
         sizes={
           props.fill
             ? props.sizes

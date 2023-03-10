@@ -97,10 +97,7 @@ const AppreciationSection = () => {
               fill
               style={{ objectFit: "cover" }}
               sizes="(max-width: 768px) 45vw,"
-              
-              blurDataUrl={getCloudinaryImageUrl(
-                "/t_placeholder/v1677804674/Color%20Mill%20Design%202023/Amanda_Friscia-Headshot_ra712c.png"
-              )}
+              blurDataURL={getCloudinaryImageUrl('/thumbnail_/v1677804674/Color%20Mill%20Design%202023/Amanda_Friscia-Headshot_ra712c.png')}
             />
           </div>
         </div>

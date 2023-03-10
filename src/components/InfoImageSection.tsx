@@ -39,7 +39,8 @@ function InfoImageSection(props: Props) {
               fill
               style={{ objectFit: "cover" }}
               sizes="(max-width: 768px) 45vw,"
-              blurDataUrl={getCloudinaryImageUrl(`/t_placeholder${imageUrl}`)}
+              blurDataURL={getCloudinaryImageUrl(`/thumbnail_${imageUrl}`)}
+              
             />
           </div>
           <div className="md:w-[535px] w-[327px] self-center lg:hidden">

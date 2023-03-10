@@ -124,7 +124,7 @@ const FortBraggFoodBank = () => {
               fill
               style={{ objectFit: "cover" }}
               sizes="(max-width: 768px) 45vw,"
-              blurDataUrl={getCloudinaryImageUrl('/t_placeholder/v1677804687/Color%20Mill%20Design%202023/Newsletters-Image_facaqq.png')}
+              blurDataURL={getCloudinaryImageUrl('/thumbnail_/v1677804687/Color%20Mill%20Design%202023/Newsletters-Image_facaqq.png')}
             />
           </div>
           <div className="lg:w-[30%] xl:h-[650px] lg:h-[500px]">

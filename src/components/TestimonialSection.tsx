@@ -79,7 +79,7 @@ const TestimonialSection = (props: Props) => {
               fill
               style={{ objectFit: "cover" }}
               sizes="(max-width: 768px) 45vw,"
-              blurDataUrl={getCloudinaryImageUrl(`/t_placeholder${imageUrl}`)}
+              blurDataURL={getCloudinaryImageUrl(`/thumbnail_${imageUrl}`)}
             />
           </div>
         </div>

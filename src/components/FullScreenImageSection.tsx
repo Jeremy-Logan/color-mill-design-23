@@ -36,7 +36,7 @@ function FullScreenImageSection(props: Props) {
               sizes="(max-width: 768px) 100vw,
                 (max-width: 1200px) 90vw,
                 80vw"
-              blurDataUrl={getCloudinaryImageUrl(`/t_placeholder${imageUrl}`)}
+                blurDataURL={getCloudinaryImageUrl(`/thumbnail_${imageUrl}`)}
             />
           </div>
           <div className=" self-center mt-4">

@@ -65,13 +65,11 @@ const NonProfits = () => {
             <div className="relative h-[222px] w-[327px] shadow-lg transition-all duration-150 ease-in-out hover:scale-[102%] sm:h-[329px] sm:w-[484px] md:h-[412px] md:w-[606px]">
               <Image
                 src={getCloudinaryImageUrl(image.src)}
-                alt="Amanda Friscia"
+                alt={image.alt}
                 fill
                 style={{ objectFit: "cover" }}
                 sizes="(max-width: 768px) 45vw,"
-                blurDataUrl={getCloudinaryImageUrl(
-                  `/t_placeholder/${image.src}`
-                )}
+                blurDataURL={getCloudinaryImageUrl(`/thumbnail_${image.src}`)}
               />
             </div>
             <div className="mt-2 md:mt-4 w-[327px] sm:w-[480px] md:w-[600px]">
