@@ -41,18 +41,15 @@ const PageLayout = (props: Props) => {
 					],
 					site_name: 'Point Arena Lighthouse',
 				}}
-			/><div className="absolute top-0 z-50 h-3 w-full bg-gradient-to-r from-[#C10682] to-[#0A99B9] "></div>
-			<motion.div className='h-full overflow-hidden'
-			// initial={{ opacity: 0 }}
-			// animate={{ opacity: 1, transition:{duration: 0.5} }}
-			>
+			/>
+			<div className=''>
 				<Header/>
-				<div className="min-h-screen">
+				<div className="min-h-screen overflow-hidden ">
 					{props.children}
 				
 				</div>
-				<Footer/>
-			</motion.div>
+				<Footer/></div>
+			
 		</>
 	)
 }

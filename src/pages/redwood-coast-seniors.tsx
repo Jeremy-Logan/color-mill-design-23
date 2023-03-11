@@ -87,7 +87,7 @@ const testimonialSectionContent = {
     "#580F85",
     "#390265",
   ],
-  imageAlt: "Amanda Friscia - Executive Director, Fort Bragg Food Bank",
+  imageAlt: "Jill Rexrode - Executive Director, Redwood Coast Seniors",
   heading:
     "'\"The Color Mill's work increased donations and added vibrancy to our entire organization.'\"",
   attribution: "Jill Rexrode - Executive Director, Redwood Coast Seniors",

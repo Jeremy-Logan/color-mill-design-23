@@ -1,7 +1,7 @@
 import { Fragment, useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-import { motion, useCycle, AnimatePresence } from "framer-motion";
+import { motion, useCycle, AnimatePresence, useScroll, MotionValue } from "framer-motion";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const categories = [
@@ -24,7 +24,22 @@ export default function Header() {
   const [mobileMenuOpen, toggleMobileMenuOpen] = useCycle(false, true);
   const pictureRef = useRef<HTMLPictureElement>(null);
   const [isPageLoaded, setPageLoaded] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState<'up' | 'down'>('up');
+  const { scrollYProgress } = useScroll();
 
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.onChange((latest) => {
+      if (latest > 0) {
+        setScrollDirection('down');
+      } else {
+        setScrollDirection('up');
+      }
+    });
+
+    return () => unsubscribe();
+  }, [scrollYProgress]);
+
+  
   useEffect(() => {
     if (pictureRef.current) {
       const sources = pictureRef.current.querySelectorAll("source");
@@ -46,10 +61,12 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="bg-white">
-      
+    <header className={`bg-white sticky top-0 z-30 transition-all origin-top duration-300 ${
+      scrollDirection === 'down' ? 'shadow-md ' : ''
+    }`}>
+      <div className=" z-50 h-3 w-full bg-gradient-to-r from-[#C10682] to-[#0A99B9] "/>
       <nav
-        className="mx-auto flex max-w-[1800px] items-center justify-between p-6 lg:px-8"
+        className={`mx-auto flex max-w-[1800px] items-center justify-between transition-all origin-top duration-300 lg:px-8 ${scrollDirection === 'down' ? 'p-1' : 'p-6'}`}
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -69,7 +86,7 @@ export default function Header() {
                   type="image/png"
                 />
                 <img
-                  className="h-20 sm:h-24 lg:h-36"
+                  className={`transition-all origin-top duration-300 ${scrollDirection === 'down' ? 'h-12 sm:h-16 lg:h-20 ' : 'h-20 sm:h-24 lg:h-36'}`}
                   srcSet="https://res.cloudinary.com/the-color-mill/image/upload/v1639014317/Color%20Mill%20Design/ColorMillLogoHeader-NoText_nvtcqj.png"
                   alt="Color Mill logo"
                 />
