@@ -64,7 +64,8 @@ export default function Header() {
     <header className={`bg-white sticky top-0 z-30 transition-all origin-top duration-300 ${
       scrollDirection === 'down' ? 'shadow-md ' : ''
     }`}>
-      <div className=" z-50 h-3 w-full bg-gradient-to-r from-[#C10682] to-[#0A99B9] "/>
+      <div className={`z-50  w-full bg-gradient-to-r transition-all origin-top duration-300 from-[#C10682] to-[#0A99B9] ${
+      scrollDirection === 'down' ? 'h-2' : 'h-3'}`}  />
       <nav
         className={`mx-auto flex max-w-[1800px] items-center justify-between transition-all origin-top duration-300 lg:px-8 ${scrollDirection === 'down' ? 'p-1' : 'p-6'}`}
         aria-label="Global"
@@ -239,7 +240,7 @@ export default function Header() {
             
             <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div className="flex items-center justify-between">
-                <div className="h-20" />
+                <div className="h-12" />
               </div>
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-500/10">

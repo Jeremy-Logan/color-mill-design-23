@@ -8,10 +8,11 @@ type Props = {
   title: string;
   subHeading: string;
   description: string;
+  primaryColor: string;
 };
 
 function FullScreenImageSection(props: Props) {
-  const {  imageUrl, imageAlt, title, subHeading, description } =
+  const {  imageUrl, imageAlt, title, subHeading, description, primaryColor } =
     props;
   return (
     <div
@@ -22,7 +23,7 @@ function FullScreenImageSection(props: Props) {
         <h1 className="z-10 mx-4 md:mb-6 font-serif text-4xl font-black leading-relaxed tracking-wide text-gray-900 md:text-5xl lg:text-6xl">
           {title}
         </h1>
-        <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide text-gray-900 md:text-2xl lg:text-4xl">
+        <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide  md:text-2xl lg:text-4xl" style={{color: primaryColor}}>
           {subHeading}
         </h2>
         <div className="mx-2 my-6 md:my-16 flex flex-col ">

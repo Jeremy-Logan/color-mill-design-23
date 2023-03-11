@@ -40,7 +40,7 @@ function StylescapeSection(props: Props) {
               sizes="(max-width: 768px) 45vw,"
             />
           </div>
-          <div className="relative lg:mb-0 h-[170px] sm:h-[200px] w-[90vw] md:w-[70vw] md:h-[400px] lg:h-[444px] 2xl:h-[555px] place-self-center md:place-self-end">
+          <div className=" relative lg:mb-0 h-[170px] sm:h-[200px] w-[90vw] md:w-[70vw] md:h-[400px] lg:h-[444px] 2xl:h-[555px] place-self-center md:place-self-end">
           
             <Image
               src={getCloudinaryImageUrl(`${image2Url}`)}

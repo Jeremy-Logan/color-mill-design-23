@@ -63,6 +63,7 @@ const collateralDesignSectionContent = {
 };
 
 const infographicSectionContent = {
+  primaryColor: primaryColor,
   imageUrl:
     "/v1678397306/color-mill-design-2023/FB-Donation-Infographic_x65ukn.png",
   imageAlt: "Fort Bragg Food Bank Infographic",

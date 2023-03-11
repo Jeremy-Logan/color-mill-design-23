@@ -10,26 +10,27 @@ type Props = {
   title: string;
   subHeading: string;
   description: string;
+  bg?: string;
 };
 
 function InfoImageSection(props: Props) {
-  const { primaryColor, imageUrl, imageAlt, title, subHeading, description } =
+  const { primaryColor, imageUrl, imageAlt, title, subHeading, description, bg } =
     props;
   return (
     <div
       className="relative flex h-auto w-full flex-col justify-center gap-4 py-2 md:py-8 text-center"
-      style={{ backgroundColor: primaryColor }}
+      style={{ backgroundColor: bg === 'white' ? 'white' : primaryColor }}
     >
       <div className="max-w-[1600px] mx-auto">
-        <h1 className="z-10 mx-4 md:mb-6 font-serif text-4xl font-black leading-relaxed tracking-wide text-white md:text-5xl lg:text-6xl">
+        <h1 className="z-10 mx-4 md:mb-6 font-serif text-4xl font-black leading-relaxed tracking-wide  md:text-5xl lg:text-6xl" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
           {title}
         </h1>
-        <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide text-white md:text-2xl lg:text-4xl">
+        <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide  md:text-2xl lg:text-4xl" style={{ color: bg === 'white' ? primaryColor : 'white' }}>
           {subHeading}
         </h2>
         <div className=" my-6 lg:my-16 items-center lg:justify-around flex flex-col gap-8 lg:flex-row lg:mx-auto">
           <div className="lg:w-[40%] self-center hidden lg:block">
-            <p className="text-left w-[327px] lg:w-full mb-8 md:text-2xl leading-relaxed tracking-wide text-white">
+            <p className="text-left w-[327px] lg:w-full mb-8 md:text-2xl leading-relaxed tracking-wide " style={{ color: bg === 'white' ? '#000000' : 'white' }}>
               {description}
             </p>
           </div>
@@ -44,7 +45,7 @@ function InfoImageSection(props: Props) {
             />
           </div>
           <div className="md:w-[535px] w-[327px] self-center lg:hidden">
-            <p className="text-left mb-8 text-sm md:text-base lg:text-2xl leading-relaxed tracking-wide text-white">
+            <p className="text-left mb-8 text-sm md:text-base lg:text-2xl leading-relaxed tracking-wide " style={{ color: bg === 'white' ? '#000000' : 'white' }}>
               {description}
             </p>
           </div>

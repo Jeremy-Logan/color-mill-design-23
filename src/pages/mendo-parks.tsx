@@ -1,10 +1,10 @@
 import PageLayout from "../components/PageLayout";
 import CaseStudyHeader from "../components/CaseStudyHeader";
 import InfoImageSection from "../components/InfoImageSection";
-import WebsiteSection from "../components/WebsiteSection";
 import FullScreenImageSection from "../components/FullScreenImageSection";
 import TestimonialSection from "../components/TestimonialSection";
 import StylescapeSection from "../components/StylescapeSection";
+import InfoImageSectionTwoRows from "../components/InfoImageSectionTwoRows";
 
 const primaryColor = "#01657D";
 
@@ -30,39 +30,63 @@ const brandStrategySectionContent = {
     "It’s a legacy they want to maintain. So how do we build a brand that radiates vibrancy and progress around a B&W logo created in the 80s? We create a palette of bright painterly colors and watercolor textures, adding splashes of color to everything: accentuating the intricate line work of the pen and ink drawing while also expressing their vibrant new direction.",
 };
 
-const yearEndAppealContent = {
-  imageUrl: "/v1678482304/color-mill-design-2023/EOY-Appeal_hfbom6.png",
+const appealContent = {
+  imageUrl: "/v1678500126/color-mill-design-2023/MP-EYO-2022_nroxlu.png",
+  image2Url: "/v1678500130/color-mill-design-2023/MP-Membership_kyytzs.png",
   primaryColor: primaryColor,
-  imageAlt: "Redwood Coast Seniors Year End Appeal",
-  title: "Year End Appeal",
+  bg: 'white',
+  imageAlt: "Mendo parks Appeal Design",
+  image2Alt: "Mendo parks Appeal Design",
+  title: "Appeal Mailers",
   subHeading: "Say Something Here",
   description:
     "It’s a legacy they want to maintain. So how do we build a brand that radiates vibrancy and progress around a B&W logo created in the 80s? We create a palette of bright painterly colors and watercolor textures, adding splashes of color to everything: accentuating the intricate line work of the pen and ink drawing while also expressing their vibrant new direction.",
+  description2:
+    "It’s a legacy they want to maintain. So how do we build a brand that radiates vibrancy and progress around a B&W logo created in the 80s? We create a palette of bright painterly colors and watercolor textures, adding splashes of color to everything: accentuating the intricate line work of the pen and ink drawing while also expressing their vibrant new direction.",
 };
 
-const websiteSectionContent = {
-  imageUrl: "/v1678484500/color-mill-design-2023/RCSwebsiteComp_yysynz.png",
-  imageAlt: "Redwood Coast Seniors Website",
-  title: "Website",
+const collateralDesignSectionContent = {
+  imageUrl: "/v1678499683/color-mill-design-2023/MP-BC-Photo_xqxncv.png",
+  image2Url: "/v1678499682/color-mill-design-2023/MP-Brochure_trwi0n.png",
+  primaryColor: primaryColor,
+  imageAlt: "Mendo parks Collateral Design",
+  image2Alt: "Mendo parks Collateral Design",
+  title: "Collateral Design",
+  subHeading: "Say Something Here",
+  description:
+    "It’s a legacy they want to maintain. So how do we build a brand that radiates vibrancy and progress around a B&W logo created in the 80s? We create a palette of bright painterly colors and watercolor textures, adding splashes of color to everything: accentuating the intricate line work of the pen and ink drawing while also expressing their vibrant new direction.",
+  description2:
+    "It’s a legacy they want to maintain. So how do we build a brand that radiates vibrancy and progress around a B&W logo created in the 80s? We create a palette of bright painterly colors and watercolor textures, adding splashes of color to everything: accentuating the intricate line work of the pen and ink drawing while also expressing their vibrant new direction.",
+};
+
+const logoSectionContent = {
+  primaryColor: primaryColor,
+  imageUrl:
+    "/v1678499217/color-mill-design-2023/mendo-parks-logo-comp_rxn1lt.png",
+  imageAlt: "A New Logo for the Mendo Parks",
+  title: "Logo Design",
   subHeading: "Say Something Here",
   description:
     "Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur. Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur.",
 };
 
-const collateralDesignSectionContent = {
-  imageUrl: "/v1678482304/color-mill-design-2023/RCS-Brochure-photo_fgbfjd.png",
+const preservationContent = {
   primaryColor: primaryColor,
-  imageAlt: "Redwood Coast Seniors Collateral Design",
-  title: "Collateral Design",
+  imageUrl:
+    "/v1678499682/color-mill-design-2023/MP-Glass-Beach-Card_dznp8p.png",
+  imageAlt: "Mendo parks Collateral Design",
+  title: "Preservation",
   subHeading: "Say Something Here",
   description:
-    "It’s a legacy they want to maintain. So how do we build a brand that radiates vibrancy and progress around a B&W logo created in the 80s? We create a palette of bright painterly colors and watercolor textures, adding splashes of color to everything: accentuating the intricate line work of the pen and ink drawing while also expressing their vibrant new direction.",
+    "Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur. Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur.",
 };
 
-const logoSectionContent = {
-  imageUrl: "/v1678484188/color-mill-design-2023/logosComp_a9s4m7.png",
-  imageAlt: "A New Logo for the Redwood Coast Seniors",
-  title: "Logo Design",
+const infographicSectionContent = {
+  primaryColor: primaryColor,
+  imageUrl:
+    "/v1678499679/color-mill-design-2023/MP-Donation-Graphic_pq8aet.png",
+  imageAlt: "Mendo Parks Infographic",
+  title: "Infographics",
   subHeading: "Say Something Here",
   description:
     "Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur. Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur.",
@@ -72,15 +96,15 @@ const testimonialSectionContent = {
   imageUrl: "/v1678482351/color-mill-design-2023/Jill-Headshot_os71b7.jpg",
   primaryColor: primaryColor,
   hexagonColors: [
-    "#E6C9FC",
-    "#CD97F8",
-    "#975EC3",
-    "#823BBA",
-    "#7313AD",
-    "#580F85",
-    "#390265",
+    "#ADEFFF",
+    "#81D5EA",
+    "#4FC3DF",
+    "#07A4C7",
+    "#0A99B9",
+    "#004E60",
+    "#002A33",
   ],
-  imageAlt: "Amanda Friscia - Executive Director, Fort Bragg Food Bank",
+  imageAlt: "Jill Rexrode - Executive Director, Redwood Coast Seniors",
   heading:
     "'\"The Color Mill's work increased donations and added vibrancy to our entire organization.'\"",
   attribution: "Jill Rexrode - Executive Director, Redwood Coast Seniors",
@@ -96,9 +120,10 @@ const MendoParks = () => {
         <CaseStudyHeader {...headerContent} />
         <StylescapeSection {...brandStrategySectionContent} />
         <FullScreenImageSection {...logoSectionContent} />
-        <InfoImageSection {...yearEndAppealContent} />
-        <WebsiteSection {...websiteSectionContent} />
-        <InfoImageSection {...collateralDesignSectionContent} />
+        <InfoImageSectionTwoRows {...collateralDesignSectionContent} />
+        <InfoImageSectionTwoRows {...appealContent} />
+        <InfoImageSection {...preservationContent} />
+       <FullScreenImageSection {...infographicSectionContent} />
         <TestimonialSection {...testimonialSectionContent} />
       </PageLayout>
     </div>

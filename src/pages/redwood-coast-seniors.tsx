@@ -63,6 +63,7 @@ const collateralDesignSectionContent = {
 };
 
 const logoSectionContent = {
+  primaryColor: primaryColor,
   imageUrl:
     "/v1678484188/color-mill-design-2023/logosComp_a9s4m7.png",
   imageAlt: "A New Logo for the Redwood Coast Seniors",
