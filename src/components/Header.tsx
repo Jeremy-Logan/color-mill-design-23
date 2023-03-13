@@ -1,7 +1,8 @@
 import { Fragment, useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-import { motion, useCycle, AnimatePresence, useScroll, MotionValue } from "framer-motion";
+import type { MotionValue } from "framer-motion";
+import { motion, useCycle, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const categories = [
@@ -25,21 +26,16 @@ export default function Header() {
   const pictureRef = useRef<HTMLPictureElement>(null);
   const [isPageLoaded, setPageLoaded] = useState(false);
   const [scrollDirection, setScrollDirection] = useState<'up' | 'down'>('up');
-  const { scrollYProgress } = useScroll();
+  const { scrollY } = useScroll();
+  const [prevScrollY, setPrevScrollY] = useState(0)
 
-  useEffect(() => {
-    const unsubscribe = scrollYProgress.onChange((latest) => {
-      if (latest > 0) {
-        setScrollDirection('down');
-      } else {
-        setScrollDirection('up');
-      }
-    });
+useMotionValueEvent(scrollY, "change", (latest) => {
+    const currentScrollY = latest;
+    setScrollDirection(currentScrollY > prevScrollY ? 'down' : 'up');
+    setPrevScrollY(currentScrollY);
+  });
 
-    return () => unsubscribe();
-  }, [scrollYProgress]);
 
-  
   useEffect(() => {
     if (pictureRef.current) {
       const sources = pictureRef.current.querySelectorAll("source");
@@ -240,7 +236,7 @@ export default function Header() {
             
             <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div className="flex items-center justify-between">
-                <div className="h-12" />
+                <div className={`${scrollDirection === 'down' ? 'h-12 ' : 'h-24'}`} />
               </div>
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-500/10">
