@@ -48,7 +48,7 @@ const Home = ({ feed }: Feed) => {
             transition={{ delay: 0.1, duration: 0.55, ease: "easeIn" }} style={{lineHeight: '1.2em'}}
             className=" 2xl:6xl mx-auto md:mt-8 mb-12 md:mb-36 w-10/12 text-left font-serif text-2xl font-black text-black sm:w-2/3 sm:text-3xl md:text-center lg:w-7/12 lg:text-4xl xl:mt-24 xl:w-1/2 xl:text-4xl 2xl:text-5xl"
           >
-            A purpose driven boutique design agency working for people who make
+            A purpose driven boutique design agency working for people <br/> who make
             a difference.
           </motion.h1>
           <HexGrid />

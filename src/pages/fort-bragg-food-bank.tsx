@@ -16,7 +16,7 @@ const headerContent = {
   title: "Fort Bragg Food Bank",
   subHeading: "Providing nutritious food for a healthy and better life.",
   description:
-    "Along with bright new leadership, facility upgrades, new delivery vans and an expanded staff, FBFB was ready for an upgrade to their brand. Their logo, established around the organization’s conception, is steadfast and very recognizable. ",
+    "Fort Bragg Food Bank is a community resource, distributing food to those who need it most. They are a lifeline for many people, but felt their brand didn’t portray the vibrancy and hope of what they offer. We were tasked with bringing this buzz into their brand and to their web presence.",
   scope:
     "Brand Strategy, Collateral Design, Annual Reports, Signage, Web design, Booth Graphics",
 };
@@ -27,10 +27,19 @@ const brandStrategySectionContent = {
     "v1677804673/color-mill-design-2023/FB-Business_card_Images_oywplp.png",
   imageAlt: "Fort Bragg Food Bank Business Cards",
   title: "Brand Strategy",
-  subHeading: "Building Around an Existsing Logo",
+  subHeading: "Building Around an \n Existing Legacy",
   description:
-    "It’s a legacy they want to maintain. So how do we build a brand that radiates vibrancy and progress around a B&W logo created in the 80s? We create a palette of bright painterly colors and watercolor textures, adding splashes of color to everything: accentuating the intricate line work of the pen and ink drawing while also expressing their vibrant new direction.",
+    "Their logo was designed nearly 30 years ago, and had an established and revered place in the community. This was a legacy they wanted to maintain. So, we created a bright palette and a luscious watercolor texture that added vibrant contrast to the clean, monochrome logo and splashed it across everything we did.",
 };
+
+const newsletterSectionContent = {
+  imageUrl: "/v1677804687/color-mill-design-2023/Newsletters-Image_facaqq.png",
+  imageAlt: "Fort Bragg Food Bank Newsletter",
+  title: "Newsletters",
+  subHeading: "An inspirational message",
+  description:
+    "The newsletter is the Food Bank's primary means of communicating directly with its members and the community. It showcases the organization's achievements in an inspiring and easily understandable format. \n \n With our extensive experience in print production, we were able to efficiently set up and print the newsletters, and mail them to the constituents. This made the process easy and hands-off for the busy Food Bank team. ",
+}
 
 const annualReportSectionContent = {
   imageUrl:
@@ -40,26 +49,27 @@ const annualReportSectionContent = {
   title: "Annual Report",
   subHeading: "Sharing Community Contributions",
   description:
-    "It’s a legacy they want to maintain. So how do we build a brand that radiates vibrancy and progress around a B&W logo created in the 80s? We create a palette of bright painterly colors and watercolor textures, adding splashes of color to everything: accentuating the intricate line work of the pen and ink drawing while also expressing their vibrant new direction.",
+    "Working closely with the Food Bank, we created a visually stunning and informative annual report that showcased the organization’s accomplishments and future goals. Our state-of-the-art printing technology made sure every detail was crisp and vibrant, leaving a lasting impression on stakeholders, donors and community members. The annual report was a powerful tool for the Food Bank to showcase their important work and inspire continued support.",
 };
 
 const websiteSectionContent = {
   imageUrl: "/v1678396053/color-mill-design-2023/Website-on-Devices_wp0haf.png",
   imageAlt: "Fort Bragg Food Bank Website",
   title: "Website",
-  subHeading: "Say Something Here",
+  subHeading: "A clean, uncluttered user experience",
   description:
-    "Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur. Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur.",
+    "The Food Bank’s website was sadly lacking modern appeal and used an outdated platform that was difficult to navigate. As a result, the organization’s essential information was buried deep in a maze of pages, making it difficult for visitors to find what they were looking for.\n \n Through our discovery process, we identified the information most important to their visitors and made sure it was easily accessible, creating a clean user experience with less to navigate. \n \n The website also made things easier for the Food Bank team. With an intuitive backend and a more streamlined presentation, they got less calls, spent less time fighting with updates and had more time for what they value most: their clients. ",
 };
+
 
 const collateralDesignSectionContent = {
   imageUrl: "/v1677804674/color-mill-design-2023/FB-Collateral_nmqg1d.png",
   primaryColor: primaryColor,
   imageAlt: "Fort Bragg Food Bank Collateral Design",
-  title: "Collateral Design",
-  subHeading: "Say Something Here",
+  title: "Collateral",
+  subHeading: "Connecting with community in a tangible way",
   description:
-    "It’s a legacy they want to maintain. So how do we build a brand that radiates vibrancy and progress around a B&W logo created in the 80s? We create a palette of bright painterly colors and watercolor textures, adding splashes of color to everything: accentuating the intricate line work of the pen and ink drawing while also expressing their vibrant new direction.",
+    "Marketing collateral like brochures, business cards and magnets allow the Food Bank to interact with the community on a personal level. These “leave-behinds” raise awareness of their mission and offerings, reminding potential donors, volunteers and supporters to interact with the brand. Eye catching designs and color palettes encourage people to keep these giveaways and strengthen the organizations connection with the community. ",
 };
 
 const infographicSectionContent = {
@@ -114,16 +124,16 @@ const FortBraggFoodBank = () => {
         <div className="relative flex h-auto w-screen flex-col justify-center gap-4 bg-white py-2 text-center md:py-8">
           <div className="mx-auto max-w-[1600px]">
             <h1 className="z-10 mx-4 font-serif text-4xl font-black leading-relaxed tracking-wide text-gray-900 md:mb-6 md:text-5xl lg:text-6xl">
-              Newsletters
+              {newsletterSectionContent.title}
             </h1>
             <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide text-gray-900 md:text-2xl lg:text-4xl">
-              Expressing a message of Inspiration
+              {newsletterSectionContent.subHeading}
             </h2>
             <div className=" my-6 flex w-full flex-col items-center justify-center sm:mx-auto md:my-16 lg:flex-row lg:items-start">
               <div className="relative  aspect-square w-[327px] md:w-[450px] lg:mr-12 lg:w-[500px] xl:w-[650px]">
                 <Image
                   src={getCloudinaryImageUrl(
-                    "/v1677804687/color-mill-design-2023/Newsletters-Image_facaqq.png"
+                    newsletterSectionContent.imageUrl
                   )}
                   alt="The Fort Bragg Food Bank Newsletter"
                   fill
@@ -132,17 +142,8 @@ const FortBraggFoodBank = () => {
                 />
               </div>
               <div className="lg:h-[500px] lg:w-[30%] xl:h-[650px]">
-                <p className="mt-4 md:mb-8 w-[327px] text-left leading-relaxed tracking-wide text-gray-900 md:w-[450px] text-sm sm:text-base lg:mt-0 lg:w-full lg:text-lg xl:text-2xl">
-                  The design of the Food Bank’s newsletters needed to appeal to
-                  donors and potential donors while also creating a lasting
-                  impression for the months between publications. Merging
-                  elements of the brand’s new strategy with their bright visual
-                  identity helped express their message of openness, vibrancy
-                  and inspiring the community. This created a publication that
-                  is inspiring, easy to digest and inviting. The infographics
-                  show off the organization’s accomplishments and help the
-                  potential donor see the possibilities and the achievements of
-                  the organization.
+                <p className="whitespace-pre-line mt-4 md:mb-8 w-[327px] text-left leading-relaxed tracking-wide text-gray-900 md:w-[450px] text-sm sm:text-base lg:mt-0 lg:w-full lg:text-lg xl:text-xl">
+                 {newsletterSectionContent.description}
                 </p>
               </div>
             </div>
@@ -152,7 +153,7 @@ const FortBraggFoodBank = () => {
               The newly designed newsletter
               <br className='hidden sm:block' /> increased donations by over
             </h3>
-            <h3 className="sm:my-auto mt-2 sm:mt-0 text-5xl sm:w-1/3 sm:text-[8rem] font-bold text-white">125%</h3>
+            <h3 className="sm:mt-0 text-5xl sm:w-1/3 sm:text-[8rem] font-bold text-white">125%</h3>
           </div>
         </div>
         <InfoImageSection {...annualReportSectionContent} />

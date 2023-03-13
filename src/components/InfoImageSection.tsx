@@ -22,13 +22,13 @@ function InfoImageSection(props: Props) {
       style={{ backgroundColor: bg === 'white' ? 'white' : primaryColor }}
     >
       <div className="max-w-[1600px] mx-auto">
-        <h1 className="z-10 mx-4 md:mb-6 font-serif text-4xl font-black leading-relaxed tracking-wide  md:text-5xl lg:text-6xl" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
+        <h1 className=" z-10 mx-4 md:mb-6 font-serif text-4xl font-black leading-relaxed tracking-wide  md:text-5xl lg:text-6xl" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
           {title}
         </h1>
-        <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide  md:text-2xl lg:text-4xl" style={{ color: bg === 'white' ? primaryColor : 'white' }}>
+        <h2 className="whitespace-pre-line z-10 mx-8 text-xl leading-relaxed tracking-wide  md:text-2xl lg:text-4xl" style={{ color: bg === 'white' ? primaryColor : 'white' }}>
           {subHeading}
         </h2>
-        <div className=" my-6 lg:my-16 items-center lg:justify-around flex flex-col gap-8 lg:flex-row lg:mx-auto">
+        <div className=" my-6 lg:my-16 items-center lg:justify-around flex flex-col gap-8 lg:flex-row lg:mx-8">
           <div className="lg:w-[40%] self-center hidden lg:block">
             <p className="text-left w-[327px] lg:w-full mb-8 md:text-2xl leading-relaxed tracking-wide " style={{ color: bg === 'white' ? '#000000' : 'white' }}>
               {description}

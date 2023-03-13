@@ -10,7 +10,7 @@ const images = [
     alt: "Fort Bragg Food Bank",
     title: "Fort Bragg Food Bank",
     description:
-      "People coming together to create hope for an abundant life for everyone.",
+      "Brand Stategy, Website Design and Development, Graphic Design, Print Design",
       url: '/fort-bragg-food-bank'
   },
   {
@@ -18,7 +18,7 @@ const images = [
     alt: "Redwood Coast Seniors",
     title: "Redwood Coast Seniors",
     description:
-      "People coming together to create hope for an abundant life for everyone.",
+      "Brand Strategy, Logo Design, Website Design and Development, Print Design",
       url: '/redwood-coast-seniors'
   },
   {
@@ -26,7 +26,7 @@ const images = [
     alt: "MendoParks",
     title: "MendoParks",
     description:
-      "People coming together to create hope for an abundant life for everyone.",
+      "Brand Strategy, Logo Design, Print Design",
       url: '/mendo-parks'
   },
   {
@@ -34,7 +34,7 @@ const images = [
     alt: "Point Arena Lighthouse",
     title: "Point Arena Lighthouse",
     description:
-      "People coming together to create hope for an abundant life for everyone.",
+      "Brand Strategy, Website Design and Development, Print Design",
       url: '/point-arena-lighthouse'
   },
 ];
