@@ -1,5 +1,7 @@
 import PageLayout from "../components/PageLayout";
 import Img from "next/image";
+import ContactForm from "../components/ContactForm";
+
 const Contact = () => {
   return (
     <div>
@@ -15,8 +17,8 @@ const Contact = () => {
           style={{ objectFit: "contain" }}
         />
       </div>
-      <h2 className="mt-12 2xl:6xl mx-auto mb-36 w-10/12 sm:w-2/3 lg:w-1/2 xl:w-1/3 text-left md:text-center font-serif text-2xl font-black text-black sm:text-3xl lg:text-4xl xl:text-4xl"
-          >We are Color Mill Design</h2></PageLayout>
+      {/* <ContactForm/> */}
+      </PageLayout>
     </div>
   );
 };  

@@ -1,8 +1,13 @@
 import { Fragment, useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-import type { MotionValue } from "framer-motion";
-import { motion, useCycle, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
+import {
+  motion,
+  useCycle,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const categories = [
@@ -25,16 +30,15 @@ export default function Header() {
   const [mobileMenuOpen, toggleMobileMenuOpen] = useCycle(false, true);
   const pictureRef = useRef<HTMLPictureElement>(null);
   const [isPageLoaded, setPageLoaded] = useState(false);
-  const [scrollDirection, setScrollDirection] = useState<'up' | 'down'>('up');
+  const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
   const { scrollY } = useScroll();
-  const [prevScrollY, setPrevScrollY] = useState(0)
+  const [prevScrollY, setPrevScrollY] = useState(0);
 
-useMotionValueEvent(scrollY, "change", (latest) => {
+  useMotionValueEvent(scrollY, "change", (latest) => {
     const currentScrollY = latest;
-    setScrollDirection(currentScrollY > prevScrollY ? 'down' : 'up');
+    setScrollDirection(currentScrollY > prevScrollY ? "down" : "up");
     setPrevScrollY(currentScrollY);
   });
-
 
   useEffect(() => {
     if (pictureRef.current) {
@@ -43,10 +47,9 @@ useMotionValueEvent(scrollY, "change", (latest) => {
         const srcset = source.srcset;
         source.removeAttribute("srcset");
         source.setAttribute("srcset", `${srcset}?t=${new Date().getTime()}`);
-            
       });
     }
-    
+
     // Set `isPageLoaded` to `true` when the page finishes loading
     window.addEventListener("load", () => setPageLoaded(true));
 
@@ -57,19 +60,26 @@ useMotionValueEvent(scrollY, "change", (latest) => {
   }, []);
 
   return (
-    <header className={`bg-white sticky top-0 z-30 transition-all origin-top duration-300 ${
-      scrollDirection === 'down' ? 'shadow-md ' : ''
-    }`}>
-      <div className={`z-50  w-full bg-gradient-to-r transition-all origin-top duration-300 from-[#C10682] to-[#0A99B9] ${
-      scrollDirection === 'down' ? 'h-2' : 'h-3'}`}  />
+    <header
+      className={`sticky top-0 z-30 origin-top bg-white transition-all duration-300 ${
+        scrollDirection === "down" ? "shadow-md " : ""
+      }`}
+    >
+      <div
+        className={`z-50  w-full origin-top bg-gradient-to-r from-[#C10682] to-[#0A99B9] transition-all duration-300 ${
+          scrollDirection === "down" ? "h-2" : "h-3"
+        }`}
+      />
       <nav
-        className={`mx-auto flex max-w-[1800px] items-center justify-between transition-all origin-top duration-300 lg:px-8 ${scrollDirection === 'down' ? 'p-1' : 'p-6'}`}
+        className={`mx-auto flex max-w-[1800px] origin-top items-center justify-between transition-all duration-300 lg:px-8 ${
+          scrollDirection === "down" ? "p-1" : "p-6"
+        }`}
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <motion.button
             initial={{ opacity: 1 }}
-            onClick={() => mobileMenuOpen ? toggleMobileMenuOpen(): null}
+            onClick={() => (mobileMenuOpen ? toggleMobileMenuOpen() : null)}
             className="z-20 flex flex-col items-center justify-center outline-none focus:outline-none sm:right-4"
           >
             <Link href="/">
@@ -83,7 +93,11 @@ useMotionValueEvent(scrollY, "change", (latest) => {
                   type="image/png"
                 />
                 <img
-                  className={`transition-all origin-top duration-300 ${scrollDirection === 'down' ? 'h-12 sm:h-16 lg:h-20 ' : 'h-20 sm:h-24 lg:h-36'}`}
+                  className={`origin-top transition-all duration-300 ${
+                    scrollDirection === "down"
+                      ? "h-12 sm:h-16 lg:h-20 "
+                      : "h-20 sm:h-24 lg:h-36"
+                  }`}
                   srcSet="https://res.cloudinary.com/the-color-mill/image/upload/v1639014317/Color%20Mill%20Design/ColorMillLogoHeader-NoText_nvtcqj.png"
                   alt="Color Mill logo"
                 />
@@ -135,7 +149,7 @@ useMotionValueEvent(scrollY, "change", (latest) => {
           </button>
         </div>
 
-        <Popover.Group className="hidden lg:flex lg:gap-x-12 z-30">
+        <Popover.Group className="z-30 hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-gray-900">
               Work
@@ -212,10 +226,10 @@ useMotionValueEvent(scrollY, "change", (latest) => {
         </div>
       </nav>
 
-     <AnimatePresence>
+      <AnimatePresence>
         {mobileMenuOpen && (
           <Dialog
-      key='menuKey'
+            key="menuKey"
             as={motion.div}
             open={mobileMenuOpen}
             onClose={() => null}
@@ -225,7 +239,6 @@ useMotionValueEvent(scrollY, "change", (latest) => {
               translateX: "0",
               transition: { duration: 0.3 },
             }}
-           
             exit={{
               opacity: 0,
               translateX: "100%",
@@ -233,10 +246,11 @@ useMotionValueEvent(scrollY, "change", (latest) => {
             }}
             className="fixed inset-0 z-10 origin-right"
           >
-            
             <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div className="flex items-center justify-between">
-                <div className={`${scrollDirection === 'down' ? 'h-12 ' : 'h-24'}`} />
+                <div
+                  className={`${scrollDirection === "down" ? "h-12 " : "h-24"}`}
+                />
               </div>
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-500/10">
@@ -259,9 +273,15 @@ useMotionValueEvent(scrollY, "change", (latest) => {
                               <Disclosure.Button
                                 key={item.name}
                                 className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                
                               >
-                                <Link href={item.href} onClick={() => isPageLoaded && toggleMobileMenuOpen()}>{item.name}</Link>
+                                <Link
+                                  href={item.href}
+                                  onClick={() =>
+                                    isPageLoaded && toggleMobileMenuOpen()
+                                  }
+                                >
+                                  {item.name}
+                                </Link>
                               </Disclosure.Button>
                             ))}
                           </Disclosure.Panel>
@@ -304,7 +324,7 @@ useMotionValueEvent(scrollY, "change", (latest) => {
             </Dialog.Panel>
           </Dialog>
         )}
-     </AnimatePresence>
+      </AnimatePresence>
     </header>
   );
 }

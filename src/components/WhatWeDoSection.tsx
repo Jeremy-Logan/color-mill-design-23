@@ -6,6 +6,7 @@ import CurvyButton from "./CurvyButton";
 const categoryProperties = [
   {
     color: "#0A99B9",
+    inactiveColor: '#86B7BC',
     name: "WEB DESIGN",
     heading: "Web Design and Development",
     subHeading: "Custom web solutions built for effective results.",
@@ -15,6 +16,7 @@ const categoryProperties = [
 
   {
     color: "#219653",
+    inactiveColor: '#8AB59B',
     name: "BRAND STRATEGY",
     heading: "Brand Strategy",
     subHeading: "Your organization is unique. Your brand should be too.",
@@ -23,6 +25,7 @@ const categoryProperties = [
   },
   {
     color: "#F2994A",
+    inactiveColor: '#C4A28A',
     name: "GRAPHIC DESIGN",
     heading: "Graphic Design",
     subHeading: "Great design grows your brand by continuing your story.",
@@ -31,6 +34,7 @@ const categoryProperties = [
   },
   {
     color: "#EB5757",
+    inactiveColor: '#D88D8D',
     name: "PRINT DESIGN",
     heading: "Print Design",
     subHeading: "Custom built for you",
@@ -68,7 +72,7 @@ function WhatWeDoSection({}) {
                 key={index}
               >
                 <CurvyButton
-                  color={activeButtonIndex === index ? button.color : "gray"}
+                  color={activeButtonIndex === index ? button.color : button.inactiveColor}
                   onClick={() => handleButtonClick(index)}
                   isActive={activeButtonIndex === index}
                 >
