@@ -61,19 +61,8 @@ const AppreciationSection = () => {
 
 
   return (
-    <div className="mt-12 md:mt-36">
-      <h3 className="md:mb-8 text-center font-serif text-3xl md:text-4xl xl:text-6xl font-black">
-        Performance
-      </h3>
-      <div className="oveflow-hidden relative h-20 md:h-24 w-11/12 mx-auto">
-        <Img
-          src="/appreciation.svg"
-          alt="Appreciation"
-          fill
-          style={{ objectFit: "contain" }}
-          sizes="100vw"
-        />
-      </div>
+    <div className="mt-12 md:mt-48">
+      
       <div className="md:mt-24 w-[75vw] md:w-[20vw]">
         <HexRow />
       </div>

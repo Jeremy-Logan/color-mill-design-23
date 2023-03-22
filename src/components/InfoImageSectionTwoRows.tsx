@@ -10,7 +10,8 @@ type Props = {
   image2Alt: string;
   title: string;
   subHeading: string;
-  description: string;
+  descriptionOne: string;
+  descriptionTwo?: string;
   bg?: string
 };
 
@@ -23,7 +24,8 @@ function InfoImageSectionTwoRows(props: Props) {
     image2Alt,
     title,
     subHeading,
-    description,
+    descriptionOne,
+    descriptionTwo,
     bg
   } = props;
   return (
@@ -41,7 +43,7 @@ function InfoImageSectionTwoRows(props: Props) {
         <div className=" my-6 flex flex-col items-center gap-8 lg:my-16 lg:mx-auto lg:flex-row lg:justify-around">
           <div className="hidden self-center lg:block lg:w-[40%]">
             <p className="mb-8 w-[327px] text-left leading-relaxed tracking-wide  md:text-2xl lg:w-full" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
-              {description}
+              {descriptionOne}
             </p>
           </div>
           <div className="relative mb-4 h-[204px] w-[327px] md:h-[444px] md:w-[535px] lg:mb-0 lg:h-[444px] lg:w-[713px]">
@@ -55,7 +57,7 @@ function InfoImageSectionTwoRows(props: Props) {
           </div>
           <div className="w-[327px] self-center md:w-[535px] lg:hidden">
             <p className="mb-8 text-left text-sm leading-relaxed tracking-wide  md:text-base lg:text-2xl" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
-              {description}
+              {descriptionOne}
             </p>
           </div>
         </div>
@@ -70,16 +72,15 @@ function InfoImageSectionTwoRows(props: Props) {
               sizes="(max-width: 768px) 45vw,"
             />
           </div>
-          <div className="hidden self-center lg:block lg:w-[40%]">
+          { descriptionTwo && <><div className="hidden self-center lg:block lg:w-[40%]">
             <p className="mb-8 w-[327px] text-left leading-relaxed tracking-wide md:text-2xl lg:w-full" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
-              {description}
+              {descriptionTwo}
             </p>
-          </div>
-          <div className="w-[327px] self-center md:w-[535px] lg:hidden">
-            <p className="mb-8 text-left text-sm leading-relaxed tracking-wide md:text-base lg:text-2xl" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
-              {description}
-            </p>
-          </div>
+          </div><div className="w-[327px] self-center md:w-[535px] lg:hidden">
+              <p className="mb-8 text-left text-sm leading-relaxed tracking-wide md:text-base lg:text-2xl" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
+                {descriptionTwo}
+              </p>
+            </div></>}
         </div>
       </div>
     </div>

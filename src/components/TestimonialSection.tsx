@@ -59,7 +59,7 @@ const TestimonialSection = (props: Props) => {
     
 
   return (
-    <div className="mt-12 md:mt-36">
+    <div className="mt-12 md:mt-24">
       
       <div className="md:mt-24 2xl:mb-10 w-[75vw] md:w-[20vw] 2xl:w-[25vw]">
         <HexRow colors={hexagonColors}/>

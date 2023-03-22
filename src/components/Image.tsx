@@ -1,4 +1,4 @@
-import Img from "next/image";
+
 import { CldImage } from "next-cloudinary";
 
 interface ImageProps {

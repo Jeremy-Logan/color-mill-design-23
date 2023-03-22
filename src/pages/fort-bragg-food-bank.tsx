@@ -6,6 +6,7 @@ import WebsiteSection from "../components/WebsiteSection";
 import FullScreenImageSection from "../components/FullScreenImageSection";
 import TestimonialSection from "../components/TestimonialSection";
 import { getCloudinaryImageUrl } from "../utils/cloudinary";
+import InfoImageSectionTwoRows from "../components/InfoImageSectionTwoRows";
 
 const primaryColor = "#002856";
 
@@ -64,11 +65,13 @@ const websiteSectionContent = {
 
 const collateralDesignSectionContent = {
   imageUrl: "/v1677804674/color-mill-design-2023/FB-Collateral_nmqg1d.png",
+  image2Url: "/v1678398772/color-mill-design-2023/Stickers_c8ngxq.png",
   primaryColor: primaryColor,
   imageAlt: "Fort Bragg Food Bank Collateral Design",
+  image2Alt: "Fort Bragg Food Bank Giveaways",
   title: "Collateral",
   subHeading: "Connecting with community in a tangible way",
-  description:
+  descriptionOne:
     "Marketing collateral like brochures, business cards and magnets allow the Food Bank to interact with the community on a personal level. These “leave-behinds” raise awareness of their mission and offerings, reminding potential donors, volunteers and supporters to interact with the brand. Eye catching designs and color palettes encourage people to keep these giveaways and strengthen the organizations connection with the community. ",
 };
 
@@ -78,19 +81,9 @@ const infographicSectionContent = {
     "/v1678397306/color-mill-design-2023/FB-Donation-Infographic_x65ukn.png",
   imageAlt: "Fort Bragg Food Bank Infographic",
   title: "Infographic",
-  subHeading: "Say Something Here",
+  subHeading: "Information at a glance",
   description:
-    "Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur. Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur.",
-};
-
-const giveawaysSectionContent = {
-  imageUrl: "/v1678398772/color-mill-design-2023/Stickers_c8ngxq.png",
-  primaryColor: primaryColor,
-  imageAlt: "Fort Bragg Food Bank Giveaways",
-  title: "Giveaways",
-  subHeading: "Say Something Here",
-  description:
-    "It’s a legacy they want to maintain. So how do we build a brand that radiates vibrancy and progress around a B&W logo created in the 80s? We create a palette of bright painterly colors and watercolor textures, adding splashes of color to everything: accentuating the intricate line work of the pen and ink drawing while also expressing their vibrant new direction.",
+    "The Food Bank has multiple income streams and community programs, which can make it challenging to provide a clear and concise overview of its work. To address this, we created a colorful and easy-to-read graphic that summarizes their contributions to the community at a glance. \n\nThe infographic helps the Food Bank's team to explain their mission and helps clients to understand the value of their contributions. This clarity has lead to an increase in donations, engagement, and emotional investment from donors, volunteers, and staff alike.",
 };
 
 const testimonialSectionContent = {
@@ -158,9 +151,8 @@ const FortBraggFoodBank = () => {
         </div>
         <InfoImageSection {...annualReportSectionContent} />
         <WebsiteSection {...websiteSectionContent} />
-        <InfoImageSection {...collateralDesignSectionContent} />
+        <InfoImageSectionTwoRows {...collateralDesignSectionContent} />
         <FullScreenImageSection {...infographicSectionContent} />
-        <InfoImageSection {...giveawaysSectionContent} />
         <TestimonialSection {...testimonialSectionContent} />
       </PageLayout>
     </div>

@@ -1,6 +1,12 @@
 import { Fragment, useRef, useState, useEffect } from "react";
 import Link from "next/link";
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import {
+  Dialog,
+  Disclosure,
+  Popover,
+  Transition,
+  Menu,
+} from "@headlessui/react";
 import {
   motion,
   useCycle,
@@ -13,13 +19,42 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 const categories = [
   {
     name: "Non-Profits",
-    description: "Get a better understanding of your traffic",
+    description: "Building brands with purpose",
     href: "/non-profits",
+    caseStudies: [
+      {
+        name: "Fort Bragg Food Bank",
+        href: "/fort-bragg-food-bank",
+        primaryColor: "#002856"
+      },
+      {
+        name: "Redwood Coast Seniors",
+        href: "/redwood-coast-seniors",
+        primaryColor: "#450265"
+      },
+      {
+        name: "Mendo Parks",
+        href: "/mendo-parks",
+        primaryColor: "#01657D"
+      },
+      {
+        name: "Point Arena Lighthouse",
+        href: "/point-arena-lighthouse",
+        primaryColor: "#008FB1"
+      },
+    ],
   },
   {
     name: "Businesses",
     description: "Speak directly to your customers",
     href: "/businesses",
+    caseStudies: [
+      {
+        name: "Mendocino Spirits",
+        href: "/mendocino-spirits",
+        primaryColor: "#008FB1"
+      },
+    ],
   },
 ];
 function classNames(...classes: any[]) {
@@ -150,14 +185,14 @@ export default function Header() {
         </div>
 
         <Popover.Group className="z-30 hidden lg:flex lg:gap-x-12">
-          <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-gray-900">
+          <Menu as="div" className="relative inline-block text-left">
+            <Menu.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-gray-900">
               Work
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-[#06b2a0]"
                 aria-hidden="true"
               />
-            </Popover.Button>
+            </Menu.Button>
 
             <Transition
               as={Fragment}
@@ -168,29 +203,47 @@ export default function Header() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-gray-900/5">
+              <Menu.Items className="absolute left-0 z-10 mt-2 w-80 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div className="p-4">
                   {categories.map((item) => (
-                    <div
-                      key={item.name}
-                      className="group relative flex items-center gap-x-6  p-4 text-sm leading-6 hover:bg-gray-50"
-                    >
-                      <div className="flex-auto">
-                        <Link
-                          href={item.href}
-                          className="block font-semibold text-gray-900"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </Link>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
+                    <Menu.Item key={item.name}>
+                      <div
+                        key={item.name}
+                        className=" relative flex items-center gap-x-6 p-4 text-sm leading-6 hover:bg-gray-50"
+                      >
+                        <div className="flex-auto">
+                          <Link
+                            href={item.href}
+                            className="block font-semibold text-gray-900"
+                          >
+                            {item.name}
+                            <span className="absolute inset-0" />
+                          </Link>
+                          <p className="mt-1 text-gray-600">
+                            {item.description}
+                          </p>
+                          
+                              {/* {item.caseStudies &&
+                                item.caseStudies.map((caseStudy) => (
+                                  
+                                    <Link
+                                      href={caseStudy.href} key={caseStudy.name} 
+                                      className="z-50 mt-1 h-12 text-sm font-medium text-white"
+                                    ><button key={caseStudy.name} className="w-full mx-auto my-2 py-2 rounded-lg shadow-lg" style={{backgroundColor: caseStudy.primaryColor}}>
+                                      {caseStudy.name} </button>
+                                    </Link>
+                                 
+                                ))} */}
+                          
+                        
+                        </div>
                       </div>
-                    </div>
+                    </Menu.Item>
                   ))}
                 </div>
-              </Popover.Panel>
+              </Menu.Items>
             </Transition>
-          </Popover>
+          </Menu>
 
           <Link
             href="/about"

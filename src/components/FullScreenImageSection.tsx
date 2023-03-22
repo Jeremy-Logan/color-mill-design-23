@@ -6,7 +6,7 @@ type Props = {
   imageUrl: string;
   imageAlt: string;
   title: string;
-  subHeading: string;
+  subHeading?: string;
   description: string;
   primaryColor: string;
 };

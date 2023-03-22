@@ -14,9 +14,9 @@ const headerContent = {
   hexagonColors: ["#025B6F", "#02768F", "#4FC3DF", "#81D5EA", "#ADEFFF"],
 
   title: "Point Arena",
-  subHeading: "Preservation Through Education",
+  subHeading: "Maintaining the historic Light Station for the inspiration, education and enjoyment of generations to come.",
   description:
-    "Along with bright new leadership, facility upgrades, new delivery vans and an expanded staff, FBFB was ready for an upgrade to their brand. Their logo, established around the organization’s conception, is steadfast and very recognizable. ",
+    "Point Arena Lighthouse wanted a brand that was as vibrant and inspirational as the light station itself. They offer miles of majestic natural beauty and an historic, functioning lighthouse but their brand showed very little of this. Our task was to bring the beauty of the site to the brand and inspire visitors to appreciate the guidance and safety a lighthouse offers to passing ships.",
   scope: "Brand Strategy, Website Design, Collateral Design",
 };
 
@@ -26,9 +26,9 @@ const brandStrategySectionContent = {
   image2Url: "/v1678501732/color-mill-design-2023/PA-Stylescape2_xff5pm.png",
   imageAlt: "Point Arena Brand Strategy",
   title: "Brand Strategy",
-  subHeading: "Say Something Here",
+  subHeading: "A Sense of Adventure",
   description:
-    "It’s a legacy they want to maintain. So how do we build a brand that radiates vibrancy and progress around a B&W logo created in the 80s? We create a palette of bright painterly colors and watercolor textures, adding splashes of color to everything: accentuating the intricate line work of the pen and ink drawing while also expressing their vibrant new direction.",
+    "Our goal was to capture the essence of the rugged Pacific Ocean and evoke a sense of adventure and exploration. To achieve this, we designed a color palette inspired by the ocean and the wildflowers and the lightkeeper’s buildings on the site, incorporating nautical themes and patterns throughout. The result is a brand that encourages reflection and invites visitors to discover the beauty of the outdoors.",
 };
 
 const collateralContent = {
@@ -37,9 +37,9 @@ const collateralContent = {
   imageUrl: "/v1678501749/color-mill-design-2023/PA-Rackcards-Photo_te3vwn.png",
   imageAlt: "Point Arena Collateral Design",
   title: "Collateral",
-  subHeading: "Say Something Here",
+  subHeading: "Strengthening Connections in the Community",
   description:
-    "Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur. Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur.",
+    "Collateral, like brochures, business cards, and rack cards, offer Pt Arena Lighthouse a tangible way to connect with the community. These materials serve as a reminder of the organization's mission and offerings, encouraging potential donors, volunteers, and supporters to engage with the brand.\n\n Our bright design and vibrant color palette make these materials memorable and encourage people to hold on to them. By strengthening their connection with the community, Pt Arena Lighthouse can continue their great mission of providing a beautiful natural space for people to enjoy.",
 };
 
 const newsletterSectionContent = {
@@ -47,28 +47,28 @@ const newsletterSectionContent = {
   image2Url: "/v1678736684/color-mill-design-2023/PA-Newsletter-Layout-split-02_di8akb.png",
   imageAlt: "The Point Arena Lighthouse Newsletter",
   title: "Newsletters",
-  subHeading: "An inspirational message",
+  subHeading: "Inspiring Community",
   description:
-    "The newsletter is the Food Bank's primary means of communicating directly with its members and the community. It showcases the organization's achievements in an inspiring and easily understandable format. \n \n With our extensive experience in print production, we were able to efficiently set up and print the newsletters, and mail them to the constituents. This made the process easy and hands-off for the busy Food Bank team. ",
+    "A newsletter is a powerful way for Pt Arena Lighthouse to connect with their members and the wider community. Through eye-catching design, photos and infographics, we helped Pt Arena to share their achievements and to inspire readers with stories of impact and change. \n\n Drawing on our expertise in print production as well as design, we streamlined the process of creating and distributing the newsletter. We took care of everything from setting up the layout to printing and mailing, freeing up time for the busy team to focus on their important work.",
 }
 
 const websiteSectionContent = {
   imageUrl: "/v1678502841/color-mill-design-2023/PA-website-comp_t8cldx.png",
   imageAlt: "Point Arena Lighthouse Website",
   title: "Website",
-  subHeading: "Say Something Here",
+  subHeading: "A Streamlined User Experience",
   description:
-    "Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur. Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur.",
+    "Pt Arena Lighthouse's old website was a little outdated and difficult to navigate, which made it hard for visitors to find what they needed. We knew that a clean, user-friendly experience was essential, so we reimagined the site with simplicity in mind. \n\n We started by identifying the information that was most important to their visitors and made sure it was front and center, with a simplified navigation structure. The result was a more intuitive and efficient user experience, making it easier for visitors to find what they needed and engage with the organization online. \n\n We also made sure that the new website was just as easy for the Pt Arena Lighthouse team to manage, with a streamlined backend that reduced the time and energy required to make updates and changes.",
 };
 
 const advertisingContent = {
   primaryColor: primaryColor,
   imageUrl: "/v1678501755/color-mill-design-2023/PA-Ad_qundkt.png",
   imageAlt: "Point Arena Collateral Design",
-  title: "Advertising",
+  title: "Ad Design",
   subHeading: "Say Something Here",
   description:
-    "Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur. Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur.",
+    "Advertising in magazines, trade publications and tourist publications is a powerful way for Pt Arena Lighthouse to reach new audiences and spread awareness of their mission and offerings. These channels offer targeted reach to audiences who may not be familiar with the organization, increasing the chances of attracting new donors, volunteers and supporters. Our colorful design jumps out at people, keeping eyes on the ad and giving them time to really absorb the message and remember the organization.",
 };
 
 
