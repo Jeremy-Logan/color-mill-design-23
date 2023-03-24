@@ -7,6 +7,8 @@ import _ from "lodash";
 import PageLayout from "../components/PageLayout";
 import Link from "next/link";
 import Img from "next/image";
+import BlogPreviewSection from "../components/BlogPreviewSection";
+import BlogFeaturedPosts from "../components/BlogFeaturedPosts";
 
 interface PageProps {
   data: PageData | null;
@@ -37,7 +39,7 @@ export default function Page(props: PageProps) {
       <main>
         
         <div className="mx-auto mb-24 flex max-w-[1600px] flex-col justify-center md:flex-row">
-          <div className="md:border-pa-navy-4 group w-full cursor-pointer bg-white p-4 pb-16 md:m-4 md:w-6/12 md:border-[2px] lg:m-12 lg:w-5/12 lg:p-10">
+          <div className="md:border-rose-300 group w-full cursor-pointer bg-white p-4 pb-16 md:m-4 md:w-6/12 md:border-[2px] lg:m-12 lg:w-5/12 lg:p-10">
             <Link href={`/posts/${posts[0].slug.current}`} key={posts[0]._id}>
               <div className="relative aspect-square w-full">
                 {posts[0].mainImage && (
@@ -59,17 +61,17 @@ export default function Page(props: PageProps) {
               {posts[0].category.map((c: any, i: number) => (
                 <p
                   className="text-md"
-                  // style={{
-                  // 	color: `${c.color.value}`,
-                  // }}
+                  style={{
+                  	color: `${c.color.value}`,
+                  }}
                   key={i}
                 >
                   {c.title}
                 </p>
               ))}
-              <div className="mt-4 flex flex-col items-start space-x-2 ">
-                <div className="relative h-16 w-16 space-x-2 rounded-full">
-                 { posts[0].author.image &&  <Img
+              <div className="mt-4 flex flex-col items-start space-y-2 ">
+              { posts[0].author.image &&<div className="relative h-16 w-16 space-x-2 rounded-full">
+                  <Img
                     fill={true}
                     style={{ objectFit: "contain" }}
                     className=""
@@ -78,32 +80,32 @@ export default function Page(props: PageProps) {
                     sizes="(max-width: 768px) 15vw,
               					(max-width: 1200px) 15vw,
               					15vw"
-                  />}
-                </div>
-                <p className="mb-2 text-sm font-light">
+                  />
+                </div>}
+                <p className="mb-2 text-base font-light">
                   Blog post by{" "}
-                  <span className="text-pa-green-4">
+                  <span className="text-green-700 font-medium ">
                     {posts[0].author.name}
                   </span>{" "}
                   <br />
                   published at {new Date(posts[0].publishedAt).toLocaleString()}
                 </p>
               </div>
-              <div>
+              <div className="mt-2">
                 <p>{posts[0].excerpt}</p>
               </div>
-              <p className="text-pa-blue-4 mt-2 underline underline-offset-2">
+              <p className="text-blue-600 mt-2 underline underline-offset-2">
                 Read full story
               </p>
             </Link>
           </div>
-          {/* <BlogFeaturedPosts posts={posts} /> */}
+          <BlogFeaturedPosts posts={posts} />
         </div>
 
-        <h2 className="text-bold bg-pa-blue-4 pt-10 text-center text-2xl text-white sm:text-4xl">
+        <h2 className="text-bold  pt-10 text-center text-2xl sm:text-4xl">
           You might also like...
         </h2>
-        {/* <BlogPreviewSection posts={firstThreePosts} title='' /> */}
+        <BlogPreviewSection posts={firstThreePosts} title='' />
       </main>
     </PageLayout>
   );

@@ -44,11 +44,20 @@ export default defineType({
       title: 'Published at',
       type: 'datetime',
     }),
-    {
+    defineField({
+      name: 'excerpt',
+      type: 'text',
+      title: 'Excerpt',
+      rows: 4,
+      description:
+        'This ends up on summary pages, on Google, and when people share your post in social media. Maximum 250 characters.',
+        validation: Rule => Rule.required().max(250).error('Please keep character count under 250'),
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
-    },
+    }),
   ],
 
   preview: {

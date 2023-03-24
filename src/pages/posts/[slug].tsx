@@ -55,13 +55,13 @@ const Post = ( { post, previews }: Props) => {
 					{post.categories &&
 						post.categories.map((category, i: number) => (
 							<p className='text-md' 
-							// style={{color: category.color.value}} 
+							style={{color: category.color.value}} 
 							key={i}>
 								{category.title}
 							</p>
 						))}
-					<div className='mt-4 flex flex-col items-start space-x-2 '>
-						<div className='relative h-16 w-16 space-x-2 rounded-full'>
+					<div className='mt-4 flex flex-col items-start space-y-2 '>
+						<div className='relative h-16 w-16 space-y-2 rounded-full'>
 							{ post.author.image && <Img
 								fill={true}
 								style={{ objectFit: 'contain' }}
