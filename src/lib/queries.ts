@@ -1,3 +1,26 @@
+import {groq} from 'next-sanity'
+
+export const POST_DATA_QUERY = groq`
+  *[_type == "post"] | order(publishedAt desc){
+    _id,
+	_createdAt,
+	title,
+	slug,
+	author->{name, image},
+  publishedAt,
+  excerpt,
+  'category': categories[]-> { title, color },
+  mainImage,
+  description,
+  body, }
+`
+
+export const PAGE_PATHS_QUERY = groq`
+  *[_type == 'page' && defined(slug.current)]{
+    'slug': slug.current
+  }
+`
+
 const postFields = `
   _id,
   title,

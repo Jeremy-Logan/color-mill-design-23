@@ -32,8 +32,10 @@ export type Post = {
 	postData: PostData
 }
 
-export type PageData = {
+export interface PageData  {
+	title: string
 	pageData: {
+		
 		pageSections: {
 			_id: string
 			slug: Slug
@@ -82,3 +84,13 @@ export type CTA = {
 		_ref: string
 	}
 }
+
+export interface PageElement {
+    _key: string
+    _type: 'article'
+    supertitle?: string
+    title?: string
+    subtitle?: string
+  }
+  
+  
