@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import Image from "./Image";
-import Img from "next/image";
 import { getCloudinaryImageUrl } from "../utils/cloudinary";
 import { motion, useInView } from "framer-motion";
 
