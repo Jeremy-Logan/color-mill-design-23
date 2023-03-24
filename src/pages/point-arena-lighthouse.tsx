@@ -66,7 +66,7 @@ const advertisingContent = {
   imageUrl: "/v1678501755/color-mill-design-2023/PA-Ad_qundkt.png",
   imageAlt: "Point Arena Collateral Design",
   title: "Ad Design",
-  subHeading: "Say Something Here",
+  subHeading: "Reaching a Broader Audience",
   description:
     "Advertising in magazines, trade publications and tourist publications is a powerful way for Pt Arena Lighthouse to reach new audiences and spread awareness of their mission and offerings. These channels offer targeted reach to audiences who may not be familiar with the organization, increasing the chances of attracting new donors, volunteers and supporters. Our colorful design jumps out at people, keeping eyes on the ad and giving them time to really absorb the message and remember the organization.",
 };

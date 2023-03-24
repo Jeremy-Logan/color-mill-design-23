@@ -222,19 +222,19 @@ export default function Header() {
                           <p className="mt-1 text-gray-600">
                             {item.description}
                           </p>
-                          
-                              {/* {item.caseStudies &&
+                          <div className="flex flex-col">
+                              {item.caseStudies &&
                                 item.caseStudies.map((caseStudy) => (
                                   
                                     <Link
                                       href={caseStudy.href} key={caseStudy.name} 
-                                      className="z-50 mt-1 h-12 text-sm font-medium text-white"
-                                    ><button key={caseStudy.name} className="w-full mx-auto my-2 py-2 rounded-lg shadow-lg" style={{backgroundColor: caseStudy.primaryColor}}>
-                                      {caseStudy.name} </button>
+                                      className="z-50 my-2 text-sm font-medium bg-slate-100 rounded-md p-1 hover:bg-slate-200" style={{color: caseStudy.primaryColor}}
+                                    >
+                                      {caseStudy.name} 
                                     </Link>
                                  
-                                ))} */}
-                          
+                                ))}
+                          </div>
                         
                         </div>
                       </div>
