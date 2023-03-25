@@ -1,6 +1,7 @@
-import PageLayout from "../components/PageLayout";
 import Img from "next/image";
-import ContactForm from "../components/ContactForm";
+
+import PageLayout from "../components/PageLayout";
+
 
 const Contact = () => {
   return (

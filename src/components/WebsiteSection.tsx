@@ -1,6 +1,7 @@
 import React from "react";
-import Image from "./Image";
+
 import { getCloudinaryImageUrl } from "../utils/cloudinary";
+import Image from "./Image";
 
 type Props = {
   imageUrl: string;

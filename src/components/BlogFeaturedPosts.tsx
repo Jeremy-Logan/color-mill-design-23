@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import Link from 'next/link'
 import _ from 'lodash'
+import Link from 'next/link'
+import { useState } from 'react'
+
 import { PostData } from '../lib/types'
 
 type Props = { posts: PostData[] }
@@ -51,7 +52,7 @@ export default function BlogFeaturedPosts({ posts }: Props) {
 			</div>
 			<div className='flex w-full flex-col divide-y overflow-hidden bg-white '>
 				{selectedCategory === 'all'
-					? firstEightPosts.slice(1).map((post: any, i: number) => (
+					? firstEightPosts.slice(1).map((post: any) => (
 							<Link
 								href={`/post/${post.slug.current}`}
 								key={post._id}
@@ -89,7 +90,7 @@ export default function BlogFeaturedPosts({ posts }: Props) {
 								(post: any) =>
 									post.category[0].title === selectedCategory
 							)
-							.map((post: any, i: number) => (
+							.map((post: any) => (
 								<Link
 									href={`/post/${post.slug.current}`}
 									key={post._id}

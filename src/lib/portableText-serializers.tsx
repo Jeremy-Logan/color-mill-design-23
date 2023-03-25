@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 const serializers = () => {
 	return {
         h1: ({ children }: any) => (

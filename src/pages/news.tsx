@@ -1,14 +1,15 @@
-import type { GetStaticProps } from "next";
-import { POST_DATA_QUERY } from "../lib/queries";
-import type { PageData } from "../lib/types";
-import { sanityClient } from "../lib/sanity-server";
-import { urlForImage } from "../lib/sanity";
 import _ from "lodash";
-import PageLayout from "../components/PageLayout";
-import Link from "next/link";
+import type { GetStaticProps } from "next";
 import Img from "next/image";
-import BlogPreviewSection from "../components/BlogPreviewSection";
+import Link from "next/link";
+
 import BlogFeaturedPosts from "../components/BlogFeaturedPosts";
+import BlogPreviewSection from "../components/BlogPreviewSection";
+import PageLayout from "../components/PageLayout";
+import { POST_DATA_QUERY } from "../lib/queries";
+import { urlForImage } from "../lib/sanity";
+import { sanityClient } from "../lib/sanity-server";
+import type { PageData } from "../lib/types";
 
 interface PageProps {
   data: PageData | null;

@@ -1,6 +1,6 @@
 
-import BlogPostPreview from "./BlogPostPreview";
 import { PostData } from "../lib/types";
+import BlogPostPreview from "./BlogPostPreview";
 
 type Props={
     posts: PostData[]

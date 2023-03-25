@@ -1,12 +1,12 @@
-import PageLayout from "../components/PageLayout";
-import Image from "../components/Image";
 import CaseStudyHeader from "../components/CaseStudyHeader";
-import InfoImageSection from "../components/InfoImageSection";
-import WebsiteSection from "../components/WebsiteSection";
 import FullScreenImageSection from "../components/FullScreenImageSection";
-import TestimonialSection from "../components/TestimonialSection";
-import { getCloudinaryImageUrl } from "../utils/cloudinary";
+import Image from "../components/Image";
+import InfoImageSection from "../components/InfoImageSection";
 import InfoImageSectionTwoRows from "../components/InfoImageSectionTwoRows";
+import PageLayout from "../components/PageLayout";
+import TestimonialSection from "../components/TestimonialSection";
+import WebsiteSection from "../components/WebsiteSection";
+import { getCloudinaryImageUrl } from "../utils/cloudinary";
 
 const primaryColor = "#002856";
 

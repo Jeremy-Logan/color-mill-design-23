@@ -1,6 +1,7 @@
-import { useRef } from "react";
-import Hexagon from "./Hexagon";
 import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
+import Hexagon from "./Hexagon";
 
 export default function HexGrid() {
   const ref = useRef(null);

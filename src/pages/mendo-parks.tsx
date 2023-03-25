@@ -1,10 +1,8 @@
-import PageLayout from "../components/PageLayout";
 import CaseStudyHeader from "../components/CaseStudyHeader";
-import InfoImageSection from "../components/InfoImageSection";
 import FullScreenImageSection from "../components/FullScreenImageSection";
-import TestimonialSection from "../components/TestimonialSection";
-import StylescapeSection from "../components/StylescapeSection";
 import InfoImageSectionTwoRows from "../components/InfoImageSectionTwoRows";
+import PageLayout from "../components/PageLayout";
+import StylescapeSection from "../components/StylescapeSection";
 
 const primaryColor = "#01657D";
 
@@ -34,7 +32,7 @@ const appealContent = {
   imageUrl: "/v1678500126/color-mill-design-2023/MP-EYO-2022_nroxlu.png",
   image2Url: "/v1678500130/color-mill-design-2023/MP-Membership_kyytzs.png",
   primaryColor: primaryColor,
-  bg: 'white',
+  bg: "white",
   imageAlt: "Mendo parks Appeal Design",
   image2Alt: "Mendo parks Appeal Design",
   title: "Appeal Mailers",
@@ -47,7 +45,8 @@ const appealContent = {
 
 const collateralDesignSectionContent = {
   imageUrl: "/v1678499683/color-mill-design-2023/MP-BC-Photo_xqxncv.png",
-  image2Url: "/v1678499682/color-mill-design-2023/MP-Glass-Beach-Card_dznp8p.png",
+  image2Url:
+    "/v1678499682/color-mill-design-2023/MP-Glass-Beach-Card_dznp8p.png",
   primaryColor: primaryColor,
   imageAlt: "Mendo parks Collateral Design",
   image2Alt: "Mendo parks Collateral Design",
@@ -70,17 +69,6 @@ const logoSectionContent = {
     "As MendoParks is all about the ocean and the forest, we thought their logo should be too. Using the iconic symbols of waves and rolling hills, the mark says exactly what they do at first glance and it retains its recognisable qualities no matter what size it is presented at. ",
 };
 
-const preservationContent = {
-  primaryColor: primaryColor,
-  imageUrl:
-    "/v1678499682/color-mill-design-2023/MP-Glass-Beach-Card_dznp8p.png",
-  imageAlt: "Mendo parks Collateral Design",
-  title: "Preservation",
-  subHeading: "Say Something Here",
-  description:
-    "Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur. Henis et alicill uptatem ratur? Acest pel imustem fugiam ventibus, to inum ipsam qui senima sumquamet quam res repro minihil lestis doluptin re sit, quis acerrum autemporerum vid moditatur aut ut dolum hiciusape cusdant otatur simi, sim fugitatur.",
-};
-
 const infographicSectionContent = {
   primaryColor: primaryColor,
   imageUrl:
@@ -92,23 +80,23 @@ const infographicSectionContent = {
     "Infographics were a game-changer for MendoParks. They made conveying important information easy for donors to understand and therefore easy for them to engage with the work MendoParks does. Utilizing this approach to make complex information accessible has increased the community’s understanding of and appreciation for MendoParks’ mission and all they accomplish.",
 };
 
-const testimonialSectionContent = {
-  imageUrl: "/v1678482351/color-mill-design-2023/Jill-Headshot_os71b7.jpg",
-  primaryColor: primaryColor,
-  hexagonColors: [
-    "#ADEFFF",
-    "#81D5EA",
-    "#4FC3DF",
-    "#07A4C7",
-    "#0A99B9",
-    "#004E60",
-    "#002A33",
-  ],
-  imageAlt: "Jill Rexrode - Executive Director, Redwood Coast Seniors",
-  heading:
-    "'\"The Color Mill's work increased donations and added vibrancy to our entire organization.'\"",
-  attribution: "Jill Rexrode - Executive Director, Redwood Coast Seniors",
-};
+// const testimonialSectionContent = {
+//   imageUrl: "/v1678482351/color-mill-design-2023/Jill-Headshot_os71b7.jpg",
+//   primaryColor: primaryColor,
+//   hexagonColors: [
+//     "#ADEFFF",
+//     "#81D5EA",
+//     "#4FC3DF",
+//     "#07A4C7",
+//     "#0A99B9",
+//     "#004E60",
+//     "#002A33",
+//   ],
+//   imageAlt: "Jill Rexrode - Executive Director, Redwood Coast Seniors",
+//   heading:
+//     "'\"The Color Mill's work increased donations and added vibrancy to our entire organization.'\"",
+//   attribution: "Jill Rexrode - Executive Director, Redwood Coast Seniors",
+// };
 
 const MendoParks = () => {
   return (
@@ -122,7 +110,7 @@ const MendoParks = () => {
         <FullScreenImageSection {...logoSectionContent} />
         <InfoImageSectionTwoRows {...collateralDesignSectionContent} />
         <InfoImageSectionTwoRows {...appealContent} />
-       <FullScreenImageSection {...infographicSectionContent} />
+        <FullScreenImageSection {...infographicSectionContent} />
         {/* <TestimonialSection {...testimonialSectionContent} /> */}
       </PageLayout>
     </div>

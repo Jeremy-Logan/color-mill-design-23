@@ -1,10 +1,10 @@
-import Header from './Header'
-import type { ReactNode } from 'react';
-import {motion} from 'framer-motion';
 
 import Head from 'next/head'
 import { NextSeo } from 'next-seo'
+import type { ReactNode } from 'react';
+
 import Footer from './Footer';
+import Header from './Header'
 
 type Props = {
 	title: string

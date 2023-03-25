@@ -1,6 +1,7 @@
-import Link from 'next/link'
-import { urlForImage } from '../lib/sanity'
 import Img from 'next/image'
+import Link from 'next/link'
+
+import { urlForImage } from '../lib/sanity'
 import { Post } from '../lib/types'
 
 

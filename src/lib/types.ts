@@ -1,4 +1,4 @@
-import type { Slug, PortableTextBlock } from '@sanity/types'
+import type { PortableTextBlock,Slug } from '@sanity/types'
 
 export type PostData = {
 	_id: string

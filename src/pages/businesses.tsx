@@ -1,5 +1,6 @@
-import PageLayout from "../components/PageLayout";
 import Img from "next/image";
+
+import PageLayout from "../components/PageLayout";
 const Businesses = () => {
   return (
     <div>

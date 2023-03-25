@@ -1,7 +1,8 @@
-import PageLayout from "../components/PageLayout";
 import Img from "next/image";
 import Link from "next/link";
+
 import Image from "../components/Image";
+import PageLayout from "../components/PageLayout";
 import { getCloudinaryImageUrl } from "../utils/cloudinary";
 
 const images = [

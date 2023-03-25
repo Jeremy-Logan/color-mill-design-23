@@ -1,6 +1,7 @@
 import Img from "next/image";
-import ProcessCard from "./ProcessCard";
+
 import {DefineIcon, DeliverIcon, DiscoverIcon, DoIcon } from "./icons"
+import ProcessCard from "./ProcessCard";
 
 // type Props = {}
 

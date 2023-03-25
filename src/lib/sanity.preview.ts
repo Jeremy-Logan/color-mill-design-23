@@ -1,4 +1,5 @@
 import {definePreview} from 'next-sanity/preview'
+
 import {sanityConfig} from './sanity-config'
 
 const {projectId, dataset} = sanityConfig

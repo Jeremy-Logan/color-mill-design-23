@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
-import Image from "./Image";
-import { getCloudinaryImageUrl } from "../utils/cloudinary";
 import { motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
+
+import { getCloudinaryImageUrl } from "../utils/cloudinary";
+import Image from "./Image";
 
 
 type Props = {

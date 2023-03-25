@@ -1,4 +1,5 @@
 import React from "react";
+
 import { InstagramIcon } from "./icons";
 
 export default function Footer() {

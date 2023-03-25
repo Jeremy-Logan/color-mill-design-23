@@ -1,20 +1,20 @@
-import { Fragment, useRef, useState, useEffect } from "react";
-import Link from "next/link";
 import {
   Dialog,
   Disclosure,
+  Menu,
   Popover,
   Transition,
-  Menu,
 } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import {
+  AnimatePresence,
   motion,
   useCycle,
-  AnimatePresence,
-  useScroll,
   useMotionValueEvent,
+  useScroll,
 } from "framer-motion";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
+import { Fragment, useEffect,useRef, useState } from "react";
 
 const categories = [
   {

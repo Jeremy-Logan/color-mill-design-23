@@ -1,6 +1,5 @@
-import PageLayout from "../components/PageLayout";
-import Img from "next/image";
 import CaseStudyHeader from "../components/CaseStudyHeader";
+import PageLayout from "../components/PageLayout";
 
 const headerContent = {
   primaryColor: "#01657D",

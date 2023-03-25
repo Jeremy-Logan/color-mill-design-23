@@ -1,10 +1,10 @@
-import PageLayout from "../components/PageLayout";
 import CaseStudyHeader from "../components/CaseStudyHeader";
-import InfoImageSection from "../components/InfoImageSection";
-import WebsiteSection from "../components/WebsiteSection";
 import FullScreenImageSection from "../components/FullScreenImageSection";
-import TestimonialSection from "../components/TestimonialSection";
+import InfoImageSection from "../components/InfoImageSection";
+import PageLayout from "../components/PageLayout";
 import StylescapeSection from "../components/StylescapeSection";
+import TestimonialSection from "../components/TestimonialSection";
+import WebsiteSection from "../components/WebsiteSection";
 
 
 const primaryColor = "#450265";

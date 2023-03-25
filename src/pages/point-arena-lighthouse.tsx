@@ -1,11 +1,11 @@
-import PageLayout from "../components/PageLayout";
 import CaseStudyHeader from "../components/CaseStudyHeader";
+import Image from "../components/Image"
 import InfoImageSection from "../components/InfoImageSection";
-import TestimonialSection from "../components/TestimonialSection";
+import PageLayout from "../components/PageLayout";
 import StylescapeSection from "../components/StylescapeSection";
+import TestimonialSection from "../components/TestimonialSection";
 import WebsiteSection from "../components/WebsiteSection";
 import { getCloudinaryImageUrl } from "../utils/cloudinary";
-import Image from "../components/Image"
 
 const primaryColor = "#008FB1";
 
