@@ -54,7 +54,7 @@ export default function BlogFeaturedPosts({ posts }: Props) {
 				{selectedCategory === 'all'
 					? firstEightPosts.slice(1).map((post: any) => (
 							<Link
-								href={`/post/${post.slug.current}`}
+								href={`/posts/${post.slug.current}`}
 								key={post._id}
 								className=' group cursor-pointer p-4 pl-2'>
 								<div className=' flex w-full justify-between'>
@@ -92,7 +92,7 @@ export default function BlogFeaturedPosts({ posts }: Props) {
 							)
 							.map((post: any) => (
 								<Link
-									href={`/post/${post.slug.current}`}
+									href={`/posts/${post.slug.current}`}
 									key={post._id}
 									className=' group cursor-pointer p-4 pl-2'>
 									<div className=' flex w-full justify-between'>

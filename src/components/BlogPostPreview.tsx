@@ -8,7 +8,7 @@ import { Post } from '../lib/types'
 
 const BlogPostPreview = (post: Post) => {
 	return (
-		<div className='group'><Link href={`/post/${post.slug.current}`} key={post._id}>
+		<div className='group'><Link href={`/posts/${post.slug.current}`} key={post._id}>
 			<div className='group overflow-hidden bg-white'>
 				
 				<div className='relative aspect-square w-full mb-12 bg-white text-center shadow-lg transition-colors group-focus-within:border-blue-600 group-hover:border-gray-400 group-focus-within:group-hover:border-blue-600'>
