@@ -1,146 +1,152 @@
-// import { useForm } from 'react-hook-form'
+import { useForm } from "react-hook-form";
 
-const ContactForm = () => {
-// 	const { register, errors } = useForm()
+type FormData = {
+  name: string;
+  email: string;
+  description: string;
+  budget: string;
+};
 
-	return (<></>
-// 		<div className='mt-12 lg:mx-[25vw] sm:mx-[10vw] justify-center flex flex-col'>
-// 		<h1 className='font-serif text-6xl mb-10'>Let&apos;s connect.</h1>
-// 			<h3 className='text-3xl md:text-4xl'>
-// 				How can we work together? Let&apos;s talk it over.
-// 			</h3>
-// 			<form
-// 				method='POST'
-// 				name='contact'
-// 				data-netlify='true'
-// 				netlify-honeypot='bot-field'
-// 				id='contact'>
-// 				<input type='hidden' name='form-name' value='contact' />
-// 				<div className={'flex flex-col w-full items-left '}>
-// 					<div className={'text-black flex-grow md:w-8/12'}>
-// 						<p className='hidden'>
-// 							<label>
-// 								Don&apos;t fill this out if you're human:{' '}
-// 								<input name='bot-field' />
-// 							</label>
-// 						</p>
+const ContactForm: React.FC = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>();
 
-// 						<label htmlFor='name' className='mr-2 text-xl'>
-// 							<h3 className='text-2xl mt-12'>
-// 								What&apos;s your name?
-// 							</h3>
-// 							<input
-// 								type='text'
-// 								name='contactName'
-// 								id='contactName'
-// 								placeholder=''
-// 								{...register('name', {
-// 									required: 'Please enter your name.',
-// 								})}
-// 								className={
-// 									'text-xl w-full my-4 pl-2 h-12 border-b-2'
-// 								}
-// 							/>
-// 						</label>
-// 						<label htmlFor='orgName' className='mr-2 text-xl '>
-// 							<h3 className='text-2xl mt-16'>
-// 								What&apos;s your organization&apos;s name?
-// 							</h3>
-// 							<input
-// 								type='text'
-// 								name='orgName'
-// 								id='orgName'
-// 								placeholder=''
-// 								{...register('orgName', {
-// 									required:
-// 										"Please enter your organization's name.",
-// 								})}
-// 								className={
-// 									'text-xl w-full my-4 pl-2 h-12 border-b-2'
-// 								}
-// 							/>
-// 						</label>
+  const onSubmit = (data: FormData) => {
+    console.log(data);
+  };
 
-// 						<label htmlFor='email' className='mr-2 text-xl '>
-// 							<h3 className='text-2xl mt-16'>
-// 								What&apos;s your email address?
-// 							</h3>
-// 							<input
-// 								type='email'
-// 								name='contactEmail'
-// 								id='contactEmail'
-// 								placeholder=''
-// 								{...register('email', {
-// 									required:
-// 										'Please enter a valid email address.',
-// 								})}
-// 								className={
-// 									'text-xl w-full my-4 pl-2 h-12 border-b-2'
-// 								}
-// 							/>
-// 						</label>
-// 						<label htmlFor='question' className='mr-2 text-xl '>
-// 							<h3 className='text-2xl mt-16'>
-// 								Briefly tell us about your project goals.
-// 							</h3>
-// 							<textarea
-// 								type='text'
-// 								name='contactGoals'
-// 								id='contactGoals'
-// 								rows='3'
-// 								placeholder=''
-// 								{...register('contactGoals', {
-// 									required:
-// 										'Please tell us about you project goals.',
-// 								})}
-// 								className={'w-full my-2 pl-2 border-b-2'}
-// 							/>
-// 						</label>
-// 						<label htmlFor='question' className='mr-2 text-xl '>
-// 							<h3 className='text-2xl mt-16'>
-// 								Do you have a timeline in mind?
-// 							</h3>
-// 							<input
-// 								type='text'
-// 								name='contactTimeline'
-// 								id='contactTimeline'
-// 								placeholder=''
-// 								{...register('contactTimeline', {
-// 									required:
-// 										'Please let us know your timeline.',
-// 								})}
-// 								className={'text-xl w-full my-4 pl-2 h-12 border-b-2 '}
-// 							/>
-// 						</label>
-// 						<label htmlFor='question' className='mr-2 text-xl '>
-// 							<h3 className='text-2xl mt-16'>
-// 								What have you budgeted for this project?
-// 							</h3>
-// 							<select
-// 								type='text'
-// 								name='contactBudget'
-// 								id='contactTimeline'
-// 								placeholder=''
-// 								{...register('contactBudget', {
-// 									required:
-// 										'Please let us know your budget.',
-// 								})}
-// 								className={'w-full my-2 pl-2 border-b-2 mb-12 focus:border-none'}
-// 							><option className='focus:border-none' value='$1,000-$5,000'>$1,000-$5,000</option>
-// 							<option value='$5,000-$15,000'>$5,000-$15,000</option>
-// 							<option value='$15,000-$30,000'>$15,000-$30,000</option>
-// 							<option value='$30,000+'>$30,000+</option></select>
-// 						</label>
-// 						<button
-// 							type='submit'
-// 							className='bg-[#fae06a] text-gray-800 text-xl font-semibold w-full md:w-1/3 py-4 px-2 mt-4 hover:bg-[#94df57] transform hover:scale-105 shadow-md hover:shadow-lg transition duration-250'>
-// 							SEND
-// 						</button>
-// 					</div>
-// 				</div>
-// 			</form>
-// 		</div>
-	)
-}
+  return (
+	<div className='mt-16 max-w-3xl w-full mx-auto justify-center flex flex-col'>
+			<h3 className='text-2xl md:text-3xl text-center'>
+				How can we work together? Let&apos;s talk it over.
+			</h3>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      method="POST"
+      name="contact"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      id="contact"
+      className="rounded-lg bg-white p-6 mt-8"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p className="hidden">
+        <label>
+          Don&apos;t fill this out if you are human: <input name="bot-field" />
+        </label>
+      </p>
+      <div className="mb-4">
+        <label htmlFor="name" className="mb-2 block text-base font-semibold">
+          What&apos;s your name?
+        </label>
+        <input
+          type="text"
+          id="name"
+          {...register("name", { required: "Name is required" })}
+          className="w-full rounded border border-gray-300 p-2"
+        />
+        {errors.name && (
+          <p className="mt-1 text-xs text-red-500">{errors.name.message}</p>
+        )}
+      </div>
+      <div className="mb-4">
+        <label htmlFor="name" className="mb-2 block text-base font-semibold">
+          What&apos;s your organization&apos;s name?
+        </label>
+        <input
+          type="text"
+          id="name"
+          {...register("name", { required: "Name is required" })}
+          className="w-full rounded border border-gray-300 p-2"
+        />
+        {errors.name && (
+          <p className="mt-1 text-xs text-red-500">{errors.name.message}</p>
+        )}
+      </div>
+      <div className="mb-4">
+        <label htmlFor="email" className="mb-2 block text-base font-semibold">
+          What&apos;s your email address?
+        </label>
+        <input
+          type="email"
+          id="email"
+          {...register("email", { required: "Email is required" })}
+          className="w-full rounded border border-gray-300 p-2"
+        />
+        {errors.email && (
+          <p className="mt-1 text-xs text-red-500">{errors.email.message}</p>
+        )}
+      </div>
+      <div className="mb-4">
+        <label
+          htmlFor="description"
+          className="mb-2 block text-base font-semibold"
+        >
+          Briefly tell us about your project goals.
+        </label>
+        <textarea
+          id="description"
+          {...register("description", {
+            required: "Please tell us about you project goals.",
+          })}
+          className="w-full rounded border border-gray-300 p-2"
+          rows={5}
+        ></textarea>
+        {errors.description && (
+          <p className="mt-1 text-xs text-red-500">
+            {errors.description.message}
+          </p>
+        )}
+      </div>
+      <div className="mb-4">
+        <label htmlFor="timeline" className="mb-2 block text-base font-semibold">
+          Do you have a timeline in mind?
+        </label>
+        <textarea
+          id="description"
+          {...register("description", {
+            required: "Please let us know your timeline",
+          })}
+          className="w-full rounded border border-gray-300 p-2"
+        ></textarea>
+        {errors.description && (
+          <p className="mt-1 text-xs text-red-500">
+            {errors.description.message}
+          </p>
+        )}
+      </div>
+      <div className="mb-4">
+        <label htmlFor="budget" className="mb-2 mr-2 block text-xl">
+          What have you budgeted for this project?
+        </label>
+        <select
+          id="budget"
+          {...register("budget", { required: "Budget is required" })}
+          className="my-2 mb-12 w-full border-b-2 pl-2 focus:border-none"
+        >
+          <option className="focus:border-none" value="$1,000-$5,000">
+            $1,000-$5,000
+          </option>
+          <option value="$5,000-$15,000">$5,000-$15,000</option>
+          <option value="$15,000-$30,000">$15,000-$30,000</option>
+          <option value="$30,000+">$30,000+</option>
+        </select>
+        {errors.budget && (
+          <p className="mt-1 text-xs text-red-500">{errors.budget.message}</p>
+        )}
+      </div>
+      <button
+        type="submit"
+        className="duration-250 mt-4 w-full transform bg-[#fae06a] py-4 px-2 text-xl font-semibold text-gray-800 shadow-md transition hover:scale-105 hover:bg-[#94df57] hover:shadow-lg md:w-1/3"
+      >
+        Submit
+      </button>
+    </form>
+	</div>
+  );
+};
 
-export default ContactForm
+export default ContactForm;

@@ -1,5 +1,6 @@
 import Img from "next/image";
 
+import ContactForm from "../components/ContactForm";
 import PageLayout from "../components/PageLayout";
 
 
@@ -12,13 +13,13 @@ const Contact = () => {
       >
       <div className="relative h-24 w-[95vw] mx-auto sm:w-screen">
         <Img
-          src="/hello.svg"
-          alt="Instagram"
+          src="/letsConnect.svg"
+          alt="Let's Connect"
           fill
           style={{ objectFit: "contain" }}
         />
       </div>
-      {/* <ContactForm/> */}
+      <ContactForm/>
       </PageLayout>
     </div>
   );

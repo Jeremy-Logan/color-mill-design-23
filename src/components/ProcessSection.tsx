@@ -42,11 +42,11 @@ const categoryProperties = [
 
 const ProcessSection = () => {
   return (
-    <div className="mt-10 mb-36 md:mt-36">
+    <div className="mt-10 mb-36 w-full mx-auto md:mt-36">
       <h3 className="md:mb-8 text-center font-serif text-3xl md:text-4xl xl:text-6xl font-black">
         Results Driven
       </h3>
-      <div className="oveflow-hidden relative h-20 md:h-24 w-11/12 mx-auto">
+      <div className=" relative h-20 md:h-24">
         <Img
           src="/process.svg"
           alt="Process"
@@ -54,7 +54,7 @@ const ProcessSection = () => {
           style={{ objectFit: "contain" }}
         />
       </div>
-      <div className="flex flex-col sm:flex-row justify-center gap-2 max-w-[1600px] mx-2 md:px-10 md:mx-auto mt-12">
+      <div className="flex flex-wrap flex-row justify-center w-full gap-2 max-w-[1600px] mx-auto mt-12">
         {categoryProperties.map((category, index) => 
           <ProcessCard key={index} props={category} />
         )}

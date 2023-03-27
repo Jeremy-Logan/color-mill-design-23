@@ -89,7 +89,7 @@ export default function Page(props: PageProps) {
                     {posts[0].author.name}
                   </span>{" "}
                   <br />
-                  published at {new Date(posts[0].publishedAt).toLocaleString()}
+                  published {new Date(posts[0].publishedAt).toLocaleDateString()}
                 </p>
               </div>
               <div className="mt-2">

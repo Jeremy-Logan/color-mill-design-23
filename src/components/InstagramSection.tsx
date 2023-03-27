@@ -30,7 +30,9 @@ const InstagramSection = ({ data }: Props) => {
       <div className="flex flex-wrap gap-4 max-w-7xl sm:mx-auto mx-4 justify-center sm:mt-12">
         {data &&
           data.slice(0, 6).map((image) => (
-            <div key={image.id} className="relative w-[400px] aspect-square col-span-1">
+            <a key={image.id} href={image.permalink}
+            target="_blank"
+            rel="noopener noreferrer" className="relative w-[400px] aspect-square col-span-1 cursor-pointer">
               <Img
                 src={image.media_url}
                 alt={image.caption}
@@ -40,7 +42,7 @@ const InstagramSection = ({ data }: Props) => {
                 (max-width: 1200px) 50vw,
                 33vw"
               />
-            </div>
+            </a>
           ))}
       </div>
     </div>

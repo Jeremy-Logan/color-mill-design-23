@@ -85,10 +85,9 @@ export default function BlogFeaturedPosts({ posts }: Props) {
 							</Link>
 					  ))
 					: firstEightPosts
-							.slice(1)
 							.filter(
-								(post: any) =>
-									post.category[0].title === selectedCategory
+								(posts: any) =>
+								posts.category.some( (category: any) => category.title === selectedCategory)
 							)
 							.map((post: any) => (
 								<Link

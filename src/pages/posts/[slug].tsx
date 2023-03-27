@@ -75,7 +75,7 @@ const Post = ({ post, previews }: Props) => {
             <p className="text-sm font-light">
               Blog post by{" "}
               <span className="text-pa-green-4">{post.author.name}</span> <br />
-              published at {new Date(post.publishedAt).toLocaleString()}
+              published {new Date(post.publishedAt).toLocaleDateString()}
             </p>
           </div>
           <div className="my-10">

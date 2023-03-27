@@ -61,20 +61,31 @@ function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(" ");
 }
 
+const inRange = (num: number, rangeStart: number, rangeEnd = 0) => // This function is used as a buffer for the scroll event
+  (rangeStart < num && num < rangeEnd) || (rangeEnd < num && num < rangeStart);
+
 export default function Header() {
   const [mobileMenuOpen, toggleMobileMenuOpen] = useCycle(false, true);
   const pictureRef = useRef<HTMLPictureElement>(null);
   const [isPageLoaded, setPageLoaded] = useState(false);
   const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
   const { scrollY } = useScroll();
-  const [prevScrollY, setPrevScrollY] = useState(0);
+  
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const currentScrollY = latest;
-    setScrollDirection(currentScrollY > prevScrollY ? "down" : "up");
-    setPrevScrollY(currentScrollY);
+  useMotionValueEvent(scrollY, "change", (latest) => { // This event controls the header shadow and height
+    const previous = scrollY.getPrevious();
+      const diff = latest - previous;
+    const currentScrolledPixels = scrollY.get();
+    if (currentScrolledPixels < 40 || inRange(diff, -10, 10)) {
+      return;
+    }
+    if (latest > previous) {
+      setScrollDirection("down");
+    } else {
+      setScrollDirection("up");
+    }
   });
-
+ 
   useEffect(() => {
     if (pictureRef.current) {
       const sources = pictureRef.current.querySelectorAll("source");

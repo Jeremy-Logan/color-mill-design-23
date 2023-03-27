@@ -13,7 +13,7 @@ export default function HexGrid() {
   }
   return (
     <div className="" ref={ref}>
-      <div className="relative flex h-[150px] w-[400vw] items-start justify-center overflow-hidden sm:w-[385vw] md:w-[300vw] lg:w-[245vw] xl:w-[225vw] 2xl:w-[105vw]">
+      <div className="relative flex h-[150px] md:h-[200px] w-[400vw] items-start justify-center overflow-hidden sm:w-[385vw] md:w-[300vw] lg:w-[245vw] xl:w-[225vw] 2xl:w-[105vw]">
         <div className="absolute my-auto h-[500px] w-full sm:mt-0">
           <motion.div className="absolute flex">
             {delayArray.map((delay, i) => (
