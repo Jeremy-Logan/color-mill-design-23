@@ -9,13 +9,6 @@ interface FormData  {
   
 };
 
-interface FormErrors {
-	  name?: string;
-	  email?: string;
-	  description?: string;
-	  timeline?: string;
-	  budget?: string;
-}
 
 
 
