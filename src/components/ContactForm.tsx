@@ -36,7 +36,7 @@ const ContactForm: React.FC = () => {
   
 	// Send form data to Netlify
 	try {
-	  const response = await fetch('/', {
+	  const response = await fetch(window.location.pathname, {
 		method: 'POST',
 		body: new URLSearchParams(formEntries),
 	  });
@@ -53,6 +53,7 @@ const ContactForm: React.FC = () => {
 	  // Display error message
 	}
   };
+  
   
 
   return (
