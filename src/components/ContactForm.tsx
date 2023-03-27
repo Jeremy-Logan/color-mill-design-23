@@ -1,11 +1,23 @@
 import { useForm } from "react-hook-form";
 
-type FormData = {
+interface FormData  {
   name: string;
   email: string;
   description: string;
+  timeline: string;
   budget: string;
+  
 };
+
+interface FormErrors {
+	  name?: string;
+	  email?: string;
+	  description?: string;
+	  timeline?: string;
+	  budget?: string;
+}
+
+
 
 const ContactForm: React.FC = () => {
   const {
@@ -14,9 +26,41 @@ const ContactForm: React.FC = () => {
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
+  const onSubmit = async (data: FormData) => {
+	// Encode form data
+	const formData = new FormData();
+	for (const key in data) {
+	  if (Object.prototype.hasOwnProperty.call(data, key)) {
+		formData.append(key, data[key as keyof FormData]);
+	  }
+	}
+  
+	// Convert FormData entries to a string array
+	const formEntries: string[][] = [];
+	for (const entry of formData.entries()) {
+	  formEntries.push([entry[0], entry[1].toString()]);
+	}
+  
+	// Send form data to Netlify
+	try {
+	  const response = await fetch('/', {
+		method: 'POST',
+		body: new URLSearchParams(formEntries),
+	  });
+  
+	  if (response.ok) {
+		console.log('Form submitted successfully');
+		// Reset form or display success message
+	  } else {
+		console.log('Form submission failed');
+		// Display error message
+	  }
+	} catch (error) {
+	  console.error('Error submitting form:', error);
+	  // Display error message
+	}
   };
+  
 
   return (
 	<div className='mt-16 max-w-3xl w-full mx-auto justify-center flex flex-col'>
@@ -106,8 +150,8 @@ const ContactForm: React.FC = () => {
           Do you have a timeline in mind?
         </label>
         <textarea
-          id="description"
-          {...register("description", {
+          id="timeline"
+          {...register("timeline", {
             required: "Please let us know your timeline",
           })}
           className="w-full rounded border border-gray-300 p-2"
