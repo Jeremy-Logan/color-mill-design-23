@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 
 interface FormData  {
   name: string;
+  companyName: string;
   email: string;
   description: string;
   timeline: string;
@@ -15,44 +16,10 @@ interface FormData  {
 const ContactForm: React.FC = () => {
   const {
     register,
-    handleSubmit,
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit = async (data: FormData) => {
-	// Encode form data
-	const formData = new FormData();
-	for (const key in data) {
-	  if (Object.prototype.hasOwnProperty.call(data, key)) {
-		formData.append(key, data[key as keyof FormData]);
-	  }
-	}
   
-	// Convert FormData entries to a string array
-	const formEntries: string[][] = [];
-	for (const entry of formData.entries()) {
-	  formEntries.push([entry[0], entry[1].toString()]);
-	}
-  
-	// Send form data to Netlify
-	try {
-	  const response = await fetch(window.location.pathname, {
-		method: 'POST',
-		body: new URLSearchParams(formEntries),
-	  });
-  
-	  if (response.ok) {
-		console.log('Form submitted successfully');
-		// Reset form or display success message
-	  } else {
-		console.log('Form submission failed');
-		// Display error message
-	  }
-	} catch (error) {
-	  console.error('Error submitting form:', error);
-	  // Display error message
-	}
-  };
   
   
 
@@ -62,7 +29,7 @@ const ContactForm: React.FC = () => {
 				How can we work together? Let&apos;s talk it over.
 			</h3>
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      
       method="POST"
       name="contact"
       data-netlify="true"
@@ -91,17 +58,17 @@ const ContactForm: React.FC = () => {
         )}
       </div>
       <div className="mb-4">
-        <label htmlFor="name" className="mb-2 block text-base font-semibold">
+        <label htmlFor="companyName" className="mb-2 block text-base font-semibold">
           What&apos;s your organization&apos;s name?
         </label>
         <input
           type="text"
-          id="name"
-          {...register("name", { required: "Name is required" })}
+          id="companyName"
+          {...register("companyName", { required: "Name is required" })}
           className="w-full rounded border border-gray-300 p-2"
         />
-        {errors.name && (
-          <p className="mt-1 text-xs text-red-500">{errors.name.message}</p>
+        {errors.companyName && (
+          <p className="mt-1 text-xs text-red-500">{errors.companyName.message}</p>
         )}
       </div>
       <div className="mb-4">
