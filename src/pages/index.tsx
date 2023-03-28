@@ -10,16 +10,7 @@ import TestimonialSection from "../components/TestimonialSection";
 import WhatWeDoSection from "../components/WhatWeDoSection";
 
 interface Feed {
-  feed: {
-    data: {
-      id: string;
-      caption: string;
-      media_url: string;
-      timestamp: string;
-      media_type: string;
-      permalink: string;
-    }[];
-  };
+  feed: any;
 }
 const primaryColor = "#002856";
 const testimonialSectionContent = {
@@ -86,9 +77,7 @@ const Home = ({ feed }: Feed) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${
-    process.env.INSTAGRAM_KEY as string
-  }`;
+  const url = `https://feeds.behold.so/tXuTH17S5apHkjYNR7Zv`;
   const data = await fetch(url);
 
   const feed: Feed = await data.json();

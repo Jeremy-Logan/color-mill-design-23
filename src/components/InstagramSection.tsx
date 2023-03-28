@@ -1,18 +1,18 @@
 import Img from "next/image";
 
 type Props = {
-  data: {
+  feed: {
     id: string;
     caption: string;
-    media_url: string;
+    mediaUrl: string;
     timestamp: string;
     media_type: string;
     permalink: string;
-  }[];
+  };
 };
 
-const InstagramSection = ({ data }: Props) => {
-
+const InstagramSection = ( feed : Props) => {
+const data = Object.values(feed) 
   
   return (
     <div className="mt-36 oveflow-hidden">
@@ -29,12 +29,12 @@ const InstagramSection = ({ data }: Props) => {
       </div>
       <div className="flex flex-wrap gap-4 max-w-7xl sm:mx-auto mx-4 justify-center sm:mt-12">
         {data &&
-          data.slice(0, 6).map((image) => (
+          data.map((image) => (
             <a key={image.id} href={image.permalink}
             target="_blank"
             rel="noopener noreferrer" className="relative w-[400px] aspect-square col-span-1 cursor-pointer">
               <Img
-                src={image.media_url}
+                src={image.mediaUrl}
                 alt={image.caption}
                 fill
                 style={{ objectFit: "cover" }}

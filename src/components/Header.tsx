@@ -44,18 +44,18 @@ const categories = [
       },
     ],
   },
-  {
-    name: "Businesses",
-    description: "Speak directly to your customers",
-    href: "/businesses",
-    caseStudies: [
-      {
-        name: "Mendocino Spirits",
-        href: "/mendocino-spirits",
-        primaryColor: "#008FB1"
-      },
-    ],
-  },
+  // {
+  //   name: "Businesses",
+  //   description: "Speak directly to your customers",
+  //   href: "/businesses",
+  //   caseStudies: [
+  //     {
+  //       name: "Mendocino Spirits",
+  //       href: "/mendocino-spirits",
+  //       primaryColor: "#008FB1"
+  //     },
+  //   ],
+  // },
 ];
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(" ");

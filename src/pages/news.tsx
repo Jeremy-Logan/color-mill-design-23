@@ -30,7 +30,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 export default function Page(props: PageProps) {
   const posts = _.flatMap(props);
-  const firstThreePosts = posts.slice(0, 3);
+  const firstThreePosts = posts.slice(1, 4);
 
   return (
     <PageLayout
