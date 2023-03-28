@@ -34,8 +34,8 @@ export default function Page(props: PageProps) {
 
   return (
     <PageLayout
-      title="Point Arena Lighthouse"
-      description="Come stay at the Point Arena Lighthouse!"
+      title="Color Mill Design | Blog"
+      description="A purpose driven boutique design agency working for people who make a difference."
     >
       <main>
         

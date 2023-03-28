@@ -17,7 +17,7 @@ const ProcessCard = ({ props }: Props) => {
       <div className="relative mt-4 h-36 w-36">{props.icon}</div>
       <h2 className="text-center text-3xl font-bold mb-4" style={{color: props.color }}>{props.name}</h2>
       <div
-        className="relative h-full px-12 py-8"
+        className="relative h-full px-10 py-8"
         style={{ backgroundColor: props.color }}
       >
         {props.arrow && (

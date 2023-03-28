@@ -262,12 +262,12 @@ export default function Header() {
           >
             About
           </Link>
-          <Link
+          {/* <Link
             href="/purpose"
             className="text-lg font-semibold leading-6 text-gray-900"
           >
             Purpose
-          </Link>
+          </Link> */}
           <Link
             href="/news"
             className="text-lg font-semibold leading-6 text-gray-900"
@@ -359,13 +359,13 @@ export default function Header() {
                     >
                       About
                     </Link>
-                    <Link
+                    {/* <Link
                       href="/purpose"
                       className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       onClick={() => isPageLoaded && toggleMobileMenuOpen()}
                     >
                       Purpose
-                    </Link>
+                    </Link> */}
                     <Link
                       href="/news"
                       className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"

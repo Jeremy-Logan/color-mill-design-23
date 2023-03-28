@@ -37,7 +37,7 @@ const testimonialSectionContent = {
   ],
   imageAlt: "Amanda Friscia - Executive Director, Fort Bragg Food Bank",
   heading:
-    "'\"The Color Mill's work increased donations and added vibrancy to our entire organization.'\"",
+    "\"The Color Mill's work increased donations and added vibrancy to our entire organization.\"",
   attribution: "Amanda Friscia - Executive Director, Fort Bragg Food Bank",
 };
 
@@ -45,8 +45,8 @@ const Home = ({ feed }: Feed) => {
   return (
     <>
       <PageLayout
-        title="Color Mill Design"
-        description="Maximize your impact with Color Mill Design."
+        title="Color Mill Design | Branding, Web Design, and Graphic Design"
+        description="A purpose driven boutique design agency working for people who make a difference."
       >
         <main className="oveflow-hidden bg-white sm:mt-[100px] md:mt-12 lg:mt-16">
           <motion.div

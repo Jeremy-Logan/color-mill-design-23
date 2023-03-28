@@ -33,8 +33,8 @@ const About = () => {
   return (
     <div>
       <PageLayout
-        title="Color Mill Design"
-        description="Maximize your impact with Color Mill Design."
+        title="Color Mill Design | About"
+        description="A purpose driven boutique design agency working for people who make a difference."
       >
         <div className="relative mx-auto h-24 w-[95vw] sm:w-screen">
           <Img
@@ -81,6 +81,7 @@ const About = () => {
         </p>
         <PortraitSection {...aspenContent}/>
         <PortraitSection {...jeremyContent}/>
+        <div className="h-24"/>
       </PageLayout>
     </div>
   );

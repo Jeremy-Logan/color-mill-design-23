@@ -101,7 +101,7 @@ const testimonialSectionContent = {
   ],
   imageAlt: "Amanda Friscia - Executive Director, Fort Bragg Food Bank",
   heading:
-    "'\"The Color Mill's work increased donations and added vibrancy to our entire organization.'\"",
+    "\"The Color Mill's work increased donations and added vibrancy to our entire organization.\"",
   attribution: "Amanda Friscia - Executive Director, Fort Bragg Food Bank",
 };
 

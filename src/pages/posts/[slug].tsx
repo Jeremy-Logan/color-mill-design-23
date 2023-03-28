@@ -87,7 +87,7 @@ const Post = ({ post, previews }: Props) => {
             />
           </div>
         </article>
-        <h2 className="text-bold bg-pa-blue-4 pt-10 text-center text-4xl text-white">
+        <h2 className="text-bold bg-pa-blue-4 pt-10 text-center text-4xl ">
           You might also like...
         </h2>
         <BlogPreviewSection posts={posts} title=''/>
@@ -132,7 +132,7 @@ const postQuery = `
       }
     `;
 
-const previewQuery = `{"previews" :*[_type == "post"] | order(publishedAt desc)[0...3]
+const previewQuery = `{"previews" :*[_type == "post"] | order(publishedAt desc)[1...4]
 {	_id,
 	_createdAt,
 	title,

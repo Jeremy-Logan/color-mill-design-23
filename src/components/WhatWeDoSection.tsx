@@ -38,9 +38,9 @@ const categoryProperties = [
     inactiveColor: '#D88D8D',
     name: "PRINT DESIGN",
     heading: "Print Design",
-    subHeading: "Custom built for you",
+    subHeading: "Tangible communication solutions for your brand.",
     description:
-      "We build beautiful, responsive websites that are lightning fast, inherently secure and require virtually zero monthly maintenance.",
+      "Printing is an indispensable tool for businesses and individuals alike, as it allows them to reach a wider audience in a tangible way. If used consistently across all channels, printed materials can help maintain a strong and recognizable brand image. From business cards and brochures to trade show displays and banners, print materials help raise brand awareness and effectively communicate a brand's story.",
   },
 ];
 

@@ -5,8 +5,8 @@ const Businesses = () => {
   return (
     <div>
         <PageLayout
-        title="Color Mill Design"
-        description="Maximize your impact with Color Mill Design."
+        title="Color Mill Design | Businesses"
+        description="A purpose driven boutique design agency working for people who make a difference."
       >
       <div className="relative h-24 w-[95vw] mx-auto sm:w-screen">
         <Img

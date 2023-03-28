@@ -87,7 +87,7 @@ const testimonialSectionContent = {
   ],
   imageAlt: "Mark Hancock - Executive Director, Point Arena Lighthouse",
   heading:
-    "'\"The Color Mill's work increased donations and added vibrancy to our entire organization.'\"",
+    "\"The Color Mill's work increased donations and added vibrancy to our entire organization.\"",
   attribution: "Mark Hancock - Executive Director, Point Arena Lighthouse",
 };
 

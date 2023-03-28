@@ -8,8 +8,8 @@ import { Post } from '../lib/types'
 
 const BlogPostPreview = (post: Post) => {
 	return (
-		<div className='group'><Link href={`/posts/${post.slug.current}`} key={post._id}>
-			<div className='group overflow-hidden bg-white'>
+		<div className='group border border-violet-400'><Link href={`/posts/${post.slug.current}`} key={post._id}>
+			<div className='group bg-white'>
 				
 				<div className='relative aspect-square w-full mb-12 bg-white text-center shadow-lg transition-colors group-focus-within:border-blue-600 group-hover:border-gray-400 group-focus-within:group-hover:border-blue-600'>
 					<Img
@@ -33,7 +33,7 @@ const BlogPostPreview = (post: Post) => {
 				</h3>
 			</div>
 				</div>
-				<div className='mx-6 mb-12 h-60'>
+				<div className='mx-6 mb-12'>
 					
 					<h2 className='text-lg font-semibold group-hover:underline underline-offset-4 mb-1'>{post.title}</h2>
 					<div className='mb-1 text-sm text-gray-700 '>
