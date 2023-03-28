@@ -63,7 +63,7 @@ const About = () => {
             sizes="(max-width: 768px) 45vw,"
           />
         </div>
-        <p className="w-[95vw] max-w-[860px] sm:w-screen mx-auto mt-6">
+        <p className="w-[95vw] max-w-[860px] text-lg sm:w-screen mx-auto mt-6">
           Our story begins in 2015 with a dream to leave our corporate careers
           behind and find more meaning in life. We wanted to wake up in the
           morning feeling fulfilled and productive, not busy and strained. We
