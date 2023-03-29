@@ -15,11 +15,11 @@ const InstagramSection = ( feed : Props) => {
 const data = Object.values(feed) 
   
   return (
-    <div className="mt-36 oveflow-hidden">
+    <div className="mt-36 xl:mt-24 oveflow-hidden">
       <h3 className="sm:mb-8 text-center font-serif text-4xl sm:text-6xl font-black">
         Visit us on
       </h3>
-      <div className="relative h-24 w-[95vw] mx-auto sm:w-screen">
+      <div className="relative h-24 w-[95vw] mx-auto sm:w-full">
         <Img
           src="/instagram.svg"
           alt="Instagram"

@@ -42,8 +42,8 @@ const categoryProperties = [
 
 const ProcessSection = () => {
   return (
-    <div className="mt-10 mb-36 w-full mx-auto md:mt-36">
-      <h3 className="md:mb-8 text-center font-serif text-3xl md:text-4xl xl:text-6xl font-black">
+    <div className="mt-16 mb-36 w-full mx-auto md:mt-36">
+      <h3 className="mb-8 text-center font-serif text-3xl md:text-4xl xl:text-6xl font-black">
         Results Driven
       </h3>
       <div className=" relative h-20 md:h-24">
