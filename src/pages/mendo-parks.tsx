@@ -65,6 +65,7 @@ const logoSectionContent = {
   imageAlt: "A New Logo for the Mendo Parks",
   title: "Logo Design",
   subHeading: "Iconic Symbolism",
+  bg: 'white',
   description:
     "As MendoParks is all about the ocean and the forest, we thought their logo should be too. Using the iconic symbols of waves and rolling hills, the mark says exactly what they do at first glance and it retains its recognisable qualities no matter what size it is presented at. ",
 };

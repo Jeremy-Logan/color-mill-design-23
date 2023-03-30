@@ -10,21 +10,22 @@ type Props = {
   subHeading?: string;
   description: string;
   primaryColor: string;
+  bg?: string;
 };
 
 function FullScreenImageSection(props: Props) {
-  const {  imageUrl, imageAlt, title, subHeading, description, primaryColor } =
+  const {  imageUrl, imageAlt, title, subHeading, description, primaryColor, bg } =
     props;
   return (
     <div
       className="relative flex bg-white h-auto w-full flex-col justify-center gap-4 py-2 md:py-12 text-center"
-      
+      style={{ backgroundColor: bg === 'white' ? 'white' : primaryColor }}
     >
       <div className="mx-auto">
-        <h1 className="z-10 mx-4 md:mb-6 font-serif text-4xl font-black leading-relaxed tracking-wide text-gray-900 md:text-5xl lg:text-6xl">
+        <h1 className="z-10 mx-4 md:mb-6 font-serif text-4xl font-black leading-relaxed tracking-wide text-gray-900 md:text-5xl lg:text-6xl" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
           {title}
         </h1>
-        <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide  md:text-2xl lg:text-4xl" style={{color: primaryColor}}>
+        <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide  md:text-2xl lg:text-4xl" style={{ color: bg === 'white' ? primaryColor : 'white' }}>
           {subHeading}
         </h2>
         <div className="mx-2 my-6 md:my-16 flex flex-col ">
@@ -42,7 +43,7 @@ function FullScreenImageSection(props: Props) {
             />
           </div>
           <div className=" self-center md:mt-4">
-            <p className="text-left max-w-[1440px] w-[85vw] xl:w-[80vw] mb-8 text-sm md:text-2xl leading-relaxed tracking-wide text-gray-900">
+            <p className="text-left max-w-[1440px] w-[85vw] xl:w-[80vw] mb-8 text-sm md:text-2xl leading-relaxed tracking-wide text-gray-900" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
               {description}
             </p>
           </div>

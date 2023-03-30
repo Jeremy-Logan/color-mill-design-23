@@ -69,6 +69,7 @@ const logoSectionContent = {
   imageAlt: "A New Logo for the Redwood Coast Seniors",
   title: "Logo Design",
   subHeading: "I heart RCS",
+  bg: 'white',
   description:
     "RCS had a logo they treasured, but it wasn’t exhibiting the lighthearted playfulness they wanted to exude. Using their idea as a guide, we implemented the bright color palette and swirled the colors around the heart, adding movement and light. We paired this with an open, flowing font and created a mark that accentuated the active vibrancy of the center itself. ",
 };
@@ -90,7 +91,7 @@ const testimonialSectionContent = {
   ],
   imageAlt: "Jill Rexrode - Executive Director, Redwood Coast Seniors",
   heading:
-    "\"The Color Mill's work increased donations and added vibrancy to our entire organization.\"",
+    "\"The Color Mill's branding has breathed new life into our Senior's Center, attracting more clients and creating a vibrant atmosphere.\"",
   attribution: "Jill Rexrode - Executive Director, Redwood Coast Seniors",
 };
 

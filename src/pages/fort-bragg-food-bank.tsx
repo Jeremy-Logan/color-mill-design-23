@@ -82,6 +82,7 @@ const infographicSectionContent = {
   imageAlt: "Fort Bragg Food Bank Infographic",
   title: "Infographic",
   subHeading: "Information at a glance",
+  bg: 'white',
   description:
     "The Food Bank has multiple income streams and community programs, which can make it challenging to provide a clear and concise overview of its work. To address this, we created a colorful and easy-to-read graphic that summarizes their contributions to the community at a glance. \n\nThe infographic helps the Food Bank's team to explain their mission and helps clients to understand the value of their contributions. This clarity has lead to an increase in donations, engagement, and emotional investment from donors, volunteers, and staff alike.",
 };
