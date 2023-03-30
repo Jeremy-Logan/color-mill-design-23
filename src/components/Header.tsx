@@ -1,6 +1,5 @@
 import {
   Dialog,
-  Disclosure,
   Menu,
   Popover,
   Transition,
