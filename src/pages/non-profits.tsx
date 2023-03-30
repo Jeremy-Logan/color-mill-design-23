@@ -11,7 +11,7 @@ const images = [
     alt: "Fort Bragg Food Bank",
     title: "Fort Bragg Food Bank",
     description:
-      "Brand Stategy, Website Design and Development, Graphic Design, Print Design",
+      "Brand Strategy, Website Design and Development, Graphic Design, Print Design",
       url: '/fort-bragg-food-bank'
   },
   {
@@ -58,7 +58,7 @@ const NonProfits = () => {
         />
       </div>
       <h2 className=" 2xl:6xl mx-auto w-10/12  text-center  text-lg font-semibold text-black sm:w-2/3 sm:text-2xl lg:w-1/2 lg:text-3xl xl:text-3xl">
-      Building brands with purpose
+      Change-Makers Transformed
       </h2>
       <div className="mx-auto mt-12 grid w-screen max-w-7xl justify-center gap-4 lg:grid-cols-2">
         {images.map((image, i) => (

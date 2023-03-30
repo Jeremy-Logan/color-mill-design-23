@@ -39,7 +39,7 @@ const PageLayout = (props: Props) => {
 							type: 'image/png',
 						},
 					],
-					site_name: 'Point Arena Lighthouse',
+					site_name: 'Color Mill Design',
 				}}
 			/>
 			<div className=''>

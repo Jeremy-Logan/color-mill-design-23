@@ -60,8 +60,8 @@ const Home = ({ feed }: Feed) => {
             style={{ lineHeight: "1.2em" }}
             className=" 2xl:6xl mx-auto mb-12 w-10/12 text-left font-serif text-2xl font-black text-black sm:w-2/3 sm:text-3xl md:mt-8 md:mb-36 md:text-center lg:w-7/12 lg:text-4xl xl:mt-24 xl:w-1/2 xl:text-4xl 2xl:text-5xl"
           >
-            A purpose driven boutique design agency working for people{" "}
-            <br className="hidden sm:block lg:hidden" /> who make a difference.
+            A boutique design agency, dedicated to empowering {" "}
+            <br className="hidden sm:block lg:hidden" /> purpose-driven visionaries.
           </motion.h1>
           <HexGrid />
           <WhatWeDoSection />

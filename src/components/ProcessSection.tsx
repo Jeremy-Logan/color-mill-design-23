@@ -46,7 +46,7 @@ const ProcessSection = () => {
       <h3 className="mb-8 text-center font-serif text-3xl md:text-4xl xl:text-6xl font-black">
         Results Driven
       </h3>
-      <div className=" relative h-20 md:h-24">
+      <div className="mx-2 relative h-20 md:h-24">
         <Img
           src="/process.svg"
           alt="Process"

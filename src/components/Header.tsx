@@ -44,18 +44,18 @@ const categories = [
       },
     ],
   },
-  // {
-  //   name: "Businesses",
-  //   description: "Speak directly to your customers",
-  //   href: "/businesses",
-  //   caseStudies: [
-  //     {
-  //       name: "Mendocino Spirits",
-  //       href: "/mendocino-spirits",
-  //       primaryColor: "#008FB1"
-  //     },
-  //   ],
-  // },
+  {
+    name: "Businesses",
+    description: "Speak directly to your customers",
+    href: "/businesses",
+    caseStudies: [
+      {
+        name: "Mendocino Spirits",
+        href: "/mendocino-spirits",
+        primaryColor: "#008FB1"
+      },
+    ],
+  },
 ];
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(" ");
@@ -126,7 +126,7 @@ export default function Header() {
           <motion.button
             initial={{ opacity: 1 }}
             onClick={() => (mobileMenuOpen ? toggleMobileMenuOpen() : null)}
-            className="z-20 flex flex-col items-center justify-center outline-none focus:outline-none sm:right-4"
+            className="z-40 flex flex-col items-center justify-center outline-none focus:outline-none sm:right-4"
           >
             <Link href="/">
               <picture ref={pictureRef}>
@@ -153,7 +153,7 @@ export default function Header() {
         </div>
         <div className=" flex lg:hidden">
           <button
-            className="group relative z-20"
+            className="group relative z-40"
             onClick={() => toggleMobileMenuOpen()}
           >
             <div className="relative flex h-[50px] w-[50px] transform items-center justify-center overflow-hidden  ring-0 ring-gray-300 ring-opacity-30 transition-all duration-200 group-focus:ring-4">
@@ -319,7 +319,7 @@ export default function Header() {
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-500/10">
                   <div className="space-y-2 py-6">
-                    <Disclosure as="div" className="-mx-3">
+                    {/* <Disclosure as="div" className="-mx-3">
                       {({ open }) => (
                         <>
                           <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50">
@@ -351,7 +351,66 @@ export default function Header() {
                           </Disclosure.Panel>
                         </>
                       )}
-                    </Disclosure>
+                    </Disclosure> */}
+                    <Menu as="div" className="relative inline-block text-left">
+            <Menu.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-gray-900">
+              Work
+              <ChevronDownIcon
+                className="h-5 w-5 flex-none text-[#06b2a0]"
+                aria-hidden="true"
+              />
+            </Menu.Button>
+
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-200"
+              enterFrom="opacity-0 translate-y-1"
+              enterTo="opacity-100 translate-y-0"
+              leave="transition ease-in duration-150"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-1"
+            >
+              <Menu.Items className="absolute left-0 z-10 mt-2 w-80 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <div className="p-4">
+                  {categories.map((item) => (
+                    <Menu.Item key={item.name}>
+                      <div
+                        key={item.name}
+                        className=" relative flex items-center gap-x-6 p-4 text-sm leading-6 hover:bg-gray-50"
+                      >
+                        <div className="flex-auto">
+                          <Link
+                            href={item.href}
+                            className="block font-semibold text-gray-900"
+                          >
+                            {item.name}
+                            <span className="absolute inset-0" />
+                          </Link>
+                          <p className="mt-1 text-gray-600">
+                            {item.description}
+                          </p>
+                          <div className="flex flex-col">
+                              {item.caseStudies &&
+                                item.caseStudies.map((caseStudy) => (
+                                  
+                                    <Link
+                                      href={caseStudy.href} key={caseStudy.name} 
+                                      className="z-50 my-2 text-sm font-medium bg-slate-100 rounded-md p-1 hover:bg-slate-200" style={{color: caseStudy.primaryColor}}
+                                    >
+                                      {caseStudy.name} 
+                                    </Link>
+                                 
+                                ))}
+                          </div>
+                        
+                        </div>
+                      </div>
+                    </Menu.Item>
+                  ))}
+                </div>
+              </Menu.Items>
+            </Transition>
+          </Menu>
                     <Link
                       href="/about"
                       className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
