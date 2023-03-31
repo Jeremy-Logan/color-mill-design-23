@@ -111,7 +111,7 @@ export default function Header() {
       }`}
     >
       <div
-        className={`z-50  w-full origin-top bg-gradient-to-r from-[#C10682] to-[#0A99B9] transition-all duration-300 ${
+        className={`z-30  w-full origin-top bg-gradient-to-r from-[#C10682] to-[#0A99B9] transition-all duration-300 ${
           scrollDirection === "down" ? "h-2" : "h-3"
         }`}
       />
