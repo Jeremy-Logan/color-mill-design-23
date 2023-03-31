@@ -56,9 +56,9 @@ const categories = [
     ],
   },
 ];
-function classNames(...classes: any[]) {
-  return classes.filter(Boolean).join(" ");
-}
+// function classNames(...classes: any[]) {
+//   return classes.filter(Boolean).join(" ");
+// }
 
 const inRange = (num: number, rangeStart: number, rangeEnd = 0) => // This function is used as a buffer for the scroll event
   (rangeStart < num && num < rangeEnd) || (rangeEnd < num && num < rangeStart);
