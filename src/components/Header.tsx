@@ -125,6 +125,7 @@ export default function Header() {
           <motion.button
             initial={{ opacity: 1 }}
             onClick={() => (mobileMenuOpen ? toggleMobileMenuOpen() : null)}
+            onTouchStart={() => (mobileMenuOpen ? toggleMobileMenuOpen() : null)}
             className="z-40 flex flex-col items-center justify-center outline-none focus:outline-none sm:right-4"
           >
             <Link href="/">
@@ -152,8 +153,9 @@ export default function Header() {
         </div>
         <div className=" flex lg:hidden">
           <button
-            className="group relative z-40"
+            className="group relative z-50"
             onClick={() => toggleMobileMenuOpen()}
+            onTouchStart={() => toggleMobileMenuOpen()}
           >
             <div className="relative flex h-[50px] w-[50px] transform items-center justify-center overflow-hidden  ring-0 ring-gray-300 ring-opacity-30 transition-all duration-200 group-focus:ring-4">
               <div className="flex h-[20px] w-[20px] origin-center transform flex-col justify-between overflow-hidden transition-all duration-300">
@@ -318,39 +320,6 @@ export default function Header() {
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-500/10">
                   <div className="space-y-2 py-6">
-                    {/* <Disclosure as="div" className="-mx-3">
-                      {({ open }) => (
-                        <>
-                          <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50">
-                            Work
-                            <ChevronDownIcon
-                              className={classNames(
-                                open ? "rotate-180" : "",
-                                "h-5 w-5 flex-none text-[#06b2a0]"
-                              )}
-                              aria-hidden="true"
-                            />
-                          </Disclosure.Button>
-                          <Disclosure.Panel className="mt-2 space-y-2">
-                            {[...categories].map((item) => (
-                              <Disclosure.Button
-                                key={item.name}
-                                className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                              >
-                                <Link
-                                  href={item.href}
-                                  onClick={() =>
-                                    isPageLoaded && toggleMobileMenuOpen()
-                                  }
-                                >
-                                  {item.name}
-                                </Link>
-                              </Disclosure.Button>
-                            ))}
-                          </Disclosure.Panel>
-                        </>
-                      )}
-                    </Disclosure> */}
                     <Menu as="div" className="relative inline-block text-left">
             <Menu.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-gray-900">
               Work
