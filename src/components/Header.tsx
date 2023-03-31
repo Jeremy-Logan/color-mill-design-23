@@ -126,7 +126,7 @@ export default function Header() {
             initial={{ opacity: 1 }}
             onClick={() => (mobileMenuOpen ? toggleMobileMenuOpen() : null)}
             onTouchStart={() => (mobileMenuOpen ? toggleMobileMenuOpen() : null)}
-            className="z-40 flex flex-col items-center justify-center outline-none focus:outline-none sm:right-4"
+            className="z-40 flex flex-col items-center justify-center outline-none focus:outline-none sm:right-4 cursor-pointer"
           >
             <Link href="/">
               <picture ref={pictureRef}>
@@ -153,7 +153,7 @@ export default function Header() {
         </div>
         <div className=" flex lg:hidden">
           <button
-            className="group relative z-50"
+            className="group relative z-50 cursor-pointer"
             onClick={() => toggleMobileMenuOpen()}
             onTouchStart={() => toggleMobileMenuOpen()}
           >
