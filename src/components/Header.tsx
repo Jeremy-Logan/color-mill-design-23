@@ -290,7 +290,7 @@ export default function Header() {
             key="menuKey"
             as={motion.div}
             open={mobileMenuOpen}
-            onClose={() => null}
+            onClose={() => setMobileMenuOpen(false)}
             initial={{ opacity: 0, translateX: "100%" }}
             animate={{
               opacity: 1,
