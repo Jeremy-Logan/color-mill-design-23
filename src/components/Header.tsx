@@ -1,12 +1,10 @@
 import {
-  Dialog,
   Menu,
   Popover,
   Transition,
 } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import {
-  AnimatePresence,
   motion,
   useCycle,
   useMotionValueEvent,
@@ -14,6 +12,8 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { Fragment, useEffect,useRef, useState } from "react";
+
+import MobileMenu from "./MobileMenu";
 
 const categories = [
   {
@@ -56,9 +56,7 @@ const categories = [
     ],
   },
 ];
-// function classNames(...classes: any[]) {
-//   return classes.filter(Boolean).join(" ");
-// }
+
 
 const inRange = (num: number, rangeStart: number, rangeEnd = 0) => // This function is used as a buffer for the scroll event
   (rangeStart < num && num < rangeEnd) || (rangeEnd < num && num < rangeStart);
@@ -109,7 +107,7 @@ export default function Header() {
         }`}
       />
       <nav
-        className={`mx-auto flex max-w-[1800px] origin-top items-center justify-between transition-all duration-300 lg:px-8 ${
+        className={`mx-auto md:flex max-w-[1800px] origin-top items-center justify-between transition-all duration-300 lg:px-8 hidden ${
           scrollDirection === "down" ? "p-1" : "p-6"
         }`}
         aria-label="Global"
@@ -284,135 +282,9 @@ export default function Header() {
           </button>
         </div>
       </nav>
-
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <Dialog
-            key="menuKey"
-            as={motion.div}
-            open={mobileMenuOpen}
-            onClose={() => toggleMobileMenuOpen()}
-            initial={{ opacity: 0, translateX: "100%" }}
-            animate={{
-              opacity: 1,
-              translateX: "0",
-              transition: { duration: 0.3 },
-            }}
-            exit={{
-              opacity: 0,
-              translateX: "100%",
-              transition: { duration: 0.5, delay: 0.1 },
-            }}
-            className="fixed inset-0 z-10 origin-right"
-            onClick={() => toggleMobileMenuOpen()}
-          >
-            <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-              <div className="flex items-center justify-between">
-                <div
-                  className={`${scrollDirection === "down" ? "h-12 " : "h-24"}`}
-                />
-              </div>
-              <div className="mt-6 flow-root">
-                <div className="-my-6 divide-y divide-gray-500/10">
-                  <div className="space-y-2 py-6">
-                    <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-gray-900">
-              Work
-              <ChevronDownIcon
-                className="h-5 w-5 flex-none text-[#06b2a0]"
-                aria-hidden="true"
-              />
-            </Menu.Button>
-
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-200"
-              enterFrom="opacity-0 translate-y-1"
-              enterTo="opacity-100 translate-y-0"
-              leave="transition ease-in duration-150"
-              leaveFrom="opacity-100 translate-y-0"
-              leaveTo="opacity-0 translate-y-1"
-            >
-              <Menu.Items className="absolute left-0 z-10 mt-2 w-80 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                <div className="p-4">
-                  {categories.map((item) => (
-                    <Menu.Item key={item.name}>
-                      <div
-                        key={item.name}
-                        className=" relative flex items-center gap-x-6 p-4 text-sm leading-6 hover:bg-gray-50"
-                      >
-                        <div className="flex-auto">
-                          <Link
-                            href={item.href}
-                            className="block font-semibold text-gray-900"
-                            onClick={() =>  toggleMobileMenuOpen()}
-                          >
-                            {item.name}
-                            <span className="absolute inset-0" />
-                          </Link>
-                          <p className="mt-1 text-gray-600">
-                            {item.description}
-                          </p>
-                          <div className="flex flex-col">
-                              {item.caseStudies &&
-                                item.caseStudies.map((caseStudy) => (
-                                  
-                                    <Link
-                                      href={caseStudy.href} key={caseStudy.name} 
-                                      className="z-50 my-2 text-sm font-medium bg-slate-100 rounded-md p-1 hover:bg-slate-200" style={{color: caseStudy.primaryColor}}
-                                      onClick={() => toggleMobileMenuOpen()}
-                                    >
-                                      {caseStudy.name} 
-                                    </Link>
-                                 
-                                ))}
-                          </div>
-                        
-                        </div>
-                      </div>
-                    </Menu.Item>
-                  ))}
-                </div>
-              </Menu.Items>
-            </Transition>
-          </Menu>
-                    <Link
-                      href="/about"
-                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                      onClick={() => toggleMobileMenuOpen()}
-                    >
-                      About
-                    </Link>
-                    {/* <Link
-                      href="/purpose"
-                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                      onClick={() => isPageLoaded && toggleMobileMenuOpen()}
-                    >
-                      Purpose
-                    </Link> */}
-                    <Link
-                      href="/news"
-                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                      onClick={() => toggleMobileMenuOpen()}
-                    >
-                      News
-                    </Link>
-                  </div>
-                  <div className="py-6">
-                    <Link
-                      href="/contact"
-                      className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                      onClick={() => toggleMobileMenuOpen()}
-                    >
-                      Contact
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </Dialog.Panel>
-          </Dialog>
-        )}
-      </AnimatePresence>
+      
+<MobileMenu categories={categories}/>
+    
     </header>
   );
 }
