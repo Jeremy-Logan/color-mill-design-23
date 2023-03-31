@@ -148,6 +148,7 @@ export default function Header() {
           <button
             className="group relative z-50 cursor-pointer"
             onClick={() => toggleMobileMenuOpen()}
+            onTouchStart={() => toggleMobileMenuOpen()}
             
           >
             <div className="relative flex h-[50px] w-[50px] transform items-center justify-center overflow-hidden  ring-0 ring-gray-300 ring-opacity-30 transition-all duration-200 group-focus:ring-4">
@@ -290,7 +291,7 @@ export default function Header() {
             key="menuKey"
             as={motion.div}
             open={mobileMenuOpen}
-            onClose={() => setMobileMenuOpen(false)}
+            onClose={() => toggleMobileMenuOpen()}
             initial={{ opacity: 0, translateX: "100%" }}
             animate={{
               opacity: 1,
