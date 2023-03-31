@@ -66,7 +66,7 @@ const inRange = (num: number, rangeStart: number, rangeEnd = 0) => // This funct
 export default function Header() {
   const [mobileMenuOpen, toggleMobileMenuOpen] = useCycle(false, true);
   const pictureRef = useRef<HTMLPictureElement>(null);
-  const [isPageLoaded, setPageLoaded] = useState(false);
+ 
   const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
   const { scrollY } = useScroll();
   
@@ -94,24 +94,17 @@ export default function Header() {
         source.setAttribute("srcset", `${srcset}?t=${new Date().getTime()}`);
       });
     }
-
-    // Set `isPageLoaded` to `true` when the page finishes loading
-    window.addEventListener("load", () => setPageLoaded(true));
-
-    // Clean up the event listener
-    return () => {
-      window.removeEventListener("load", () => setPageLoaded(true));
-    };
   }, []);
 
   return (
     <header
+    
       className={`sticky top-0 z-30 origin-top bg-white transition-all duration-300 ${
         scrollDirection === "down" ? "shadow-md " : ""
       }`}
     >
       <div
-        className={`z-30  w-full origin-top bg-gradient-to-r from-[#C10682] to-[#0A99B9] transition-all duration-300 ${
+        className={`z-30 w-full origin-top bg-gradient-to-r from-[#C10682] to-[#0A99B9] transition-all duration-300 ${
           scrollDirection === "down" ? "h-2" : "h-3"
         }`}
       />
@@ -121,11 +114,11 @@ export default function Header() {
         }`}
         aria-label="Global"
       >
-        <div className="flex lg:flex-1">
+        <div className="flex lg:flex-1 z-40">
           <motion.button
             initial={{ opacity: 1 }}
             onClick={() => (mobileMenuOpen ? toggleMobileMenuOpen() : null)}
-            onTouchStart={() => (mobileMenuOpen ? toggleMobileMenuOpen() : null)}
+            
             className="z-40 flex flex-col items-center justify-center outline-none focus:outline-none sm:right-4 cursor-pointer"
           >
             <Link href="/">
@@ -155,7 +148,7 @@ export default function Header() {
           <button
             className="group relative z-50 cursor-pointer"
             onClick={() => toggleMobileMenuOpen()}
-            onTouchStart={() => toggleMobileMenuOpen()}
+            
           >
             <div className="relative flex h-[50px] w-[50px] transform items-center justify-center overflow-hidden  ring-0 ring-gray-300 ring-opacity-30 transition-all duration-200 group-focus:ring-4">
               <div className="flex h-[20px] w-[20px] origin-center transform flex-col justify-between overflow-hidden transition-all duration-300">
@@ -350,6 +343,7 @@ export default function Header() {
                           <Link
                             href={item.href}
                             className="block font-semibold text-gray-900"
+                            onClick={() =>  toggleMobileMenuOpen()}
                           >
                             {item.name}
                             <span className="absolute inset-0" />
@@ -364,6 +358,7 @@ export default function Header() {
                                     <Link
                                       href={caseStudy.href} key={caseStudy.name} 
                                       className="z-50 my-2 text-sm font-medium bg-slate-100 rounded-md p-1 hover:bg-slate-200" style={{color: caseStudy.primaryColor}}
+                                      onClick={() => toggleMobileMenuOpen()}
                                     >
                                       {caseStudy.name} 
                                     </Link>
@@ -382,7 +377,7 @@ export default function Header() {
                     <Link
                       href="/about"
                       className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                      onClick={() => isPageLoaded && toggleMobileMenuOpen()}
+                      onClick={() => toggleMobileMenuOpen()}
                     >
                       About
                     </Link>
@@ -396,7 +391,7 @@ export default function Header() {
                     <Link
                       href="/news"
                       className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                      onClick={() => isPageLoaded && toggleMobileMenuOpen()}
+                      onClick={() => toggleMobileMenuOpen()}
                     >
                       News
                     </Link>
@@ -405,7 +400,7 @@ export default function Header() {
                     <Link
                       href="/contact"
                       className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                      onClick={() => isPageLoaded && toggleMobileMenuOpen()}
+                      onClick={() => toggleMobileMenuOpen()}
                     >
                       Contact
                     </Link>
