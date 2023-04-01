@@ -65,7 +65,7 @@ const MobileMenu = ({ categories }: CategoriesProps) => {
 
   return (
   
-    <nav className="relative mr-2 flex md:hidden">
+    <nav className="relative mr-2 flex lg:hidden">
       <div className="flex justify-between w-full items-center z-40">
           <motion.button
             initial={{ opacity: 1 }}
@@ -103,8 +103,8 @@ const MobileMenu = ({ categories }: CategoriesProps) => {
             
             
           >
-            <div className="relative flex h-[50px] w-[50px] transform items-center justify-center overflow-hidden  ring-0 ring-gray-300 ring-opacity-30 transition-all duration-200 group-focus:ring-4">
-              <div className="flex h-[25px] w-[25px] origin-center transform flex-col justify-around overflow-hidden transition-all duration-300">
+            <div className="relative flex h-[50px] w-[50px] transform items-center justify-center overflow-hidden ring-0 ring-gray-300 ring-opacity-30 transition-all duration-200 group-focus:ring-4">
+              <div className="flex h-[25px] w-[25px] origin-center transform flex-col justify-between overflow-hidden transition-all duration-300">
                 <div
                   className={`h-[2px] w-7 origin-left transform bg-gray-700 transition-all duration-300 ${
                     menuOpen ? "translate-x-10" : ""

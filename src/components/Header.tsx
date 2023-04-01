@@ -1,8 +1,4 @@
-import {
-  Menu,
-  Popover,
-  Transition,
-} from "@headlessui/react";
+import { Menu, Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import {
   motion,
@@ -11,7 +7,7 @@ import {
   useScroll,
 } from "framer-motion";
 import Link from "next/link";
-import { Fragment, useEffect,useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 import MobileMenu from "./MobileMenu";
 
@@ -24,22 +20,22 @@ const categories = [
       {
         name: "Fort Bragg Food Bank",
         href: "/fort-bragg-food-bank",
-        primaryColor: "#002856"
+        primaryColor: "#002856",
       },
       {
         name: "Redwood Coast Seniors",
         href: "/redwood-coast-seniors",
-        primaryColor: "#450265"
+        primaryColor: "#450265",
       },
       {
         name: "Mendo Parks",
         href: "/mendo-parks",
-        primaryColor: "#01657D"
+        primaryColor: "#01657D",
       },
       {
         name: "Point Arena Lighthouse",
         href: "/point-arena-lighthouse",
-        primaryColor: "#008FB1"
+        primaryColor: "#008FB1",
       },
     ],
   },
@@ -51,27 +47,30 @@ const categories = [
       {
         name: "Mendocino Spirits",
         href: "/mendocino-spirits",
-        primaryColor: "#008FB1"
+        primaryColor: "#008FB1",
       },
     ],
   },
 ];
 
-
-const inRange = (num: number, rangeStart: number, rangeEnd = 0) => // This function is used as a buffer for the scroll event
+const inRange = (
+  num: number,
+  rangeStart: number,
+  rangeEnd = 0 // This function is used as a buffer for the scroll event
+) =>
   (rangeStart < num && num < rangeEnd) || (rangeEnd < num && num < rangeStart);
 
 export default function Header() {
   const [mobileMenuOpen, toggleMobileMenuOpen] = useCycle(false, true);
   const pictureRef = useRef<HTMLPictureElement>(null);
- 
+
   const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
   const { scrollY } = useScroll();
-  
 
-  useMotionValueEvent(scrollY, "change", (latest) => { // This event controls the header shadow and height
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    // This event controls the header shadow and height
     const previous = scrollY.getPrevious();
-      const diff = latest - previous;
+    const diff = latest - previous;
     const currentScrolledPixels = scrollY.get();
     if (currentScrolledPixels < 40 || inRange(diff, -10, 10)) {
       return;
@@ -82,7 +81,7 @@ export default function Header() {
       setScrollDirection("up");
     }
   });
- 
+
   useEffect(() => {
     if (pictureRef.current) {
       const sources = pictureRef.current.querySelectorAll("source");
@@ -96,7 +95,6 @@ export default function Header() {
 
   return (
     <header
-    
       className={`sticky top-0 z-30 origin-top bg-white transition-all duration-300 ${
         scrollDirection === "down" ? "shadow-md " : ""
       }`}
@@ -107,17 +105,16 @@ export default function Header() {
         }`}
       />
       <nav
-        className={`mx-auto md:flex max-w-[1800px] origin-top items-center justify-between transition-all duration-300 lg:px-8 hidden ${
+        className={`mx-auto hidden max-w-[1800px] origin-top items-center justify-between transition-all duration-300 lg:flex lg:px-8 ${
           scrollDirection === "down" ? "p-1" : "p-6"
         }`}
         aria-label="Global"
       >
-        <div className="flex lg:flex-1 z-40">
+        <div className="z-40 flex lg:flex-1">
           <motion.button
             initial={{ opacity: 1 }}
             onClick={() => (mobileMenuOpen ? toggleMobileMenuOpen() : null)}
-            
-            className="z-40 flex flex-col items-center justify-center outline-none focus:outline-none sm:right-4 cursor-pointer"
+            className="z-40 flex cursor-pointer flex-col items-center justify-center outline-none focus:outline-none sm:right-4"
           >
             <Link href="/">
               <picture ref={pictureRef}>
@@ -141,51 +138,6 @@ export default function Header() {
               </picture>
             </Link>
           </motion.button>
-        </div>
-        <div className=" flex lg:hidden">
-          <button
-            className="group relative z-50 cursor-pointer"
-            onClick={() => toggleMobileMenuOpen()}
-            onTouchStart={() => toggleMobileMenuOpen()}
-            
-          >
-            <div className="relative flex h-[50px] w-[50px] transform items-center justify-center overflow-hidden  ring-0 ring-gray-300 ring-opacity-30 transition-all duration-200 group-focus:ring-4">
-              <div className="flex h-[20px] w-[20px] origin-center transform flex-col justify-between overflow-hidden transition-all duration-300">
-                <div
-                  className={`h-[2px] w-7 origin-left transform bg-gray-700 transition-all duration-300 ${
-                    mobileMenuOpen ? "translate-x-10" : ""
-                  }`}
-                ></div>
-                <div
-                  className={`h-[2px] w-7 transform rounded bg-gray-700 transition-all delay-75 duration-300 ${
-                    mobileMenuOpen ? "translate-x-10" : ""
-                  }`}
-                ></div>
-                <div
-                  className={`h-[2px] w-7 origin-left transform bg-gray-700 transition-all delay-150 duration-300 ${
-                    mobileMenuOpen ? "translate-x-10" : ""
-                  }`}
-                ></div>
-
-                <div
-                  className={`absolute top-2.5 flex w-0 -translate-x-10 transform items-center justify-between transition-all duration-500  ${
-                    mobileMenuOpen ? "w-12 translate-x-0" : ""
-                  }`}
-                >
-                  <div
-                    className={`absolute h-[2px] w-5 rotate-0 transform bg-gray-700 transition-all delay-300 duration-500 ${
-                      mobileMenuOpen ? "rotate-45" : ""
-                    }`}
-                  ></div>
-                  <div
-                    className={`absolute h-[2px] w-5 -rotate-0 transform bg-gray-700 transition-all delay-300 duration-500 ${
-                      mobileMenuOpen ? "-rotate-45" : ""
-                    }`}
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </button>
         </div>
 
         <Popover.Group className="z-30 hidden lg:flex lg:gap-x-12">
@@ -227,19 +179,18 @@ export default function Header() {
                             {item.description}
                           </p>
                           <div className="flex flex-col">
-                              {item.caseStudies &&
-                                item.caseStudies.map((caseStudy) => (
-                                  
-                                    <Link
-                                      href={caseStudy.href} key={caseStudy.name} 
-                                      className="z-50 my-2 text-sm font-medium bg-slate-100 rounded-md p-1 hover:bg-slate-200" style={{color: caseStudy.primaryColor}}
-                                    >
-                                      {caseStudy.name} 
-                                    </Link>
-                                 
-                                ))}
+                            {item.caseStudies &&
+                              item.caseStudies.map((caseStudy) => (
+                                <Link
+                                  href={caseStudy.href}
+                                  key={caseStudy.name}
+                                  className="z-50 my-2 rounded-md bg-slate-100 p-1 text-sm font-medium hover:bg-slate-200"
+                                  style={{ color: caseStudy.primaryColor }}
+                                >
+                                  {caseStudy.name}
+                                </Link>
+                              ))}
                           </div>
-                        
                         </div>
                       </div>
                     </Menu.Item>
@@ -282,9 +233,8 @@ export default function Header() {
           </button>
         </div>
       </nav>
-      
-<MobileMenu categories={categories}/>
-    
+
+      <MobileMenu categories={categories} />
     </header>
   );
 }
