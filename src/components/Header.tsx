@@ -95,7 +95,7 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-30 origin-top bg-white transition-all duration-300 ${
+      className={`sticky top-0 z-30 origin-top bg-white transition-all duration-300  ${
         scrollDirection === "down" ? "shadow-md " : ""
       }`}
     >
