@@ -43,11 +43,11 @@ function InfoImageSectionTwoRows(props: Props) {
         </h2>
         <div className=" my-6 flex flex-col items-center gap-8 lg:my-16 lg:mx-auto lg:flex-row lg:justify-around">
           <div className="hidden self-center lg:block lg:w-[40%]">
-            <p className="mb-8 w-[327px] text-left leading-relaxed tracking-wide  md:text-2xl lg:w-full" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
+            <p className="mb-8 w-[327px] text-left leading-relaxed tracking-wide px-4 lg:text-sm md:text-base lg:w-full" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
               {descriptionOne}
             </p>
           </div>
-          <div className="relative mb-4 h-[204px] w-[327px] md:h-[444px] md:w-[535px] lg:mb-0 lg:h-[444px] lg:w-[713px]">
+          <div className="relative lg:self-start mb-4 h-[204px] w-[327px] md:h-[444px] md:w-[535px] lg:mb-0 lg:w-[570px] lg:h-[355px] xl:h-[444px] xl:w-[713px]">
             <Image
               src={getCloudinaryImageUrl(`${imageUrl}`)}
               alt={imageAlt}
@@ -57,14 +57,14 @@ function InfoImageSectionTwoRows(props: Props) {
             />
           </div>
           <div className="w-[327px] self-center md:w-[535px] lg:hidden">
-            <p className="mb-8 text-left text-sm leading-relaxed tracking-wide  md:text-base lg:text-2xl" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
+            <p className="mb-8 text-left text-sm leading-relaxed tracking-wide md:text-base" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
               {descriptionOne}
             </p>
           </div>
         </div>
-        <div className=" my-6 flex flex-col items-center gap-8 lg:my-16 lg:mx-auto lg:flex-row lg:justify-around">
+        <div className={`my-6 flex flex-col items-center gap-8 lg:my-16 lg:mx-auto lg:flex-row lg:justify-around ${descriptionTwo ? '' : 'px-12'}`}>
           
-          <div className="relative mb-4 h-[204px] w-[327px] md:h-[444px] md:w-[535px] lg:mb-0 lg:h-[444px] lg:w-[713px]">
+          <div className={`relative mb-4 h-[204px] w-[327px] md:h-[444px] md:w-[535px] lg:mb-0 lg:h-[444px] lg:w-full ${descriptionTwo ? '' : 'lg:w-full lg:h-[700px]'}`}>
             <Image
               src={getCloudinaryImageUrl(`${image2Url}`)}
               alt={image2Alt}

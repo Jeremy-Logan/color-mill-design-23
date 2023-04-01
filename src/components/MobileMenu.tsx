@@ -2,6 +2,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { Fragment, useEffect, useRef, useState } from "react";
 
 interface CategoriesProps {
@@ -26,9 +27,15 @@ const inRange = (
 
 const MobileMenu = ({ categories }: CategoriesProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
   const pictureRef = useRef<HTMLPictureElement>(null);
   const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
   const { scrollY } = useScroll();
+
+  const handleNavigation = (href: string) => {
+    router.push(href);
+    
+    };
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     // This event controls the header shadow and height
@@ -60,8 +67,20 @@ const MobileMenu = ({ categories }: CategoriesProps) => {
     }
   }, []);
 
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setMenuOpen(false);
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
-    <nav className="relative mr-2 flex lg:hidden">
+    <nav className="relative mr-2 flex lg:hidden ">
       <div className="z-40 flex w-full items-center justify-between">
         <motion.button
           initial={{ opacity: 1 }}
@@ -146,7 +165,7 @@ const MobileMenu = ({ categories }: CategoriesProps) => {
                 menuOpen ? "block" : "hidden"
               } absolute top-full left-0 z-10 w-full bg-white px-6 shadow-lg`}
           >
-        <div className="py-6 w-full">
+        <div className="py-6">
           <Menu as="div">
             <Menu.Button className="flex  items-center gap-x-1 text-base font-semibold leading-6 text-gray-900">
               Work
@@ -165,10 +184,10 @@ const MobileMenu = ({ categories }: CategoriesProps) => {
               leaveTo="opacity-0 translate-y-1"
             >
               <Menu.Items
-                className="absolute left-0 z-10 mt-2 w-80 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                className="z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                 as="div"
               >
-                <div className="p-4">
+                <div className="p-4 w-full overflow-hidden">
                   {categories.map((item) => (
                     <Menu.Item key={item.name}>
                       <div className="relative flex items-center gap-x-6 p-4 text-sm leading-6 hover:bg-gray-50">

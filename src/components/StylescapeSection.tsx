@@ -54,7 +54,7 @@ function StylescapeSection(props: Props) {
             />
           </div>
           <div className=" self-center mt-2 md:mt-4">
-            <p className="text-left max-w-[1440px] w-[85vw] xl:w-[80vw] text-sm sm:text-lg md:text-2xl leading-relaxed tracking-wide text-white">
+            <p className="text-left max-w-[1440px] w-[85vw] xl:w-[80vw] text-sm sm:text-lg md:text-xl leading-relaxed tracking-wide text-white">
               {description}
             </p>
           </div>

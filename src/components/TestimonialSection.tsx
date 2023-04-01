@@ -67,8 +67,8 @@ const TestimonialSection = (props: Props) => {
       </div>
       <div className="mx-auto flex max-w-[1600px] flex-col justify-center gap-2 px-6 md:px-10 md:flex-row">
         <div className="flex flex-col items-center justify-center md:flex-row">
-          <div className="w-2/3 text-left hidden md:block">
-            <h3 className="mb-4 text-5xl font-semibold italic" style={{color: primaryColor}}>
+          <div className="w-2/3 px-2 text-left hidden md:block">
+            <h3 className="mb-4 lg:text-3xl xl:text-4xl font-semibold italic" style={{color: primaryColor}}>
               {heading}
             </h3>
             <h4 className="md:text-xl italic">

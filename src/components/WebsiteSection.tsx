@@ -42,7 +42,7 @@ function WebsiteSection(props: Props) {
             />
           </div>
           <div className=" self-center mt-4">
-            <p className="whitespace-pre-line text-left max-w-[1440px] w-[85vw] xl:w-[80vw] mb-8 text-sm md:text-2xl leading-relaxed tracking-wide text-gray-900">
+            <p className="whitespace-pre-line text-left max-w-[1440px] w-[85vw] xl:w-[80vw] mb-8 text-sm md:text-lg leading-relaxed tracking-wide text-gray-900">
               {description}
             </p>
           </div>

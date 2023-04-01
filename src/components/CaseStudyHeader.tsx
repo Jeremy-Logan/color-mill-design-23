@@ -77,13 +77,13 @@ function CaseStudyHeader(props: Props) {
         <h1 className="z-10 mx-4 font-serif text-3xl font-black text-white sm:text-4xl lg:text-6xl tracking-wide leading-relaxed">
           {title}
         </h1>
-        <h2 className="z-10 mx-4 text-lg italic text-white sm:text-xl lg:text-3xl tracking-wide leading-relaxed">
+        <h2 className="z-10 mx-4 text-lg italic text-white sm:text-xl lg:text-xl xl:text-2xl tracking-wide leading-relaxed">
           {subHeading}
         </h2>
       </div>
       <div className="mx-4 my-12 flex flex-col justify-around sm:flex-row  max-w-[1600px] md:mx-auto">
         <div className="w-full md:w-[40%]">
-          <p className="md:text-xl font-medium tracking-wide leading-relaxed mb-8">{description}</p>
+          <p className="md:text-base font-medium tracking-wide leading-relaxed mb-8">{description}</p>
         </div>
         <div className="w-full md:w-[40%]">
           <h3
@@ -92,7 +92,7 @@ function CaseStudyHeader(props: Props) {
           >
             Scope
           </h3>
-          <p className="md:text-xl font-medium tracking-wide leading-relaxed">{scope}</p>
+          <p className="md:text-lg font-medium tracking-wide leading-relaxed">{scope}</p>
         </div>
       </div>
     </div>

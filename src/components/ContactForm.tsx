@@ -16,12 +16,14 @@ interface FormData  {
 const ContactForm: React.FC = () => {
   const {
     register,
+    handleSubmit,
     formState: { errors },
   } = useForm<FormData>();
 
-  
-  
-  
+  const onSubmit = (data: FormData) => {
+    console.log(data);
+    // No need for custom handling, Netlify will take care of it
+  };
 
   return (
 	<div className='mt-16 max-w-3xl w-full mx-auto justify-center flex flex-col'>
@@ -29,7 +31,7 @@ const ContactForm: React.FC = () => {
 				How can we work together? Let&apos;s talk it over.
 			</h3>
     <form
-      
+      onSubmit={handleSubmit(onSubmit)}
       method="POST"
       name="contact"
       data-netlify="true"
@@ -64,12 +66,9 @@ const ContactForm: React.FC = () => {
         <input
           type="text"
           id="companyName"
-          {...register("companyName", { required: "Name is required" })}
           className="w-full rounded border border-gray-300 p-2"
         />
-        {errors.companyName && (
-          <p className="mt-1 text-xs text-red-500">{errors.companyName.message}</p>
-        )}
+        
       </div>
       <div className="mb-4">
         <label htmlFor="email" className="mb-2 block text-base font-semibold">

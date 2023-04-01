@@ -12,7 +12,7 @@ const images = [
     title: "Fort Bragg Food Bank",
     description:
       "Brand Strategy, Website Design and Development, Graphic Design, Print Design",
-      url: '/fort-bragg-food-bank'
+    url: "/fort-bragg-food-bank",
   },
   {
     src: "v1678240470/color-mill-design-2023/RCS-Landing-Image_nln6uo.png",
@@ -20,23 +20,21 @@ const images = [
     title: "Redwood Coast Seniors",
     description:
       "Brand Strategy, Logo Design, Website Design and Development, Print Design",
-      url: '/redwood-coast-seniors'
+    url: "/redwood-coast-seniors",
   },
   {
     src: "v1678240471/color-mill-design-2023/MendoParks-Landing_nmbmil.png",
     alt: "MendoParks",
     title: "MendoParks",
-    description:
-      "Brand Strategy, Logo Design, Print Design",
-      url: '/mendo-parks'
+    description: "Brand Strategy, Logo Design, Print Design",
+    url: "/mendo-parks",
   },
   {
     src: "v1678240470/color-mill-design-2023/Point_Arena-Landing-Image_vdppyv.png",
     alt: "Point Arena Lighthouse",
     title: "Point Arena Lighthouse",
-    description:
-      "Brand Strategy, Website Design and Development, Print Design",
-      url: '/point-arena-lighthouse'
+    description: "Brand Strategy, Website Design and Development, Print Design",
+    url: "/point-arena-lighthouse",
   },
 ];
 
@@ -46,10 +44,10 @@ const NonProfits = () => {
       title="Color Mill Design"
       description="Maximize your non-profit impact with Color Mill Design."
     >
-      <h1 className="2xl:6xl mx-auto md:mt-12 w-10/12 text-center font-serif text-2xl font-black text-black sm:w-2/3 sm:text-3xl lg:w-1/2 lg:text-4xl xl:w-1/3 xl:text-5xl">
+      <h1 className="2xl:6xl mx-auto w-10/12 text-center font-serif text-2xl font-black text-black sm:w-2/3 sm:text-3xl md:mt-12 lg:w-1/2 lg:text-4xl xl:w-1/3 xl:text-5xl">
         Non-profit
       </h1>
-      <div className="relative md:my-8 mx-auto h-16 md:h-24 w-[95vw] sm:w-screen">
+      <div className="relative mx-auto h-16 w-[95vw] sm:w-screen md:my-8 md:h-24">
         <Img
           src="/specialists.svg"
           alt="Instagram"
@@ -58,26 +56,25 @@ const NonProfits = () => {
         />
       </div>
       <h2 className=" 2xl:6xl mx-auto w-10/12  text-center  text-lg font-semibold text-black sm:w-2/3 sm:text-2xl lg:w-1/2 lg:text-3xl xl:text-3xl">
-      Change-Makers Transformed
+        Change-Makers Transformed
       </h2>
       <div className="mx-auto mt-12 grid w-screen max-w-7xl justify-center gap-4 lg:grid-cols-2">
         {images.map((image, i) => (
-          <Link key={i} href={image.url} className="mb-8 ">
-            <div className="relative h-[222px] w-[327px] shadow-lg transition-all duration-150 ease-in-out hover:scale-[102%] sm:h-[329px] sm:w-[484px] md:h-[412px] md:w-[606px]">
+          <Link key={i} href={image.url} className="mb-8 justify-self-center ">
+            <div className="relative h-[222px] w-[327px] shadow-lg transition-all duration-150 ease-in-out hover:scale-[102%] sm:h-[329px] sm:w-[484px] md:h-[412px] md:w-[606px] lg:h-[329px] lg:w-[484px] xl:h-[412px] xl:w-[606px]">
               <Image
                 src={getCloudinaryImageUrl(image.src)}
                 alt={image.alt}
                 fill
                 style={{ objectFit: "cover" }}
                 sizes="(max-width: 768px) 45vw,"
-                
               />
             </div>
-            <div className="mt-2 md:mt-4 w-[327px] sm:w-[480px] md:w-[600px]">
-              <h3 className="text-2xl font-medium sm:text-3xl">
+            <div className="mt-2 w-[327px] sm:w-[480px] md:mt-4 md:w-[600px] lg:w-[484px] xl:w-[606px]">
+              <h3 className="mb-2 text-xl font-medium sm:text-3xl">
                 {image.title}{" "}
               </h3>
-              <p className="italic sm:text-xl">{image.description}</p>
+              <p className="italic sm:text-lg">{image.description}</p>
             </div>
           </Link>
         ))}

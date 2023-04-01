@@ -22,7 +22,7 @@ function FullScreenImageSection(props: Props) {
       style={{ backgroundColor: bg === 'white' ? 'white' : primaryColor }}
     >
       <div className="mx-auto">
-        <h1 className="z-10 mx-4 md:mb-6 font-serif text-4xl font-black leading-relaxed tracking-wide text-gray-900 md:text-5xl lg:text-6xl" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
+        <h1 className="z-10 mx-4 md:mb-4 font-serif text-4xl font-black leading-relaxed tracking-wide text-gray-900 md:text-5xl lg:text-6xl" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
           {title}
         </h1>
         <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide  md:text-2xl lg:text-4xl" style={{ color: bg === 'white' ? primaryColor : 'white' }}>
@@ -43,7 +43,7 @@ function FullScreenImageSection(props: Props) {
             />
           </div>
           <div className=" self-center md:mt-4">
-            <p className="text-left max-w-[1440px] w-[85vw] xl:w-[80vw] mb-8 text-sm md:text-2xl leading-relaxed tracking-wide text-gray-900" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
+            <p className="text-left max-w-[1440px] w-[85vw] xl:w-[80vw] mb-8 text-sm md:text-lg leading-relaxed tracking-wide text-gray-900" style={{ color: bg === 'white' ? '#000000' : 'white' }}>
               {description}
             </p>
           </div>

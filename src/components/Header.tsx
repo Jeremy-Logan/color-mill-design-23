@@ -49,6 +49,31 @@ const categories = [
         href: "/mendocino-spirits",
         primaryColor: "#008FB1",
       },
+      {
+        name: "Newberger & Associates",
+        href: "/newberger-and-associates",
+        primaryColor: "#5E85C4",
+      },
+      {
+        name: "Noyo Harbor Inn",
+        href: "/noyo-harbor-inn",
+        primaryColor: "#074B78",
+      },
+      // {
+      //   name: "Daniel Zenefski",
+      //   href: "/daniel-zenefski",
+      //   primaryColor: "#5A261F",
+      // },
+      // {
+      //   name: "Mendocino High School",
+      //   href: "/mendocino-high-school",
+      //   primaryColor: "#810A1E",
+      // },
+      // {
+      //   name: "Darland Software",
+      //   href: "/darland-software",
+      //   primaryColor: "#011F42",
+      // },
     ],
   },
 ];
@@ -184,7 +209,7 @@ export default function Header() {
                                 <Link
                                   href={caseStudy.href}
                                   key={caseStudy.name}
-                                  className="z-50 my-2 rounded-md bg-slate-100 p-1 text-sm font-medium hover:bg-slate-200"
+                                  className="z-50 my-2 rounded-sm bg-slate-100 p-1 text-sm font-medium hover:bg-slate-200"
                                   style={{ color: caseStudy.primaryColor }}
                                 >
                                   {caseStudy.name}
