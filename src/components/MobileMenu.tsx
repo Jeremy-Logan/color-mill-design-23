@@ -32,11 +32,6 @@ const MobileMenu = ({ categories }: CategoriesProps) => {
   const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
   const { scrollY } = useScroll();
 
-  const handleNavigation = (href: string) => {
-    router.push(href);
-    
-    };
-
   useMotionValueEvent(scrollY, "change", (latest) => {
     // This event controls the header shadow and height
     const previous = scrollY.getPrevious();
