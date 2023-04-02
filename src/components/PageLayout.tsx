@@ -1,8 +1,10 @@
 
 import Head from 'next/head'
+import Script from 'next/script'
 import { NextSeo } from 'next-seo'
 import type { ReactNode } from 'react';
 
+import * as gtag from '../lib/gtag'
 import Footer from './Footer';
 import Header from './Header'
 
@@ -41,7 +43,24 @@ const PageLayout = (props: Props) => {
 					],
 					site_name: 'Color Mill Design',
 				}}
-			/>
+			/><Script
+			strategy='afterInteractive'
+			src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+		/>
+		<Script
+			id='gtag-init'
+			strategy='afterInteractive'
+			dangerouslySetInnerHTML={{
+				__html: `
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', '${gtag.GA_TRACKING_ID}', {
+			page_path: window.location.pathname,
+		});
+		`,
+			}}
+		/>
 			<div className=''>
 				<Header/>
 				<div className="min-h-screen overflow-hidden ">
