@@ -88,9 +88,12 @@ const ContactForm: React.FC = () => {
         <input
           type="text"
           id="companyName"
-          {...register("companyName")}
+          {...register("companyName", { required: " Organization name is required" })}
           className="w-full rounded border border-gray-300 p-2"
         />
+        {errors.name && (
+          <p className="mt-1 text-xs text-red-500">{errors.companyName.message}</p>
+        )}
       </div>
       <div className="mb-4">
         <label htmlFor="email" className="mb-2 block text-base font-semibold">
