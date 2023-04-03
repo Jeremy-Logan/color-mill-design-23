@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Dialog } from '@headlessui/react';
 
 interface FormData  {
   name: string;
@@ -18,9 +19,11 @@ const ContactForm: React.FC = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormData>();
-  
+
+  const [showModal, setShowModal] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const encode = (data: Record<string, any>) => {
@@ -39,6 +42,8 @@ const ContactForm: React.FC = () => {
       setSuccessMessage('Thank you for contacting us! We will be in touch soon.');
     })
     .catch(error => console.log(error));
+    reset()
+    setShowModal(true);
   }
 
   return (
@@ -165,10 +170,27 @@ const ContactForm: React.FC = () => {
       >
         Submit
       </button>
-      {successMessage && (
-<p className="mt-3 text-green-600">{successMessage}</p>
-)}
     </form>
+    <Dialog
+        open={showModal}
+        onClose={() => setShowModal(false)}
+        className="fixed z-40 inset-0 overflow-y-auto"
+      >
+        <div className="flex items-center justify-center min-h-screen">
+          <Dialog.Overlay className="fixed inset-0 bg-black opacity-30" />
+
+          <div className="bg-white p-8 z-50 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">Form submitted successfully</h2>
+            <p>Thank you for reaching out! We will be in touch soon.</p>
+            <button
+              className="bg-blue-500 text-white px-4 py-2 mt-4 rounded"
+              onClick={() => setShowModal(false)}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </Dialog>
 	</div>
   );
 };
