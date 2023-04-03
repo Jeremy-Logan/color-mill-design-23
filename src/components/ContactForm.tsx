@@ -1,6 +1,6 @@
+import { Dialog } from '@headlessui/react';
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Dialog } from '@headlessui/react';
 
 interface FormData  {
   name: string;
@@ -39,7 +39,7 @@ const ContactForm: React.FC = () => {
       body: encode({ 'form-name': 'contact', ...values })
     })
     .then(() => {
-      setSuccessMessage('Thank you for contacting us! We will be in touch soon.');
+      setSuccessMessage('Thank you for reaching out! We will be in touch soon.');
     })
     .catch(error => console.log(error));
     reset()
@@ -91,7 +91,7 @@ const ContactForm: React.FC = () => {
           {...register("companyName", { required: " Organization name is required" })}
           className="w-full rounded border border-gray-300 p-2"
         />
-        {errors.name && (
+        {errors.companyName && (
           <p className="mt-1 text-xs text-red-500">{errors.companyName.message}</p>
         )}
       </div>
@@ -184,7 +184,7 @@ const ContactForm: React.FC = () => {
 
           <div className="bg-white p-8 z-50 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">Form submitted successfully</h2>
-            <p>Thank you for reaching out! We will be in touch soon.</p>
+            <p>{successMessage}</p>
             <button
               className="bg-blue-500 text-white px-4 py-2 mt-4 rounded"
               onClick={() => setShowModal(false)}
