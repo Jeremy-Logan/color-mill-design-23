@@ -20,9 +20,30 @@ const ContactForm: React.FC = () => {
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-    // No need for custom handling, Netlify will take care of it
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key: string) =>
+          encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
+  const onSubmit = async (data: FormData) => {
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...data })
+      });
+      if (response.status === 200) {
+        console.log("Form submitted successfully!");
+      } else {
+        console.log("Form submission failed.");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
