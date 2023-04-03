@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 interface FormData  {
@@ -29,7 +30,9 @@ const ContactForm: React.FC = () => {
       .join("&");
   };
 
-  const onSubmit = async (data: FormData) => {
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+
+  const onSubmit = async (data: FormData, e: React.FormEvent<HTMLFormElement>) => {
     try {
       const response = await fetch("/", {
         method: "POST",
@@ -38,6 +41,8 @@ const ContactForm: React.FC = () => {
       });
       if (response.status === 200) {
         console.log("Form submitted successfully!");
+        e.currentTarget.reset();
+        setSuccessMessage("Form submitted successfully!");
       } else {
         console.log("Form submission failed.");
       }
@@ -170,6 +175,9 @@ const ContactForm: React.FC = () => {
       >
         Submit
       </button>
+      {successMessage && (
+<p className="mt-3 text-green-600">{successMessage}</p>
+)}
     </form>
 	</div>
   );
