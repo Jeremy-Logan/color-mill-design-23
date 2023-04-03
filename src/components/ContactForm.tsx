@@ -144,6 +144,7 @@ const ContactForm: React.FC = () => {
       </div>
       <button
         type="submit"
+        onClick={handleSubmit(onSubmit)}
         className="duration-250 mt-4 w-full transform bg-[#fae06a] py-4 px-2 text-xl font-semibold text-gray-800 shadow-md transition hover:scale-105 hover:bg-[#94df57] hover:shadow-lg md:w-1/3"
       >
         Submit

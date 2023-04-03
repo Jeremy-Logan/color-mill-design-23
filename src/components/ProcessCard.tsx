@@ -31,7 +31,7 @@ const ProcessCard = ({ props }: Props) => {
             <polygon style={{ fill: props.color }} points="0,0 25,25 0,50" />
           </svg>
         )}
-        <p className="text-base xl:text-lg font-medium text-white">{props.description}</p>
+        <p className="text-base  font-medium text-white">{props.description}</p>
       </div>
     </div>
   );
