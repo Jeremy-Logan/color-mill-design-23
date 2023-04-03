@@ -95,9 +95,9 @@ const ContactForm: React.FC = () => {
         <input
           type="text"
           id="companyName"
+          {...register("companyName")}
           className="w-full rounded border border-gray-300 p-2"
         />
-        
       </div>
       <div className="mb-4">
         <label htmlFor="email" className="mb-2 block text-base font-semibold">
