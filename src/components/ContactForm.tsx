@@ -32,7 +32,9 @@ const ContactForm: React.FC = () => {
 
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
-  const onSubmit = async (data: FormData, e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (data: FormData, event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
     try {
       const response = await fetch("/", {
         method: "POST",
@@ -41,8 +43,8 @@ const ContactForm: React.FC = () => {
       });
       if (response.status === 200) {
         console.log("Form submitted successfully!");
-        e.currentTarget.reset();
-        setSuccessMessage("Form submitted successfully!");
+        event.currentTarget.reset();
+        setSuccessMessage("Thank you for contacting us! We'll be in touch soon.");
       } else {
         console.log("Form submission failed.");
       }
