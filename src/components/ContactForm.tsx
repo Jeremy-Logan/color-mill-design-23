@@ -20,17 +20,14 @@ const ContactForm: React.FC = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>();
-
-  const encode = (data: any) => {
-    return Object.keys(data)
-      .map(
-        (key: string) =>
-          encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
-
+  
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+
+  const encode = (data: Record<string, any>) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
 
   const handleRegistration = (values: Record<string, any>) => {
     fetch('/', {
