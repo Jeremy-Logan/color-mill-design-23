@@ -32,26 +32,17 @@ const ContactForm: React.FC = () => {
 
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
-  const onSubmit = async (data: FormData, event: React.FormEvent<HTMLFormElement> | undefined) => {
-    event?.preventDefault();
-
-    try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...data })
-      });
-      if (response.status === 200) {
-        console.log("Form submitted successfully!");
-        event?.currentTarget.reset();
-        setSuccessMessage("Thank you for contacting us! We'll be in touch soon.");
-      } else {
-        console.log("Form submission failed.");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const handleRegistration = (values: Record<string, any>) => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...values })
+    })
+    .then(() => {
+      setSuccessMessage('Thank you for contacting us! We will be in touch soon.');
+    })
+    .catch(error => console.log(error));
+  }
 
   return (
 	<div className='mt-16 max-w-3xl w-full mx-auto justify-center flex flex-col'>
@@ -59,7 +50,7 @@ const ContactForm: React.FC = () => {
 				How can we work together? Let&apos;s talk it over.
 			</h3>
     <form
-      onSubmit={handleSubmit(onSubmit)}
+       onSubmit={handleSubmit(handleRegistration)}
       method="POST"
       name="contact"
       action="color-mill-design-23"
