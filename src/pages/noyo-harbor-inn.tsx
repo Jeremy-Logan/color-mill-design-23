@@ -21,7 +21,7 @@ const headerContent = {
 const menuSectionContent = {
   primaryColor: primaryColor,
   imageUrl:
-    "/v1680385547/color-mill-design-2023/Noyo-Menus_sivqxx.png",
+    "/v1680718621/color-mill-design-2023/Noyo-Menus_uo7z39.jpg",
   imageAlt: "An elegant dining experience",
   title: "Menus",
   subHeading: "An elegant dining experience",
