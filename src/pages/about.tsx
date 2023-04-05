@@ -22,7 +22,7 @@ const jeremyContent = {
   imageUrl:
     "v1679965314/color-mill-design-2023/Jeremy_Headshot_md-res_bbdxgk.jpg",
   imageAlt: "Portrait of Aspen Logan",
-  title: "Jeremy",
+  title: "Jeremy Logan",
   subHeading: "Giving Back: Volunteerism & Charitable Contributions.",
   description:
     "Meet Jeremy, a multi-talented artist who has mastered the art of oil painting, animation, and coding. After spending two decades in the software industry, where he breathed life into some of the biggest AAA video games, Jeremy redirected his creative energy towards design. With an insatiable curiosity, he has honed his coding skills while creating stunningly intricate illustrations that captivate the imagination.\n\nAs an expert in front-end web development, Jeremy is the driving force behind all the creative projects at The Color Mill. He has a relentless design sense that pushes creative boundaries, and his unique ability to envision the unimaginable has helped shape The Color Mill into the successful creative studio it is today. Get ready to be inspired by Jeremy's passion and innovative spirit!",
