@@ -24,13 +24,14 @@ const PageLayout = (props: Props) => {
           
         </Head>
 			<NextSeo
-				title={props.title}
+				title={`Impactful Design Solutions for Nonprofits & Small Businesses |${props.title}`}
 				description={props.description}
+				additionalMetaTags={[{name:"keywords", content:"design agency, brand strategy, web design, web development, graphic design, nonprofits, small businesses, branding, digital presence, creative solutions"}]}
 				openGraph={{
 					url: 'https://www.colormilldesign.com',
 					locale: 'en_IE',
 					type: 'website',
-					title: `${props.title}`,
+					title: `Impactful Design Solutions for Nonprofits & Small Businesses |${props.title}`,
 					description: `${props.description}`,
 					images: [
 						{

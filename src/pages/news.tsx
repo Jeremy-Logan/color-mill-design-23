@@ -34,8 +34,8 @@ export default function Page(props: PageProps) {
 
   return (
     <PageLayout
-      title="Color Mill Design | Blog"
-      description="A purpose driven boutique design agency working for people who make a difference."
+      title="News"
+      description="Stay informed with the latest insights, trends, and best practices in brand strategy, web design, and graphic design for nonprofits and small businesses on the Color Mill Design blog."
     >
       <main>
         

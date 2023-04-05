@@ -41,8 +41,8 @@ const images = [
 const NonProfits = () => {
   return (
     <PageLayout
-      title="Color Mill Design"
-      description="Maximize your non-profit impact with Color Mill Design."
+      title="Non-Profits"
+      description="Discover how Color Mill Design's specialized design services for nonprofits, including brand strategy, web design & development, and graphic design, can amplify your impact and further your mission."
     >
       <h1 className="2xl:6xl mx-auto w-10/12 text-center font-serif text-2xl font-black text-black sm:w-2/3 sm:text-3xl md:mt-12 lg:w-1/2 lg:text-4xl xl:w-1/3 xl:text-5xl">
         Non-profit

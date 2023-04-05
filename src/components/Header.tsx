@@ -59,11 +59,11 @@ const categories = [
         href: "/noyo-harbor-inn",
         primaryColor: "#074B78",
       },
-      // {
-      //   name: "Daniel Zenefski",
-      //   href: "/daniel-zenefski",
-      //   primaryColor: "#5A261F",
-      // },
+      {
+        name: "Daniel Zenefski",
+        href: "/daniel-zenefski",
+        primaryColor: "#5A261F",
+      },
       // {
       //   name: "Mendocino High School",
       //   href: "/mendocino-high-school",
@@ -97,7 +97,7 @@ export default function Header() {
     const previous = scrollY.getPrevious();
     const diff = latest - previous;
     const currentScrolledPixels = scrollY.get();
-    if (currentScrolledPixels < 40 || inRange(diff, -10, 10)) {
+    if (currentScrolledPixels < 50 || inRange(diff, -20, 20)) {
       return;
     }
     if (latest > previous) {

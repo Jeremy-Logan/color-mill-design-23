@@ -5,7 +5,7 @@ const Purpose = () => {
   return (
     <div>
         <PageLayout
-        title="Color Mill Design | Purpose"
+        title="Purpose"
         description="A purpose driven boutique design agency working for people who make a difference."
       >
       <div className="relative h-24 w-[95vw] mx-auto sm:w-screen">

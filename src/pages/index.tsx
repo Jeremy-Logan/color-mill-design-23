@@ -36,8 +36,8 @@ const Home = ({ feed }: Feed) => {
   return (
     <>
       <PageLayout
-        title="Color Mill Design | Branding, Web Design, and Graphic Design"
-        description="A purpose driven boutique design agency working for people who make a difference."
+        title="Home"
+        description="Discover Color Mill Design's tailored brand strategy, web design & development, and graphic design services that empower nonprofits and small businesses to create meaningful impact."
       >
         <main className="oveflow-hidden bg-white sm:mt-[100px] md:mt-12 lg:mt-16">
           <motion.div

@@ -3,16 +3,16 @@ import InfoImageSectionTwoRows from "../components/InfoImageSectionTwoRows";
 import PageLayout from "../components/PageLayout";
 import WebsiteSection from "../components/WebsiteSection";
 
-const primaryColor = "#5E85C4";
+const primaryColor = "#011F42";
 
 const headerContent = {
   primaryColor: primaryColor,
   hexagonColors: ["#41565c", "#778288", "#929a9f", "#b4b8bc", "#eaebed"],
-  title: "Newberger & Associates",
+  title: "Darland Software",
   subHeading:
     "Dedicated to design solutions that elevate the human experience.",
   description:
-    "Newberger and Associates, a premier architecture firm specializing in coastal projects, approached us with the challenge of creating a brand and website that reflected their commitment to excellence. As coastal professionals, they wanted their image to match the high-quality work they deliver. Our task was to create a brand that aligned with Newberger and Associates' vision and conveyed their expertise and attention to detail.",
+    "We were approached by Darland Software, an established business of over 25 years, to help them enhance their brand identity. Recognizing the need to elevate their brand to attract a broader range of clients, they turned to us for our expertise in developing compelling brand identities that stand out among the rest.",
   scope: "Website, Brand Strategy, Graphic Design, Print",
 };
 
@@ -20,7 +20,7 @@ const headerContent = {
 const websiteSectionContent = {
   primaryColor: primaryColor,
   imageUrl: "/v1680386081/color-mill-design-2023/Newberger-website_nu1r1n.png",
-  imageAlt: "Newberger & Associates Website",
+  imageAlt: "Darland Software Website",
   title: "Website",
   bg: "white",
   subHeading: "A gallery site with exquisite detail",
@@ -34,8 +34,8 @@ const collateralDesignSectionContent = {
   image2Url:
     "/v1680385234/color-mill-design-2023/Newberger-LH_wdq9lg.png",
   primaryColor: primaryColor,
-  imageAlt: "Newberger & Associates Business Cards",
-  image2Alt: "Newberger & Associates Stationery",
+  imageAlt: "Darland Software Business Cards",
+  image2Alt: "Darland Software Stationery",
   title: "Collateral",
   subHeading: "A look to match their vision",
   descriptionOne:
@@ -44,12 +44,12 @@ const collateralDesignSectionContent = {
 };
 
 
-const NewbergerAndAssociates = () => {
+const DarlandSoftware = () => {
   return (
     <div>
       <PageLayout
-        title="Newberger & Associates Case Study"
-        description="Newberger and Associates, a coastal architecture firm, needed a brand reflecting their excellence. We aligned their brand with their vision and expertise."
+        title="Darland Software Case Study"
+        description="Darland Software, an established business, sought a brand enhancement to attract diverse clients. We developed a compelling identity that stands out."
       >
         <CaseStudyHeader {...headerContent} />
         <InfoImageSectionTwoRows {...collateralDesignSectionContent} />
@@ -59,4 +59,4 @@ const NewbergerAndAssociates = () => {
   );
 };
 
-export default NewbergerAndAssociates;
+export default DarlandSoftware;

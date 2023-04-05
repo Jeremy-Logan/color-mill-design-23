@@ -17,7 +17,7 @@ const headerContent = {
   subHeading:
     "Providing stimulating activities, essential services & programs for seniors.",
   description:
-    "Along with bright new leadership, facility upgrades, new delivery vans and an expanded staff, FBFB was ready for an upgrade to their brand. Their logo, established around the organization’s conception, is steadfast and very recognizable. ",
+    "Along with bright new leadership, facility upgrades, new delivery vans and an expanded staff, RCS was ready for an upgrade to their brand. Their logo, established around the organization’s conception, is steadfast and very recognizable. ",
   scope: "Brand Strategy, Collateral Design, Signage, Web design",
 };
 
@@ -99,8 +99,8 @@ const RedwoodCoastSeniors = () => {
   return (
     <div>
       <PageLayout
-        title="Color Mill Design"
-        description={`${headerContent.title} Case Study`}
+        title="Redwood Coast Seniors Case Study"
+        description="With new leadership and upgrades, RCS was ready for a brand refresh. We preserved their recognizable logo while giving their identity a modern twist."
       >
         <CaseStudyHeader {...headerContent} />
         <StylescapeSection {...brandStrategySectionContent} />

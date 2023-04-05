@@ -67,8 +67,8 @@ const Businesses = () => {
   return (
     <div>
       <PageLayout
-        title="Color Mill Design | Businesses"
-        description="A purpose driven boutique design agency working for people who make a difference."
+        title="Businesses"
+        description="Explore our tailored design services for small businesses, including brand strategy, web design & development, and graphic design, that drive growth and make a lasting impact."
       >
         <h1 className="2xl:6xl mx-auto w-10/12 text-center font-serif text-2xl font-black text-black sm:w-2/3 sm:text-3xl md:mt-12 lg:w-1/2 lg:text-4xl xl:w-1/3 xl:text-5xl">
           Small Business

@@ -103,8 +103,8 @@ const MendoParks = () => {
   return (
     <div>
       <PageLayout
-        title="Color Mill Design"
-        description={`${headerContent.title} Case Study`}
+        title="Mendo Parks Case Study"
+        description="MendoParks, supporting Mendocino County State Parks, sought increased visibility. We provided branding and marketing that embodied their mission."
       >
         <CaseStudyHeader {...headerContent} />
         <StylescapeSection {...brandStrategySectionContent} />

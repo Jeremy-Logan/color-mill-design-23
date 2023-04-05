@@ -95,8 +95,8 @@ const PointArenaLighthouse = () => {
   return (
     <div>
       <PageLayout
-        title="Color Mill Design"
-        description={`${headerContent.title} Case Study`}
+        title="Point Arena Lighthouse Case Study"
+        description="Point Arena Lighthouse needed a vibrant brand showcasing its historic beauty. We brought the site's charm to their brand, inspiring visitors."
       >
         <CaseStudyHeader {...headerContent} />
         <StylescapeSection {...brandStrategySectionContent} />

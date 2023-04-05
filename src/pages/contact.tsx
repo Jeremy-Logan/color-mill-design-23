@@ -8,8 +8,8 @@ const Contact = () => {
   return (
     <div>
         <PageLayout
-        title="Color Mill Design | Contact"
-        description="A purpose driven boutique design agency working for people who make a difference."
+        title="Contact"
+        description="Get in touch with Color Mill Design to discuss your nonprofit or small business's design needs, ask questions, or schedule a consultation with our experienced team."
       >
       <div className="relative h-24 w-[95vw] mx-auto sm:w-screen">
         <Img

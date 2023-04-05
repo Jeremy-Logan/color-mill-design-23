@@ -3,6 +3,7 @@ import FullScreenImageSection from "../components/FullScreenImageSection";
 import InfoImageSection from "../components/InfoImageSection";
 import InfoImageSectionTwoRows from "../components/InfoImageSectionTwoRows";
 import PageLayout from "../components/PageLayout";
+import WebsiteSection from "../components/WebsiteSection";
 
 
 const primaryColor = "#074B78";
@@ -24,21 +25,21 @@ const menuSectionContent = {
   imageAlt: "An elegant dining experience",
   title: "Menus",
   subHeading: "An elegant dining experience",
-  bg: 'white',
+  bg: primaryColor,
   description:
     "The menus for their gourmet restaurant feature the elegant floral patterns and Craftsman fonts, adding a sophisticated touch to every dining experience. The color palette distinguishes the menu’s focus, all the while, keeping consistent with the Inn’s overall brand.",
 }; 
 
-// const websiteSectionContent = {
-//   primaryColor: primaryColor,
-//   imageUrl: "/v1680108468/color-mill-design-2023/Website-on-Devices_gthkxi.png",
-//   imageAlt: "Mendocino Spirits Website",
-//   title: "Website",
-//   bg: 'white',
-//   subHeading: "Bringing the brand to the world",
-//   description:
-//     "Mendocino Spirits are truly amazing artists, but we noticed that their brand wasn't getting the recognition it deserved. So we designed a website that showcases their unique spirits and positions them as a top-shelf brand where people all over the world can discover and experience their delicious spirits. Plus, with the integration of a strong ecommerce platform, Mendocino Spirits can now sell and ship their spirits nationwide! We made sure the website was easy to use on both mobile and desktop, so no matter what, it is a great experience browsing and shopping.",
-// };
+const websiteSectionContent = {
+  primaryColor: primaryColor,
+  imageUrl: "/v1680634928/color-mill-design-2023/Website-on-Devices_phkf8b.png",
+  imageAlt: "Noyo Harbor Inn Website",
+  title: "Website",
+  bg: 'white',
+  subHeading: "Increased engagement",
+  description:
+    "When we started designing the website for the Noyo Harbor Inn, we wanted to make sure to focus on the features that made the luxury hotel extremely unique. Highlighting the gorgeous views, the gourmet restaurant and the amazing guest rooms while maintaining brand consistency was an important part of our process. What we produced was a visually appealing and user friendly website that showcased the hotel’s extraordinary features, attracting guests and boosting stays.",
+};
 
 const collateralDesignSectionContent = {
   imageUrl: "/v1680385547/color-mill-design-2023/NHI-BC-PS_npn110.png",
@@ -67,13 +68,14 @@ const NoyoHarborInn = () => {
   return (
     <div>
       <PageLayout
-        title="Color Mill Design"
-        description={`${headerContent.title} Case Study`}
+        title="Noyo Harbor Inn Case Study"
+        description="Noyo Harbor Inn, a restored Craftsman-style inn, desired a period-inspired brand. We created a warm, inviting color palette based on floral patterns."
       >
         <CaseStudyHeader {...headerContent} />
         <InfoImageSectionTwoRows {...collateralDesignSectionContent} />
+        <WebsiteSection {...websiteSectionContent} />
         <FullScreenImageSection {...menuSectionContent} />
-        {/* <WebsiteSection {...websiteSectionContent} /> */}        
+               
         <InfoImageSection {...advertisingSectionContent} />
       </PageLayout>
     </div>

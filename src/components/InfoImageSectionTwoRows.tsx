@@ -69,7 +69,7 @@ function InfoImageSectionTwoRows(props: Props) {
               src={getCloudinaryImageUrl(`${image2Url}`)}
               alt={image2Alt}
               fill
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "contain" }}
               sizes="(max-width: 768px) 45vw,"
             />
           </div>

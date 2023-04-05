@@ -110,8 +110,8 @@ const FortBraggFoodBank = () => {
   return (
     <div>
       <PageLayout
-        title="Color Mill Design"
-        description={`${headerContent.title} Case Study`}
+        title="Fort Bragg Food Bank Case Study"
+        description="Fort Bragg Food Bank needed a vibrant brand reflecting their community impact. We revitalized their brand and web presence."
       >
         <CaseStudyHeader {...headerContent} />
         <InfoImageSection {...brandStrategySectionContent} />

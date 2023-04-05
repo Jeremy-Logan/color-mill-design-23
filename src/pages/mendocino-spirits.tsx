@@ -91,8 +91,8 @@ const MendocinoSpirits = () => {
   return (
     <div>
       <PageLayout
-        title="Color Mill Design"
-        description={`${headerContent.title} Case Study`}
+        title="Mendocino Spirits Case Study"
+        description="Mendocino Spirits, blending tradition and innovation, needed a unique brand. As longtime fans, we were thrilled to create their inspiring branding."
       >
         <CaseStudyHeader {...headerContent} />
         <StylescapeSection {...brandStrategySectionContent}/>
