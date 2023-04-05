@@ -10,38 +10,38 @@ const headerContent = {
   hexagonColors: ["#41565c", "#778288", "#929a9f", "#b4b8bc", "#eaebed"],
   title: "Darland Software",
   subHeading:
-    "Dedicated to design solutions that elevate the human experience.",
+    "An agricultural software company helping farmers be more efficient.",
   description:
     "We were approached by Darland Software, an established business of over 25 years, to help them enhance their brand identity. Recognizing the need to elevate their brand to attract a broader range of clients, they turned to us for our expertise in developing compelling brand identities that stand out among the rest.",
   scope: "Website, Brand Strategy, Graphic Design, Print",
 };
 
-
-const websiteSectionContent = {
-  primaryColor: primaryColor,
-  imageUrl: "/v1680386081/color-mill-design-2023/Newberger-website_nu1r1n.png",
-  imageAlt: "Darland Software Website",
-  title: "Website",
-  bg: "white",
-  subHeading: "A gallery site with exquisite detail",
-  description:
-    "We designed Newberger and Associates' website with a focus on the exquisite materials used in each project, showcasing the detailed craftsmanship and beauty of the properties. We carefully selected descriptive adjectives for each case study that captured the essence of each building, evoking curiosity and a sense of wonder in potential clients. Through captivating visuals and expertly crafted copy, we emphasized Newberger and Associates' ability to create exceptional work while demonstrating their meticulous attention to detail. The website serves as a powerful tool for showcasing their brand, their outstanding portfolio, and their expertise in delivering awe-inspiring coastal projects and acts as a very effective sales tool.",
-};
-
 const collateralDesignSectionContent = {
   imageUrl:
-    "/v1680385239/color-mill-design-2023/Newberger-BC_kr2ko1.png",
+    "/v1680385437/color-mill-design-2023/Darland-Banners_yxz7om.png",
   image2Url:
-    "/v1680385234/color-mill-design-2023/Newberger-LH_wdq9lg.png",
+    "/v1680385441/color-mill-design-2023/Darland-Rackcard_ef0nk5.png",
   primaryColor: primaryColor,
-  imageAlt: "Darland Software Business Cards",
-  image2Alt: "Darland Software Stationery",
+  imageAlt: "Darland Software Banners",
+  image2Alt: "Darland Software Rack Card",
   title: "Collateral",
   subHeading: "A look to match their vision",
   descriptionOne:
-    "Newberger and Associates' collateral materials, including their business cards, stationery, and a specially designed title block, are a testament to the importance of maintaining brand consistency. By investing in high-quality materials that reflect their brand values, Newberger and Associates has been able to reinforce their brand identity, making it easier for clients to recognize and remember them. The consistency of their color palette, typography, and design elements across all touchpoints helps to create a lasting impression and reinforces their reputation for delivering high-quality work.",
+    "We not only enhanced their brand identity, but also provided them with custom rack cards, show flyers, and banners for a trade show. These materials effectively communicated their brand message and strengths, reinforcing their position as a leading player in their industry. Our designs helped Darland Software stand out among competitors and communicated their value proposition in a clear and compelling way.",
     
 };
+
+const websiteSectionContent = {
+  primaryColor: primaryColor,
+  imageUrl: "/v1680655168/color-mill-design-2023/Website-on-screen_xgibnn.png",
+  imageAlt: "Darland Software Website",
+  title: "Interactive Design",
+  bg: "white",
+  // subHeading: "A gallery site with exquisite detail",
+  description:
+    "We also helped Darland Software by creating visuals for their websites, which consisted of static images to support their multiple landing pages. Our team worked closely with their team to understand their objectives and create visuals that accurately represented their messaging. Our work elevated the look and feel of their websites and create a more engaging user experience for their clients.",
+};
+
 
 
 const DarlandSoftware = () => {

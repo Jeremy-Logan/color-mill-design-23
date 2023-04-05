@@ -3,7 +3,7 @@ import InfoImageSectionTwoRows from "../components/InfoImageSectionTwoRows";
 import PageLayout from "../components/PageLayout";
 import WebsiteSection from "../components/WebsiteSection";
 
-const primaryColor = "#5E85C4";
+const primaryColor = "#4B6A96";
 
 const headerContent = {
   primaryColor: primaryColor,

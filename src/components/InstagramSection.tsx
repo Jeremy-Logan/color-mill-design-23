@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Img from "next/image";
 
 type Props = {
@@ -32,13 +33,12 @@ const data = Object.values(feed)
           data.map((image) => (
             <a key={image.id} href={image.permalink}
             target="_blank"
-            rel="noopener noreferrer" className="relative w-[400px] aspect-square col-span-1 cursor-pointer">
-              <Img
+            rel="noopener noreferrer" className="relative w-[400px] aspect-square col-span-1 cursor-pointer bg-gradient-to-b from-violet-500 to-cyan-50">
+              <img
                 src={image.mediaUrl}
                 alt={image.caption}
-                fill
                 aria-label="Instagram post"
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "cover", position: "absolute", height:'400px' }}
                 sizes="(max-width: 768px) 100vw,
                 (max-width: 1200px) 50vw,
                 33vw"

@@ -7,7 +7,7 @@ type Props = {
   imageUrl: string;
   imageAlt: string;
   title: string;
-  subHeading: string;
+  subHeading?: string;
   description: string;
 };
 
@@ -23,9 +23,9 @@ function WebsiteSection(props: Props) {
         <h1 className="z-10 mx-4 md:mb-6 font-serif text-4xl font-black leading-relaxed tracking-wide text-gray-900 md:text-5xl lg:text-6xl">
           {title}
         </h1>
-        <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide text-gray-900 md:text-2xl lg:text-4xl">
+        {subHeading && <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide text-gray-900 md:text-2xl lg:text-4xl">
           {subHeading}
-        </h2>
+        </h2>}
         <div className="mx-2 my-6 md:my-16 flex flex-col ">
          
           <div className="relative mx-auto h-[200px] w-[90vw] sm:h-[300px] md:h-[400px] xl:h-[600px] 2xl:h-[800px]">

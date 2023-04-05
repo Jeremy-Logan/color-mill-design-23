@@ -17,12 +17,12 @@ export default function BlogFeaturedPosts({ posts }: Props) {
 	)
 
 	return (
-		<div className=' w-full md:w-6/12 lg:w-4/12 self-center md:self-start mx-4'>
+		<div className=' w-full md:w-5/12 lg:w-6/12 xl:w-4/12 self-center md:self-start mx-4'>
 			<div className=' flex flex-col border-b-2 border-b-pa-navy-3 bg-white p-4 pb-2 '>
 				<h2 className='mb-2 text-2xl'>Featured Posts</h2>
-				<div className='-ml-2 flex w-full justify-start'>
+				<div className='flex w-full justify-center'>
 					<button
-						className={`m-1 sm:m-2 px-3 py-1 font-light  ${
+						className={`m-[2px] px-3 py-1 font-light text-sm  ${
 							selectedCategory === 'all'
 								? 'bg-cyan-600 text-white'
 								: 'bg-gray-200'
@@ -32,7 +32,7 @@ export default function BlogFeaturedPosts({ posts }: Props) {
 					</button>
 					{uniqueCategories.map((category: any, i: number) => (
 						<button
-							className='m-1 sm:m-2 px-3 py-1 font-light '
+							className='m-[2px] px-3 py-1 font-light text-sm'
 							style={{
 								color:
 									selectedCategory === category.title
@@ -58,12 +58,13 @@ export default function BlogFeaturedPosts({ posts }: Props) {
 								key={post._id}
 								className=' group cursor-pointer p-4 pl-2'>
 								<div className=' flex w-full justify-between'>
-									<h3 className='mb-3 w-8/12 text-xl group-hover:underline'>
+									<h3 className='mb-3 w-8/12 lg:text-xl group-hover:underline'>
 										{post.title}
 									</h3><div className='flex flex-col text-right'>
 									{post.category.map((c: any, i: number) => (
 										<p
 											key={i}
+											className='text-sm'
 											style={{
 												color: `${c.color.value}`,
 											}}
@@ -76,7 +77,7 @@ export default function BlogFeaturedPosts({ posts }: Props) {
 									<p className='text-sm text-gray-700'>
 										{post.author.name}
 									</p>
-									<p className='text-sm text-gray-700'>
+									<p className=' text-gray-700 text-xs'>
 										{post.publishedAt
 											.replace(/-/g, '/')
 											.replace(/T.+/, '')}
@@ -95,13 +96,14 @@ export default function BlogFeaturedPosts({ posts }: Props) {
 									key={post._id}
 									className=' group cursor-pointer p-4 pl-2'>
 									<div className=' flex w-full justify-between'>
-										<h3 className='mb-3 w-full text-xl group-hover:underline'>
+										<h3 className='mb-3 w-full lg:text-xl group-hover:underline'>
 											{post.title}
 										</h3><div className='flex flex-col text-right'>
 										{post.category.map(
 											(c: any, i: number) => (
 												<p
 													key={i}
+													className='text-sm'
 													style={{
 														color: `${c.color.value}`,
 													}}>
@@ -114,7 +116,7 @@ export default function BlogFeaturedPosts({ posts }: Props) {
 										<p className='text-sm text-gray-700'>
 											{post.author.name}
 										</p>
-										<p className='text-sm text-gray-700'>
+										<p className='text-xs self-center text-gray-700'>
 											{post.publishedAt
 												.replace(/-/g, '/')
 												.replace(/T.+/, '')}

@@ -16,7 +16,7 @@ const BlogPreviewSection = (props: Props) => {
     return (
         <div className={"bg-pa-blue-4 py-10"}>
             <h2
-                className={"text-white text-center text-xl md:text-4xl font-bold font-serif tracking-wide"}
+                className={" text-center text-2xl md:text-4xl font-semibold mb-2 tracking-wide"}
                 
             >
              {props.title}

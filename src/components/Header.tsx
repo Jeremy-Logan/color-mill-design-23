@@ -52,7 +52,7 @@ const categories = [
       {
         name: "Newberger & Associates",
         href: "/newberger-and-associates",
-        primaryColor: "#5E85C4",
+        primaryColor: "#4B6A96",
       },
       {
         name: "Noyo Harbor Inn",
@@ -69,11 +69,11 @@ const categories = [
       //   href: "/mendocino-high-school",
       //   primaryColor: "#810A1E",
       // },
-      // {
-      //   name: "Darland Software",
-      //   href: "/darland-software",
-      //   primaryColor: "#011F42",
-      // },
+      {
+        name: "Darland Software",
+        href: "/darland-software",
+        primaryColor: "#011F42",
+      },
     ],
   },
 ];

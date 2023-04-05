@@ -46,14 +46,13 @@ const About = () => {
         </div>
         <h2
           style={{ lineHeight: "1.4em" }}
-          className="mx-auto mb-12 mt-8 w-10/12 text-left font-serif text-xl font-black text-black sm:w-2/3 sm:text-2xl md:mt-8 md:mb-36 md:text-center lg:w-10/12 lg:text-2xl xl:mt-24 xl:text-3xl 2xl:text-4xl"
+          className="mx-auto mt-8 mb-4 w-10/12 text-left font-serif text-xl font-black text-black sm:w-2/3 sm:text-2xl md:mt-8 md:mb-16 md:text-center lg:w-10/12 lg:text-2xl xl:mt-24 xl:text-3xl 2xl:text-4xl"
         >
           We are Color Mill Design, a branding and web design studio
           <br className="hidden lg:block" /> based in California and Oregon.{" "}
-          <br />
-          <br />
-          Our mission is to help people like you find your story.
         </h2>
+        <h3 className="mx-auto mb-12 w-10/12 text-left font-serif text-lg font-black text-black sm:w-2/3 sm:text-xl md:mt-8 md:mb-36 md:text-center lg:w-10/12 lg:text-xl xl:mt-4 xl:text-2xl 2xl:text-3xl"
+        >Our mission is to help people like you find your story.</h3>
         <div className="relative mx-auto aspect-square w-[95vw] max-w-[860px] sm:w-screen">
           <Image
             src={getCloudinaryImageUrl(
