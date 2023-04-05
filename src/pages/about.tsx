@@ -10,7 +10,7 @@ const aspenContent = {
   imageUrl:
     "v1679965306/color-mill-design-2023/COLORMILL_HEADSHOTS_2020-102_ebusx1.jpg",
   imageAlt: "Portrait of Aspen Logan",
-  title: "Aspen",
+  title: "Aspen Logan",
   subHeading: "Giving Back: Volunteerism & Charitable Contributions.",
   description:
     "As the studio project manager, everyday I draw on my experience working at big corporations to help my boutique studio run smoothly and efficiently. Previously, I spent the better part of two decades in software development managing video games for huge companies like Disney, Warner Brothers, Pixar, Dreamworks and LeapFrog. I’m a thoroughly organized person so creating and managing schedules and keeping creative people on task is a natural fit. \n\nI love to travel, read and write murder mysteries and I’m a fanatical vegetable gardener. I also give time to local organizations that are dear to me. Knowing non profits and corporations from all sides has helped me to be a better strategic partner to my clients, allowing me to guide them to well informed solutions.",
@@ -51,7 +51,7 @@ const About = () => {
           We are Color Mill Design, a branding and web design studio
           <br className="hidden lg:block" /> based in California and Oregon.{" "}
         </h2>
-        <h3 className="mx-auto mb-12 w-10/12 text-left font-serif text-lg font-black text-black sm:w-2/3 sm:text-xl md:mt-8 md:mb-36 md:text-center lg:w-10/12 lg:text-xl xl:mt-4 xl:text-2xl 2xl:text-3xl"
+        <h3 className="mx-auto mb-12 w-10/12 text-left text-lg font-semibold text-black sm:w-2/3 sm:text-xl md:mt-8 md:mb-36 md:text-center lg:w-10/12 lg:text-xl xl:mt-4 xl:text-2xl 2xl:text-3xl"
         >Our mission is to help people like you find your story.</h3>
         <div className="relative mx-auto aspect-square w-[95vw] max-w-[860px] sm:w-screen">
           <Image

@@ -38,12 +38,12 @@ function PortraitSection(props: Props) {
           <div className="block ">
             
 
-            <div className="relative mx-auto lg:ml-4 lg:mb-4 aspect-square w-[327px] sm:w-[400px] lg:float-right lg:w-[500px]">
+            <div className="relative mx-auto lg:ml-4 lg:mb-4 aspect-square h-[327px] sm:h-[400px] lg:float-right lg:h-[500px]">
               <Image
                 src={getCloudinaryImageUrl(`${imageUrl}`)}
                 alt={imageAlt}
                 fill
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "contain" }}
                 sizes="(max-width: 768px) 45vw,"
               />
             </div>
