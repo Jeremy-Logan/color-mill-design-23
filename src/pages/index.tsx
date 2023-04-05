@@ -1,16 +1,26 @@
 import { motion } from "framer-motion";
+import _ from "lodash";
 import type { GetStaticProps } from "next";
 import Img from "next/image";
 
+import BlogPreviewSection from '../components/BlogPreviewSection';
 import HexGrid from "../components/HexGrid";
 import InstagramSection from "../components/InstagramSection";
 import PageLayout from "../components/PageLayout";
 import ProcessSection from "../components/ProcessSection";
 import TestimonialSection from "../components/TestimonialSection";
 import WhatWeDoSection from "../components/WhatWeDoSection";
+import { POST_DATA_QUERY } from "../lib/queries";
+import { sanityClient } from "../lib/sanity-server";
+import type { PageData } from "../lib/types";
 
-interface Feed {
-  feed: any;
+
+interface PageProps {
+  postData: PageData | null
+  feed: any
+  preview: boolean;
+  slug: string | null;
+  token: string | null;
 }
 const primaryColor = "#002856";
 const testimonialSectionContent = {
@@ -32,7 +42,11 @@ const testimonialSectionContent = {
   attribution: "Amanda Friscia - Executive Director, Fort Bragg Food Bank",
 };
 
-const Home = ({ feed }: Feed) => {
+
+
+const Home = ( props: PageProps) => {
+  const posts = _.flatMap(props.postData);
+  const firstThreePosts = posts.slice(0, 3);
   return (
     <>
       <PageLayout
@@ -50,8 +64,7 @@ const Home = ({ feed }: Feed) => {
               src="/gradientIndexHeader.svg"
               alt="Color Mill Design"
               fill
-              style={{ objectFit: "contain" }}
-            />
+              style={{ objectFit: "contain" }} />
           </motion.div>
           <motion.h1
             initial={{ opacity: 0 }}
@@ -67,7 +80,9 @@ const Home = ({ feed }: Feed) => {
           <WhatWeDoSection />
           <ProcessSection />
           <TestimonialSection {...testimonialSectionContent} />
-          <InstagramSection {...feed} />
+          <div className='h-8'></div>
+          <BlogPreviewSection posts={firstThreePosts} title="Featured Articles & News" />
+          <InstagramSection {...props.feed} />
         </main>
       </PageLayout>
     </>
@@ -78,13 +93,15 @@ export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
   const url = `https://feeds.behold.so/tXuTH17S5apHkjYNR7Zv`;
-  const data = await fetch(url);
+  const instagram = await fetch(url);
+  const postData = await sanityClient.fetch<PageData | null>(POST_DATA_QUERY);
 
-  const feed: Feed = await data.json();
+  const feed = await instagram.json();
 
   return {
     props: {
       feed,
+      postData
     },
   };
 };

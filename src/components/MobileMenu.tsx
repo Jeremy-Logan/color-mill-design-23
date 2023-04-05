@@ -108,6 +108,7 @@ const MobileMenu = ({ categories }: CategoriesProps) => {
       <div className=" flex lg:hidden">
         <button
           className="group relative z-50 cursor-pointer"
+          aria-label="Menu toggle"
           onClick={() => toggleMenu()}
         >
           <div className="relative flex h-[50px] w-[50px] transform items-center justify-center overflow-hidden ring-0 ring-gray-300 ring-opacity-30 transition-all duration-200 group-focus:ring-4">
@@ -162,7 +163,7 @@ const MobileMenu = ({ categories }: CategoriesProps) => {
           >
         <div className="py-6">
           <Menu as="div">
-            <Menu.Button className="flex  items-center gap-x-1 text-base font-semibold leading-6 text-gray-900">
+            <Menu.Button className="flex items-center gap-x-1 text-base font-semibold leading-6 text-gray-900">
               Work
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-[#06b2a0]"

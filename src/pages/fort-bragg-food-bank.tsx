@@ -124,7 +124,7 @@ const FortBraggFoodBank = () => {
               {newsletterSectionContent.subHeading}
             </h2>
             <div className=" my-6 flex w-full flex-col items-center justify-center sm:mx-auto md:my-16 lg:flex-row lg:items-start">
-              <div className="relative  aspect-square w-[327px] md:w-[450px] lg:mr-12 lg:w-[500px] xl:w-[650px]">
+              <div className="relative aspect-square w-[327px] md:w-[450px] lg:mr-12 lg:w-[500px] xl:w-[650px]">
                 <Image
                   src={getCloudinaryImageUrl(
                     newsletterSectionContent.imageUrl

@@ -37,7 +37,7 @@ const BlogPostPreview = (post: Post) => {
 					
 					<h2 className='text-lg font-semibold group-hover:underline underline-offset-4 mb-1'>{post.title}</h2>
 					<div className='mb-1 text-sm text-gray-700 '>
-						{post.publishedAt && post.publishedAt.replace(/-/g, '/').replace(/T.+/, '')}
+					{new Date(post.publishedAt).toLocaleDateString()}
 					</div>
 					<div>
 						<p>{post.excerpt}</p>

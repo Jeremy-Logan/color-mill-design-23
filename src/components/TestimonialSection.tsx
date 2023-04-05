@@ -75,7 +75,7 @@ const TestimonialSection = (props: Props) => {
              {attribution}
             </h4>
           </div>
-          <div className="relative my-6 md:my-0 aspect-square h-[340px] md:h-[400px] shadow-xl">
+          <div className="relative m-6 md:my-0 aspect-square h-[340px] md:h-[400px] shadow-xl">
             <Image
               src={getCloudinaryImageUrl(`/q_1,f_auto${imageUrl}`)}
               alt={imageAlt}
