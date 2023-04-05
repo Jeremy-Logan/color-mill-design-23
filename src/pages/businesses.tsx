@@ -28,13 +28,13 @@ const images = [
     description: "Website, Brand Strategy, Graphic Design, Print",
     url: "/noyo-harbor-inn",
   },
-  // {
-  //   src: "v1680385379/color-mill-design-2023/Zenefski-Landing-Page_c8k1pi.png",
-  //   alt: "Daniel Zenefski",
-  //   title: "Daniel Zenefski",
-  //   description: "Brand Strategy, Logo Design",
-  //   url: "/daniel-zenefski",
-  // },
+  {
+    src: "v1680385379/color-mill-design-2023/Zenefski-Landing-Page_c8k1pi.png",
+    alt: "Daniel Zenefski",
+    title: "Daniel Zenefski",
+    description: "Brand Strategy, Logo Design",
+    url: "/daniel-zenefski",
+  },
   // {
   //   src: "v1680385485/color-mill-design-2023/MendoHigh-Landing_ykiifp.png",
   //   alt: "Mendocino High School",
@@ -42,25 +42,25 @@ const images = [
   //   description: "Brand Strategy, Logo Design, Print Design",
   //   url: "/mendocino-high-school",
   // },
-  // {
-  //   src: "v1680385443/color-mill-design-2023/Darland-Landing_nrwsar.png",
-  //   alt: "Darland Software",
-  //   title: "Darland Software",
-  //   description: "Graphic Design, Print, Interactive Design",
-  //   url: "/darland-software",
-  // },
-  // {
-  //   src: "v1680385589/color-mill-design-2023/Shaw-coffee-Landing_dqbszf.png",
-  //   alt: "Shaw Coffee",
-  //   title: "Shaw Coffee",
-  //   description: "Package Design",
-  // },
-  // {
-  //   src: "v1680385613/color-mill-design-2023/RCC-BC-Landing_rpasr3.png",
-  //   alt: "Redwood Coast Construction",
-  //   title: "Redwood Coast Construction",
-  //   description: "Print Design",
-  // },
+  {
+    src: "v1680385443/color-mill-design-2023/Darland-Landing_nrwsar.png",
+    alt: "Darland Software",
+    title: "Darland Software",
+    description: "Graphic Design, Print, Interactive Design",
+    url: "/darland-software",
+  },
+  {
+    src: "v1680385589/color-mill-design-2023/Shaw-coffee-Landing_dqbszf.png",
+    alt: "Shaw Coffee",
+    title: "Shaw Coffee",
+    description: "Package Design",
+  },
+  {
+    src: "v1680385613/color-mill-design-2023/RCC-BC-Landing_rpasr3.png",
+    alt: "Redwood Coast Construction",
+    title: "Redwood Coast Construction",
+    description: "Print Design",
+  },
 ];
 
 const Businesses = () => {
