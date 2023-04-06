@@ -1,4 +1,6 @@
 import { Dialog } from '@headlessui/react';
+import { Switch } from '@headlessui/react'
+import  Link   from "next/link"
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -9,10 +11,12 @@ interface FormData  {
   description: string;
   timeline: string;
   budget: string;
-  
+  agreed: boolean;
 };
 
-
+function classNames(...classes: string[]) {
+	return classes.filter(Boolean).join(' ')
+}
 
 
 const ContactForm: React.FC = () => {
@@ -21,8 +25,9 @@ const ContactForm: React.FC = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<FormData>();
+  } = useForm<FormData>({mode: 'onBlur'});
 
+  const [agreed, setAgreed] = useState(false)
   const [showModal, setShowModal] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
@@ -45,6 +50,11 @@ const ContactForm: React.FC = () => {
     reset()
     setShowModal(true);
   }
+
+  register("agreed", {
+    required: "You must agree to the policies",
+    validate: (value) => value === true || "You must agree to the policies",
+  });
 
   return (
 	<div className='mt-16 max-w-3xl w-full mx-auto justify-center flex flex-col'>
@@ -154,7 +164,7 @@ const ContactForm: React.FC = () => {
         <select
           id="budget"
           {...register("budget", { required: "Budget is required" })}
-          className="my-2 mb-12 w-full border-b-2 pl-2 focus:border-none"
+          className="my-2 mb-8 w-full border-b-2 pl-2 focus:border-none"
         >
           <option className="focus:border-none" value="$1,000-$5,000">
             $1,000-$5,000
@@ -167,6 +177,56 @@ const ContactForm: React.FC = () => {
           <p className="mt-1 text-xs text-red-500">{errors.budget.message}</p>
         )}
       </div>
+      <div className='sm:col-span-2'>
+							<div className='flex items-start'>
+								<div className='flex-shrink-0'>
+									<Switch
+										checked={agreed}
+										onChange={(value) => setAgreed(value)}
+										className={classNames(
+											agreed
+												? 'bg-teal-500'
+												: 'bg-gray-200',
+											'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-pa-teal-3 focus:ring-offset-2'
+										)}
+                    name="agreed"
+                    >
+										<span className='sr-only'>
+											Agree to policies
+										</span>
+										<span
+											aria-hidden='true'
+											className={classNames(
+												agreed
+													? 'translate-x-5'
+													: 'translate-x-0',
+												'inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out'
+											)}
+										/>
+									</Switch>
+								</div>
+								<div className='ml-3'>
+									<p className='text-base text-gray-500'>
+										By selecting this, you agree to the{' '}
+										<Link
+											href='/policies#privacy'
+											className='font-medium text-pa-navy-4 underline'>
+											Privacy Policy
+										</Link>{' '}
+										and{' '}
+										<Link
+											href='/policies#cookies'
+											className='font-medium text-pa-navy-4 underline'>
+											Cookie Policy
+										</Link>
+										.
+									</p>
+                  {errors.agreed && (
+            <p className="mt-1 text-xs text-red-500">{errors.agreed.message}</p>
+          )}
+								</div>
+							</div>
+						</div>
       <button
         type="submit"
         className="duration-250 mt-4 w-full transform bg-[#fae06a] py-4 px-2 text-xl font-semibold text-gray-800 shadow-md transition hover:scale-105 hover:bg-[#94df57] hover:shadow-lg md:w-1/3"
