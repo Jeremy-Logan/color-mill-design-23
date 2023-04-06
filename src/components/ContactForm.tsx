@@ -31,11 +31,11 @@ const ContactForm: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
-  const encode = (data: Record<string, any>) => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&')
-  }
+  // const encode = (data: Record<string, any>) => {
+  //   return Object.keys(data)
+  //     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+  //     .join('&')
+  // }
 
   const handleRegistration = (values: Record<string, any>) => {
     const formData = new FormData();
