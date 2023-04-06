@@ -47,7 +47,7 @@ const ContactForm: React.FC = () => {
   }
 
   const handleRegistration = async (values: Record<string, any>) => {
-    trigger(); // Trigger validation manually
+    // trigger(); // Trigger validation manually
     if (Object.keys(errors).length === 0) {
       try {
         const response = await fetch("/", {
@@ -281,7 +281,3 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
-function trigger() {
-  throw new Error('Function not implemented.');
-}
-
