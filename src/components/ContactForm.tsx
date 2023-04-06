@@ -24,8 +24,17 @@ const ContactForm: React.FC = () => {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
-  } = useForm<FormData>({mode: 'onBlur'});
+  } = useForm<FormData>({defaultValues: {
+    name: "",
+    companyName: "",
+    email: "",
+    description: "",
+    timeline: "",
+    budget: "",
+    agreed: false // Add default value for agreed field
+  }});
 
   const [agreed, setAgreed] = useState(false)
   const [showModal, setShowModal] = useState(false);
@@ -188,7 +197,10 @@ const ContactForm: React.FC = () => {
 								<div className='flex-shrink-0'>
 									<Switch
 										checked={agreed}
-										onChange={(value) => setAgreed(value)}
+                    onChange={(checked) => {
+                      setAgreed(checked);
+                      setValue("agreed", checked); // Update form value
+                    }}
 										className={classNames(
 											agreed
 												? 'bg-teal-500'
