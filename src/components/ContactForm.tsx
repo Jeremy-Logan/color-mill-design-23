@@ -40,32 +40,36 @@ const ContactForm: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
-  // const encode = (data: Record<string, any>) => {
-  //   return Object.keys(data)
-  //     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-  //     .join('&')
-  // }
+  const encode = (data: Record<string, any>) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
 
-  const handleRegistration = (values: Record<string, any>) => {
-    const formData = new FormData();
-    Object.keys(values).forEach((key) => {
-      formData.append(key, values[key]);
-    });
-  
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData as any).toString(),
-    })
-      .then(() => {
-        setSuccessMessage(
-          "Thank you for reaching out! We will be in touch soon."
-        );
-      })
-      .catch((error) => console.log(error));
-    reset();
-    setShowModal(true);
+  const handleRegistration = async (values: Record<string, any>) => {
+    trigger(); // Trigger validation manually
+    if (Object.keys(errors).length === 0) {
+      try {
+        const response = await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact", ...values })
+        });
+        if (response.status === 200) {
+          setSuccessMessage(
+            "Thank you for reaching out! We will be in touch soon."
+          );
+          reset();
+          setShowModal(true);
+        } else {
+          console.log(response);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
   };
+  
   register("agreed", {
     required: "You must agree to the policies",
     validate: (value) => value === true || "You must agree to the policies",
@@ -277,3 +281,7 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
+function trigger() {
+  throw new Error('Function not implemented.');
+}
+
