@@ -38,19 +38,25 @@ const ContactForm: React.FC = () => {
   }
 
   const handleRegistration = (values: Record<string, any>) => {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...values })
+    const formData = new FormData();
+    Object.keys(values).forEach((key) => {
+      formData.append(key, values[key]);
+    });
+  
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString(),
     })
-    .then(() => {
-      setSuccessMessage('Thank you for reaching out! We will be in touch soon.');
-    })
-    .catch(error => console.log(error));
-    reset()
+      .then(() => {
+        setSuccessMessage(
+          "Thank you for reaching out! We will be in touch soon."
+        );
+      })
+      .catch((error) => console.log(error));
+    reset();
     setShowModal(true);
-  }
-
+  };
   register("agreed", {
     required: "You must agree to the policies",
     validate: (value) => value === true || "You must agree to the policies",
