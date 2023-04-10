@@ -23,7 +23,7 @@ const serializers = () => {
 			<blockquote style={{borderLeftStyle: 'solid', borderLeftWidth: '4px', borderColor: '#0088A7', paddingLeft: '4px'}} className='italic'>&quot;{children}&quot;</blockquote>
 		),
 		link: ({ href, children }: any) => (
-			<a className='text-pa-teal-4 underline' href={href}			
+			<a className='text-cyan-700 underline' href={href}			
 			>
 				{children}
 			</a>
