@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import _ from "lodash";
 import type { GetStaticProps } from "next";
 import Img from "next/image";
+import Link from "next/link";
 
-import BlogPreviewSection from '../components/BlogPreviewSection';
+import BlogPreviewSection from "../components/BlogPreviewSection";
 import HexGrid from "../components/HexGrid";
 import InstagramSection from "../components/InstagramSection";
 import PageLayout from "../components/PageLayout";
@@ -14,10 +15,9 @@ import { POST_DATA_QUERY } from "../lib/queries";
 import { sanityClient } from "../lib/sanity-server";
 import type { PageData } from "../lib/types";
 
-
 interface PageProps {
-  postData: PageData | null
-  feed: any
+  postData: PageData | null;
+  feed: any;
   preview: boolean;
   slug: string | null;
   token: string | null;
@@ -38,13 +38,11 @@ const testimonialSectionContent = {
   ],
   imageAlt: "Amanda Friscia - Executive Director, Fort Bragg Food Bank",
   heading:
-    "\"The Color Mill's work increased donations and added vibrancy to our entire organization.\"",
+    '"The Color Mill\'s work increased donations and added vibrancy to our entire organization."',
   attribution: "Amanda Friscia - Executive Director, Fort Bragg Food Bank",
 };
 
-
-
-const Home = ( props: PageProps) => {
+const Home = (props: PageProps) => {
   const posts = _.flatMap(props.postData);
   const firstThreePosts = posts.slice(0, 3);
   return (
@@ -64,24 +62,42 @@ const Home = ( props: PageProps) => {
               src="/gradientIndexHeader.svg"
               alt="Color Mill Design"
               fill
-              style={{ objectFit: "contain" }} />
+              style={{ objectFit: "contain" }}
+            />
           </motion.div>
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1, duration: 0.55, ease: "easeIn" }}
             style={{ lineHeight: "1.2em" }}
-            className=" 2xl:6xl mx-auto mb-12 w-10/12 text-left font-serif text-2xl font-black text-black sm:w-2/3 sm:text-3xl md:mt-8 md:mb-36 md:text-center lg:w-7/12 lg:text-4xl xl:mt-24 xl:w-1/2 xl:text-4xl 2xl:text-5xl"
+            className=" 2xl:6xl mx-auto mb-12 w-10/12 text-left font-serif text-2xl font-black text-black sm:w-2/3 sm:text-3xl md:mt-8 md:mb-20 md:text-center lg:w-7/12 lg:text-4xl xl:mt-24 xl:w-1/2 xl:text-4xl 2xl:text-5xl"
           >
-            A boutique design agency, dedicated to empowering {" "}
-            <br className="hidden sm:block lg:hidden" /> purpose-driven visionaries.
+            A boutique design agency, dedicated to empowering{" "}
+            <br className="hidden sm:block lg:hidden" /> purpose-driven
+            visionaries.
           </motion.h1>
+          <div className="mb-12 lg:mb-20 flex w-full justify-center">
+            <Link
+              href="/contact"
+              className=""
+            >
+              <button
+                type="button"
+                className="relative text-lg sm:text-xl lg:text-2xl font-semibold leading-6 text-white inline-flex items-center rounded-md bg-rose-600 px-6 lg:px-8 py-3 lg:py-5 shadow-lg transition duration-150 hover:scale-105 hover:bg-rose-500 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+              >
+                Hire Us!
+              </button>
+            </Link>
+          </div>
           <HexGrid />
           <WhatWeDoSection />
           <ProcessSection />
           <TestimonialSection {...testimonialSectionContent} />
-          <div className='h-8'></div>
-          <BlogPreviewSection posts={firstThreePosts} title="Featured Articles & News" />
+          <div className="h-8"></div>
+          <BlogPreviewSection
+            posts={firstThreePosts}
+            title="Featured Articles & News"
+          />
           <InstagramSection {...props.feed} />
         </main>
       </PageLayout>
@@ -101,7 +117,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       feed,
-      postData
+      postData,
     },
   };
 };

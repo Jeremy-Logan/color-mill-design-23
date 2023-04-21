@@ -245,17 +245,19 @@ export default function Header() {
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <Link
+              href="/contact"
+              className=""
+            >
           <button
             type="button"
-            className="relative inline-flex items-center gap-x-1.5 rounded-md border-2 border-[#625BE4] px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            className="relative text-lg font-semibold leading-6 text-[#625BE4] inline-flex items-center gap-x-1.5 rounded-md border-2 border-[#625BE4] px-4 py-3  shadow-sm hover:bg-indigo-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
           >
-            <Link
-              href="/contact"
-              className="text-lg font-semibold leading-6 text-[#625BE4]"
-            >
+            
               Contact
-            </Link>
+            
           </button>
+          </Link>
         </div>
       </nav>
 

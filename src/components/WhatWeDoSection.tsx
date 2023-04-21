@@ -66,7 +66,7 @@ function WhatWeDoSection({}) {
         style={{ background: outlineGradient }}
       >
         <div className="relative flex h-full min-h-[500px] w-full items-start rounded-bl-3xl rounded-tr-3xl bg-white py-8">
-          <div className="-ml-[6%] flex w-2/12 flex-col items-center justify-center self-center md:-ml-[10%] md:w-4/12 2xl:w-3/12 ">
+          <div className="-ml-[4%] flex w-2/12 flex-col items-center justify-center self-center md:-ml-[10%] md:w-4/12 2xl:w-3/12 ">
             {categoryProperties.map((button, index) => (
               <div
                 className="my-9 -rotate-90 md:my-2 md:w-full md:rotate-0"
@@ -88,7 +88,7 @@ function WhatWeDoSection({}) {
                 {activeButtonIndex === index && (
                   <div
                     key={index}
-                    className="mx-8 flex h-full flex-col items-start justify-center gap-4 md:my-8 sm:mx-12 md:items-center xl:mx-24 2xl:mx-36"
+                    className="mx-6 flex h-full flex-col items-start justify-center gap-4 md:my-8 sm:mx-12 md:items-center xl:mx-24 2xl:mx-36"
                   >
                     <h3
                       className="text-left text-2xl font-medium sm:text-center sm:text-4xl"
