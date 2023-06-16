@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import BlogPreviewSection from "../components/BlogPreviewSection";
 import HexGrid from "../components/HexGrid";
-import InstagramSection from "../components/InstagramSection";
+// import InstagramSection from "../components/InstagramSection";
 import PageLayout from "../components/PageLayout";
 import ProcessSection from "../components/ProcessSection";
 import TestimonialSection from "../components/TestimonialSection";
@@ -70,7 +70,7 @@ const Home = (props: PageProps) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1, duration: 0.55, ease: "easeIn" }}
             style={{ lineHeight: "1.2em" }}
-            className="w-10/12 mx-auto mb-12 font-serif text-2xl font-black text-left text-black  2xl:6xl sm:w-2/3 sm:text-3xl md:mt-8 md:mb-20 md:text-center lg:w-7/12 lg:text-4xl xl:mt-24 xl:w-1/2 xl:text-4xl 2xl:text-5xl"
+            className="w-10/12 mx-auto mb-12 font-serif text-2xl font-black text-left text-black 2xl:6xl sm:w-2/3 sm:text-3xl md:mt-8 md:mb-20 md:text-center lg:w-7/12 lg:text-4xl xl:mt-24 xl:w-1/2 xl:text-4xl 2xl:text-5xl"
           >
             A boutique design agency, dedicated to empowering{" "}
             <br className="hidden sm:block lg:hidden" /> purpose-driven
