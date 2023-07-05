@@ -2,6 +2,7 @@ import CaseStudyHeader from "../components/CaseStudyHeader";
 import InfoImageSectionTwoRows from "../components/InfoImageSectionTwoRows";
 import PageLayout from "../components/PageLayout";
 import WebsiteSection from "../components/WebsiteSection";
+import { getCloudinaryImageUrl } from "../utils/cloudinary";
 
 const primaryColor = "#011F42";
 
@@ -45,11 +46,20 @@ const websiteSectionContent = {
 
 
 const DarlandSoftware = () => {
+  const metaData = {
+    "type": "website",
+    "headline": "Darland Software Case Study",
+    "description": "Darland Software, an established business, sought a brand enhancement to attract diverse clients. We developed a compelling identity that stands out.",
+    "slug": "darland-software",
+    "image": getCloudinaryImageUrl("v1680385443/color-mill-design-2023/Darland-Landing_nrwsar.png"),
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
   return (
     <div>
       <PageLayout
-        title="Darland Software Case Study"
-        description="Darland Software, an established business, sought a brand enhancement to attract diverse clients. We developed a compelling identity that stands out."
+        {...metaData}
       >
         <CaseStudyHeader {...headerContent} />
         <InfoImageSectionTwoRows {...collateralDesignSectionContent} />

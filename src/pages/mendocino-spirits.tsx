@@ -5,6 +5,7 @@ import InfoImageSectionTwoRows from "../components/InfoImageSectionTwoRows";
 import PageLayout from "../components/PageLayout";
 import StylescapeSection from "../components/StylescapeSection";
 import WebsiteSection from "../components/WebsiteSection";
+import { getCloudinaryImageUrl } from "../utils/cloudinary";
 
 const primaryColor = "#1A3D44";
 
@@ -88,11 +89,20 @@ const largeFormatSectionContent = {
 };
 
 const MendocinoSpirits = () => {
+  const metaData = {
+    "type": "website",
+    "headline": "Mendocino Spirits Case Study",
+    "description": "Mendocino Spirits, blending tradition and innovation, needed a unique brand. As longtime fans, we were thrilled to create their inspiring branding.",
+    "slug": "mendocino-spirits",
+    "image": getCloudinaryImageUrl("v1680108504/color-mill-design-2023/Mendocino-Spirits-Landing-Image_kt9oby.png"),
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
   return (
     <div>
       <PageLayout
-        title="Mendocino Spirits Case Study"
-        description="Mendocino Spirits, blending tradition and innovation, needed a unique brand. As longtime fans, we were thrilled to create their inspiring branding."
+      {...metaData}
       >
         <CaseStudyHeader {...headerContent} />
         <StylescapeSection {...brandStrategySectionContent}/>

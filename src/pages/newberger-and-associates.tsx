@@ -2,6 +2,7 @@ import CaseStudyHeader from "../components/CaseStudyHeader";
 import InfoImageSectionTwoRows from "../components/InfoImageSectionTwoRows";
 import PageLayout from "../components/PageLayout";
 import WebsiteSection from "../components/WebsiteSection";
+import { getCloudinaryImageUrl } from "../utils/cloudinary";
 
 const primaryColor = "#4B6A96";
 
@@ -45,11 +46,20 @@ const collateralDesignSectionContent = {
 
 
 const NewbergerAndAssociates = () => {
+  const metaData = {
+    "type": "website",
+    "headline": "Newberger & Associates Case Study",
+    "description": "Newberger and Associates, a coastal architecture firm, needed a brand reflecting their excellence. We aligned their brand with their vision and expertise.",
+    "slug": "newberger-and-associates",
+    "image": getCloudinaryImageUrl("v1680385225/color-mill-design-2023/Newberger-Landing-Image_d39dhp.png"),
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
   return (
     <div>
       <PageLayout
-        title="Newberger & Associates Case Study"
-        description="Newberger and Associates, a coastal architecture firm, needed a brand reflecting their excellence. We aligned their brand with their vision and expertise."
+        {...metaData}
       >
         <CaseStudyHeader {...headerContent} />
         <InfoImageSectionTwoRows {...collateralDesignSectionContent} />

@@ -9,50 +9,62 @@ import Footer from './Footer';
 import Header from './Header'
 
 type Props = {
-	title: string
+	tags?: string[] | undefined;
+	author: any;
+	image: string;
+	headline: string;
 	description: string
 	children: ReactNode
+	slug?: string
+	type?: string
+	publishedAt?: string
 }
 
 const PageLayout = (props: Props) => {
 	return (
 		<>
-            <Head>
-          <title>Color Mill Design</title>
-          <meta name="description" content={props.description} />
-          <link rel="icon" href="/favicon.ico" />
-          
-        </Head>
+			<Head>
+				<title>Color Mill Design</title>
+				<meta name="description" content={props.description} />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 			<NextSeo
-				title={`Impactful Design Solutions for Nonprofits & Small Businesses |${props.title}`}
+				title={`Impactful Design Solutions for Nonprofits & Small Businesses |${props.headline}`}
 				description={props.description}
-				additionalMetaTags={[{name:"keywords", content:"design agency, brand strategy, web design, web development, graphic design, nonprofits, small businesses, branding, digital presence, creative solutions"}]}
+				additionalMetaTags={[{ name: "keywords", content: "design agency, brand strategy, web design, web development, graphic design, nonprofits, small businesses, branding, digital presence, creative solutions" }]}
 				openGraph={{
-					url: 'https://www.colormilldesign.com',
+					url: `https://www.colormilldesign.com/${props.slug}`,
 					locale: 'en_IE',
-					type: 'website',
-					title: `Impactful Design Solutions for Nonprofits & Small Businesses |${props.title}`,
+					type: props.type,
+					title: `Impactful Design Solutions for Nonprofits & Small Businesses | ${props.headline}`,
 					description: `${props.description}`,
+					article: {
+						publishedTime: props.publishedAt,
+						authors: [
+							`${props.author}`,
+						],
+						tags: props.tags ,
+					},
 					images: [
 						{
-							url: 'https://www.colormilldesign.com/color-mill-logo.jpg',
+							url: props.image,
 							width: 800,
 							height: 600,
-							alt: 'Color Mill Design',
+							alt: props.headline,
 							type: 'image/png',
 						},
 					],
 					site_name: 'Color Mill Design',
 				}}
 			/><Script
-			strategy='afterInteractive'
-			src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-		/>
-		<Script
-			id='gtag-init'
-			strategy='afterInteractive'
-			dangerouslySetInnerHTML={{
-				__html: `
+				strategy='afterInteractive'
+				src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+			/>
+			<Script
+				id='gtag-init'
+				strategy='afterInteractive'
+				dangerouslySetInnerHTML={{
+					__html: `
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
@@ -60,16 +72,16 @@ const PageLayout = (props: Props) => {
 			page_path: window.location.pathname,
 		});
 		`,
-			}}
-		/>
+				}}
+			/>
 			<div className=''>
-				<Header/>
+				<Header />
 				<div className="min-h-screen overflow-hidden ">
 					{props.children}
-				
+					
 				</div>
-				<Footer/></div>
-			
+				<Footer /></div>
+
 		</>
 	)
 }

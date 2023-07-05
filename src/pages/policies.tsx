@@ -1,19 +1,28 @@
 import PageLayout from "../components/PageLayout";
 
 const Policies = () => {
+  const metaData = {
+    "type": "website",
+    "headline": "Policies",
+    "description": "Learn about Color Mill Design, our mission, values, and the passionate team of creative experts behind our innovative design solutions for nonprofits and small businesses.",
+    "slug": "policies",
+    "image": "/color-mill-logo.jpg",
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
   return (
     <div>
       <PageLayout
-        title="About"
-        description="Learn about Color Mill Design, our mission, values, and the passionate team of creative experts behind our innovative design solutions for nonprofits and small businesses."
+        {...metaData}
       >
         <main className="oveflow-hidden mx-auto max-w-[1800px] bg-white sm:mt-[120px] md:mt-16 lg:mt-24">
-          <h1 className="2xl:6xl mx-auto mb-12 w-10/12 pt-12 text-left font-serif text-2xl font-black text-black sm:w-2/3 sm:text-3xl md:mt-8 md:mb-36 md:text-center lg:w-10/12 lg:text-4xl xl:mt-24 xl:text-4xl 2xl:text-5xl">
+          <h1 className="w-10/12 pt-12 mx-auto mb-12 font-serif text-2xl font-black text-left text-black 2xl:6xl sm:w-2/3 sm:text-3xl md:mt-8 md:mb-36 md:text-center lg:w-10/12 lg:text-4xl xl:mt-24 xl:text-4xl 2xl:text-5xl">
             Color Mill Design Website Policies
           </h1>
           <section
             id="privacy"
-            className="mx-8 border-2 border-teal-400 py-12 px-24"
+            className="px-24 py-12 mx-8 border-2 border-teal-400"
           >
             <h2 className="text-2xl font-semibold">Privacy Policy</h2>
             <p>
@@ -28,7 +37,7 @@ const Policies = () => {
             <p>
               When you use our website and contact form, we may collect the
               following personal information:{" "}
-              <ul className="list-outside list-disc indent-4">
+              <ul className="list-disc list-outside indent-4">
                 <li>Your name</li> <li>Your email address</li>{" "}
                 <li>Your phone number (optional)</li>
               </ul>
@@ -38,7 +47,7 @@ const Policies = () => {
             </h3>
             <p>
               We collect this information to:{" "}
-              <ul className="list-outside list-disc indent-4">
+              <ul className="list-disc list-outside indent-4">
                 <li>Respond to your inquiries and provide customer support</li>{" "}
                 <li>Keep a record of our communication with you</li>{" "}
                 <li>Improve our products and services</li>
@@ -50,7 +59,7 @@ const Policies = () => {
             <p>
               We use your information only for the purposes for which it was
               collected, which include:{" "}
-              <ul className="list-outside list-disc indent-4">
+              <ul className="list-disc list-outside indent-4">
                 <li>
                   Responding to your inquiries and providing customer support
                 </li>{" "}
@@ -83,7 +92,7 @@ const Policies = () => {
               What are your rights?
             </h3>
             <p>Under the GDPR, you have the following rights: </p>
-            <ul className="list-outside list-disc indent-4">
+            <ul className="list-disc list-outside indent-4">
               <li>The right to access your personal information</li>{" "}
               <li>The right to rectify inaccurate or incomplete information</li>{" "}
               <li>The right to erasure of your personal information</li>
@@ -107,7 +116,7 @@ const Policies = () => {
           </section>
           <section
             id="cookies"
-            className="mx-8 mt-12 border-2 border-teal-400 py-12 px-24"
+            className="px-24 py-12 mx-8 mt-12 border-2 border-teal-400"
           >
             <h2 className="text-2xl font-semibold">Cookie Policy</h2>
             <p>
@@ -118,7 +127,7 @@ const Policies = () => {
             <h3 className="mt-4 text-xl font-semibold">
               What types of cookies do we use?
             </h3>
-            <ul className="list-outside list-disc indent-4">
+            <ul className="list-disc list-outside indent-4">
               <li>
                 Strictly necessary cookies: These cookies are essential for the
                 operation of our website and cannot be turned off in our

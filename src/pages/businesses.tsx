@@ -64,13 +64,22 @@ const images = [
 ];
 
 const Businesses = () => {
+  const metaData = {
+    "type": "website",
+    "headline": "Businesses",
+    "description": "Explore our tailored design services for small businesses, including brand strategy, web design & development, and graphic design, that drive growth and make a lasting impact.",
+    "slug": "businesses",
+    "image": getCloudinaryImageUrl("v1680108504/color-mill-design-2023/Mendocino-Spirits-Landing-Image_kt9oby.png"),
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
   return (
     <div>
       <PageLayout
-        title="Businesses"
-        description="Explore our tailored design services for small businesses, including brand strategy, web design & development, and graphic design, that drive growth and make a lasting impact."
+        {...metaData}
       >
-        <h1 className="2xl:6xl mx-auto w-10/12 text-center font-serif text-2xl font-black text-black sm:w-2/3 sm:text-3xl md:mt-12 lg:w-1/2 lg:text-4xl xl:w-1/3 xl:text-5xl">
+        <h1 className="w-10/12 mx-auto font-serif text-2xl font-black text-center text-black 2xl:6xl sm:w-2/3 sm:text-3xl md:mt-12 lg:w-1/2 lg:text-4xl xl:w-1/3 xl:text-5xl">
           Small Business
         </h1>
         <div className="relative mx-auto h-16 w-[95vw] sm:w-screen md:my-8 md:h-24">
@@ -81,12 +90,12 @@ const Businesses = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <h2 className=" 2xl:6xl mx-auto w-10/12  text-center  text-lg font-semibold text-black sm:w-2/3 sm:text-2xl lg:w-1/2 lg:text-3xl xl:text-3xl">
+        <h2 className="w-10/12 mx-auto text-lg font-semibold text-center text-black 2xl:6xl sm:w-2/3 sm:text-2xl lg:w-1/2 lg:text-3xl xl:text-3xl">
           Branding and Website Design
         </h2>
-        <div className="mx-auto mt-12 grid w-screen max-w-7xl justify-center gap-4 lg:grid-cols-2">
+        <div className="grid justify-center w-screen gap-4 mx-auto mt-12 max-w-7xl lg:grid-cols-2">
           {images.map((image, i) => (
-            <div key={i} className="justify-self-center mb-8 ">
+            <div key={i} className="mb-8 justify-self-center ">
               {image.url ? (
                 <Link href={image.url}>
                   <div className="relative h-[222px] w-[327px] shadow-lg transition-all duration-150 ease-in-out hover:scale-[102%] sm:h-[329px] sm:w-[484px] md:h-[412px] md:w-[606px] lg:h-[329px] lg:w-[484px] xl:h-[412px] xl:w-[606px]">

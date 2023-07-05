@@ -3,6 +3,7 @@ import FullScreenImageSection from "../components/FullScreenImageSection";
 import InfoImageSectionTwoRows from "../components/InfoImageSectionTwoRows";
 import PageLayout from "../components/PageLayout";
 import StylescapeSection from "../components/StylescapeSection";
+import { getCloudinaryImageUrl } from "../utils/cloudinary";
 
 const primaryColor = "#01657D";
 
@@ -100,11 +101,20 @@ const infographicSectionContent = {
 // };
 
 const MendoParks = () => {
+  const metaData = {
+    "type": "website",
+    "headline": "Mendo Parks Case Study",
+    "description": "MendoParks, supporting Mendocino County State Parks, sought increased visibility. We provided branding and marketing that embodied their mission.",
+    "slug": "mendo-parks",
+    "image": getCloudinaryImageUrl("v1678240471/color-mill-design-2023/MendoParks-Landing_nmbmil.png"),
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
   return (
     <div>
       <PageLayout
-        title="Mendo Parks Case Study"
-        description="MendoParks, supporting Mendocino County State Parks, sought increased visibility. We provided branding and marketing that embodied their mission."
+      {...metaData}
       >
         <CaseStudyHeader {...headerContent} />
         <StylescapeSection {...brandStrategySectionContent} />

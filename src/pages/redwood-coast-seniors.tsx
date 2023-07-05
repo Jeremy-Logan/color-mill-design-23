@@ -5,6 +5,7 @@ import PageLayout from "../components/PageLayout";
 import StylescapeSection from "../components/StylescapeSection";
 import TestimonialSection from "../components/TestimonialSection";
 import WebsiteSection from "../components/WebsiteSection";
+import { getCloudinaryImageUrl } from "../utils/cloudinary";
 
 
 const primaryColor = "#450265";
@@ -96,11 +97,20 @@ const testimonialSectionContent = {
 };
 
 const RedwoodCoastSeniors = () => {
+  const metaData = {
+    "type": "website",
+    "headline": "Redwood Coast Seniors Case Study",
+    "description": "With new leadership and upgrades, RCS was ready for a brand refresh. We preserved their recognizable logo while giving their identity a modern twist.",
+    "slug": "redwood-coast-seniors",
+    "image": getCloudinaryImageUrl("v1678240470/color-mill-design-2023/RCS-Landing-Image_nln6uo.png"),
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
   return (
     <div>
       <PageLayout
-        title="Redwood Coast Seniors Case Study"
-        description="With new leadership and upgrades, RCS was ready for a brand refresh. We preserved their recognizable logo while giving their identity a modern twist."
+        {...metaData}
       >
         <CaseStudyHeader {...headerContent} />
         <StylescapeSection {...brandStrategySectionContent} />

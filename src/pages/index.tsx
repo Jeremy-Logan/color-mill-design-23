@@ -15,6 +15,7 @@ import { POST_DATA_QUERY } from "../lib/queries";
 import { sanityClient } from "../lib/sanity-server";
 import type { PageData } from "../lib/types";
 
+
 interface PageProps {
   postData: PageData | null;
   feed: any;
@@ -45,11 +46,22 @@ const testimonialSectionContent = {
 const Home = (props: PageProps) => {
   const posts = _.flatMap(props.postData);
   const firstThreePosts = posts.slice(0, 3);
+  const metaData = {
+    "type": "website",
+    "headline": "Home",
+    "description": "Discover Color Mill Design's tailored brand strategy, web design & development, and graphic design services that empower nonprofits and small businesses to create meaningful impact.",
+    "slug": "",
+    "image": "/color-mill-logo.jpg",
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
+
+    
   return (
     <>
       <PageLayout
-        title="Home"
-        description="Discover Color Mill Design's tailored brand strategy, web design & development, and graphic design services that empower nonprofits and small businesses to create meaningful impact."
+        {...metaData}
       >
         <main className="oveflow-hidden bg-white sm:mt-[100px] md:mt-12 lg:mt-16">
           <motion.div
@@ -108,15 +120,15 @@ const Home = (props: PageProps) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const url = `https://feeds.behold.so/tXuTH17S5apHkjYNR7Zv`;
-  const instagram = await fetch(url);
+  // const url = `https://feeds.behold.so/tXuTH17S5apHkjYNR7Zv`;
+  // const instagram = await fetch(url);
   const postData = await sanityClient.fetch<PageData | null>(POST_DATA_QUERY);
 
-  const feed = await instagram.json();
+  // const feed = await instagram.json();
 
   return {
     props: {
-      feed,
+      // feed,
       postData,
     },
   };

@@ -4,6 +4,7 @@ import InfoImageSection from "../components/InfoImageSection";
 import InfoImageSectionTwoRows from "../components/InfoImageSectionTwoRows";
 import PageLayout from "../components/PageLayout";
 import WebsiteSection from "../components/WebsiteSection";
+import { getCloudinaryImageUrl } from "../utils/cloudinary";
 
 
 const primaryColor = "#074B78";
@@ -65,17 +66,25 @@ const advertisingSectionContent = {
 };
 
 const NoyoHarborInn = () => {
+  const metaData = {
+    "type": "website",
+    "headline": "Noyo Harbor Inn Case Study",
+    "description": "Noyo Harbor Inn, a restored Craftsman-style inn, desired a period-inspired brand. We created a warm, inviting color palette based on floral patterns.",
+    "slug": "noyo-harbor-inn",
+    "image": getCloudinaryImageUrl("v1680385546/color-mill-design-2023/Noyo-Landing_dyhaqj.png"),
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
   return (
     <div>
       <PageLayout
-        title="Noyo Harbor Inn Case Study"
-        description="Noyo Harbor Inn, a restored Craftsman-style inn, desired a period-inspired brand. We created a warm, inviting color palette based on floral patterns."
+        {...metaData}
       >
         <CaseStudyHeader {...headerContent} />
         <InfoImageSectionTwoRows {...collateralDesignSectionContent} />
         <WebsiteSection {...websiteSectionContent} />
-        <FullScreenImageSection {...menuSectionContent} />
-               
+        <FullScreenImageSection {...menuSectionContent} />               
         <InfoImageSection {...advertisingSectionContent} />
       </PageLayout>
     </div>

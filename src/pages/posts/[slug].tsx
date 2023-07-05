@@ -4,7 +4,7 @@ import { useNextSanityImage } from "next-sanity-image";
 import React from "react";
 import PortableText from "react-portable-text";
 
- import BlogPreviewSection from '../../components/BlogPreviewSection'
+import BlogPreviewSection from '../../components/BlogPreviewSection'
 import PageLayout from "../../components/PageLayout";
 import serializers from "../../lib/portableText-serializers";
 import { urlForImage } from "../../lib/sanity";
@@ -22,12 +22,27 @@ interface Props {
     };
   };
 }
+
+
+
 const Post = ({ post, previews }: Props) => {
   const { previews: posts } = previews;
   const imageProps: any = useNextSanityImage(sanityClient, post.mainImage);
+  const metaData = {   
+    "type": "article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "slug": post.slug.current,
+    "image": imageProps.src,
+    "datePublished": post.publishedAt,
+    "dateModified": post.publishedAt,
+    "author": post.author.name,
+    tags: post.categories.map((category: any) => category.title)
+}
+  
 
   return (
-    <PageLayout title={post.title} description={post.title}>
+    <PageLayout {...metaData}>
       <main>
         <div className="relative top-4 z-0 mx-auto h-[50vh] w-full max-w-[1600px] md:h-[60vh]">
           {post.mainImage && (
@@ -39,13 +54,11 @@ const Post = ({ post, previews }: Props) => {
               priority={true}
               quality={80}
               style={{ objectFit: "cover" }}
-              sizes="(max-width: 768px) 100vw,
-              					(max-width: 1200px) 50vw,
-              					33vw"
+              sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 33vw"
             />
           )}
         </div>
-        <article className="mx-auto max-w-4xl p-5">
+        <article className="max-w-4xl p-5 mx-auto">
           <h1 className="mt-10 mb-1 text-3xl">{post.title}</h1>
           {post.categories &&
             post.categories.map((category, i: number) => (
@@ -57,8 +70,8 @@ const Post = ({ post, previews }: Props) => {
                 {category.title}
               </p>
             ))}
-          <div className="mt-4 flex flex-col items-start space-y-2 ">
-            <div className="relative h-16 w-16 space-y-2 rounded-full">
+          <div className="flex flex-col items-start mt-4 space-y-2 ">
+            <div className="relative w-16 h-16 space-y-2 rounded-full">
               {post.author.image && (
                 <Img
                   fill={true}
@@ -66,9 +79,7 @@ const Post = ({ post, previews }: Props) => {
                   className=""
                   src={urlForImage(post.author.image).url()!}
                   alt={post.author.name}
-                  sizes="(max-width: 768px) 15vw,
-              					(max-width: 1200px) 15vw,
-              					15vw"
+                  sizes="(max-width: 768px) 15vw, (max-width: 1200px) 15vw, 15vw"
                 />
               )}
             </div>
@@ -87,7 +98,7 @@ const Post = ({ post, previews }: Props) => {
             />
           </div>
         </article>
-        <h2 className="text-bold bg-pa-blue-4 pt-10 text-center text-4xl ">
+        <h2 className="pt-10 text-4xl text-center text-bold bg-pa-blue-4 ">
           You might also like...
         </h2>
         <BlogPreviewSection posts={posts} title=''/>

@@ -107,15 +107,24 @@ const testimonialSectionContent = {
 };
 
 const FortBraggFoodBank = () => {
+  const metaData = {
+    "type": "website",
+    "headline": "Fort Bragg Food Bank Case Study",
+    "description": "Fort Bragg Food Bank needed a vibrant brand reflecting their community impact. We revitalized their brand and web presence.",
+    "slug": "fort-bragg-food-bank",
+    "image": getCloudinaryImageUrl("v1678240470/color-mill-design-2023/Food-Bank-Landing-Image_n17ako.png"),
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
   return (
     <div>
       <PageLayout
-        title="Fort Bragg Food Bank Case Study"
-        description="Fort Bragg Food Bank needed a vibrant brand reflecting their community impact. We revitalized their brand and web presence."
+        {...metaData}
       >
         <CaseStudyHeader {...headerContent} />
         <InfoImageSection {...brandStrategySectionContent} />
-        <div className="relative flex h-auto w-screen flex-col justify-center gap-4 bg-white py-2 text-center md:py-8">
+        <div className="relative flex flex-col justify-center w-screen h-auto gap-4 py-2 text-center bg-white md:py-8">
           <div className="mx-auto max-w-[1600px]">
             <h1 className="z-10 mx-4 font-serif text-4xl font-black leading-relaxed tracking-wide text-gray-900 md:mb-6 md:text-5xl lg:text-6xl">
               {newsletterSectionContent.title}
@@ -123,7 +132,7 @@ const FortBraggFoodBank = () => {
             <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide text-gray-900 md:text-2xl lg:text-4xl">
               {newsletterSectionContent.subHeading}
             </h2>
-            <div className=" my-6 flex w-full flex-col items-center justify-center sm:mx-auto md:my-16 lg:flex-row lg:items-start">
+            <div className="flex flex-col items-center justify-center w-full my-6 sm:mx-auto md:my-16 lg:flex-row lg:items-start">
               <div className="relative aspect-square w-[327px] md:w-[450px] lg:mr-12 lg:w-[500px] xl:w-[650px]">
                 <Image
                   src={getCloudinaryImageUrl(
@@ -143,7 +152,7 @@ const FortBraggFoodBank = () => {
             </div>
           </div>
           <div className="mx-auto mb-12 flex h-48 w-9/12 max-w-[1400px] flex-col items-center justify-center bg-[#067893] sm:px-12 ring-[20px] ring-[#067893] ring-offset-2 sm:flex-row">
-            <h3 className="sm:my-auto sm:w-2/3 font-semibold text-white text-lg md:text-2xl xl:text-4xl">
+            <h3 className="text-lg font-semibold text-white sm:my-auto sm:w-2/3 md:text-2xl xl:text-4xl">
               The newly designed newsletter
               <br className='hidden sm:block' /> increased donations by over
             </h3>

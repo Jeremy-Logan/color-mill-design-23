@@ -39,12 +39,21 @@ const images = [
 ];
 
 const NonProfits = () => {
+  const metaData = {
+    "type": "website",
+    "headline": "Non-Profits",
+    "description": "Discover how Color Mill Design's specialized design services for nonprofits, including brand strategy, web design & development, and graphic design, can amplify your impact and further your mission.",
+    "slug": "non-profits",
+    "image": getCloudinaryImageUrl("v1678240470/color-mill-design-2023/Food-Bank-Landing-Image_n17ako.png"),
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
   return (
     <PageLayout
-      title="Non-Profits"
-      description="Discover how Color Mill Design's specialized design services for nonprofits, including brand strategy, web design & development, and graphic design, can amplify your impact and further your mission."
+      {...metaData}
     >
-      <h1 className="2xl:6xl mx-auto w-10/12 text-center font-serif text-2xl font-black text-black sm:w-2/3 sm:text-3xl md:mt-12 lg:w-1/2 lg:text-4xl xl:w-1/3 xl:text-5xl">
+      <h1 className="w-10/12 mx-auto font-serif text-2xl font-black text-center text-black 2xl:6xl sm:w-2/3 sm:text-3xl md:mt-12 lg:w-1/2 lg:text-4xl xl:w-1/3 xl:text-5xl">
         Non-profit
       </h1>
       <div className="relative mx-auto h-16 w-[95vw] sm:w-screen md:my-8 md:h-24">
@@ -55,10 +64,10 @@ const NonProfits = () => {
           style={{ objectFit: "contain" }}
         />
       </div>
-      <h2 className=" 2xl:6xl mx-auto w-10/12  text-center  text-lg font-semibold text-black sm:w-2/3 sm:text-2xl lg:w-1/2 lg:text-3xl xl:text-3xl">
+      <h2 className="w-10/12 mx-auto text-lg font-semibold text-center text-black 2xl:6xl sm:w-2/3 sm:text-2xl lg:w-1/2 lg:text-3xl xl:text-3xl">
         Change-Makers Transformed
       </h2>
-      <div className="mx-auto mt-12 grid w-screen max-w-7xl justify-center gap-4 lg:grid-cols-2">
+      <div className="grid justify-center w-screen gap-4 mx-auto mt-12 max-w-7xl lg:grid-cols-2">
         {images.map((image, i) => (
           <Link key={i} href={image.url} className="mb-8 justify-self-center ">
             <div className="relative h-[222px] w-[327px] shadow-lg transition-all duration-150 ease-in-out hover:scale-[102%] sm:h-[329px] sm:w-[484px] md:h-[412px] md:w-[606px] lg:h-[329px] lg:w-[484px] xl:h-[412px] xl:w-[606px]">

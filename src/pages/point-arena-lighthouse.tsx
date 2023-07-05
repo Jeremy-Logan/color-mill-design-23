@@ -92,16 +92,25 @@ const testimonialSectionContent = {
 };
 
 const PointArenaLighthouse = () => {
+  const metaData = {
+    "type": "website",
+    "headline": "Point Arena Lighthouse Case Study",
+    "description": "Point Arena Lighthouse needed a vibrant brand showcasing its historic beauty. We brought the site's charm to their brand, inspiring visitors.",
+    "slug": "point-arena-lighthouse",
+    "image": getCloudinaryImageUrl("v1678240470/color-mill-design-2023/Point_Arena-Landing-Image_vdppyv.png"),
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
   return (
     <div>
       <PageLayout
-        title="Point Arena Lighthouse Case Study"
-        description="Point Arena Lighthouse needed a vibrant brand showcasing its historic beauty. We brought the site's charm to their brand, inspiring visitors."
+        {...metaData}
       >
         <CaseStudyHeader {...headerContent} />
         <StylescapeSection {...brandStrategySectionContent} />
         <InfoImageSection {...collateralContent} />
-        <div className="relative w-full justify-center gap-4 py-2 text-center md:py-8" >
+        <div className="relative justify-center w-full gap-4 py-2 text-center md:py-8" >
           <div className='py-8' style={{backgroundColor: primaryColor}}>
           <div className="mx-auto max-w-[1400px]" >
             <h1 className="z-10 mx-4 font-serif text-4xl font-black leading-relaxed tracking-wide text-white md:mb-6 md:text-5xl lg:text-6xl">
@@ -111,8 +120,8 @@ const PointArenaLighthouse = () => {
               {newsletterSectionContent.subHeading}
             </h2>
             <div className="w-[90%] mx-auto mt-4">
-                <p className="whitespace-pre-line mt-4 md:mb-8 text-left leading-relaxed tracking-wide text-white text-sm sm:text-base lg:mt-0 w-full lg:text-lg xl:text-xl">
-                 {newsletterSectionContent.description}
+                <p className="w-full mt-4 text-sm leading-relaxed tracking-wide text-left text-white whitespace-pre-line md:mb-8 sm:text-base lg:mt-0 lg:text-lg xl:text-xl">
+                  {newsletterSectionContent.description}
                 </p>
               </div>
             
@@ -143,7 +152,7 @@ const PointArenaLighthouse = () => {
               </div>
              
             </div>
-            <div className="h-4 w-full" style={{backgroundColor: primaryColor}}/>
+            <div className="w-full h-4" style={{backgroundColor: primaryColor}}/>
         </div>
         <WebsiteSection {...websiteSectionContent} />
         <InfoImageSection {...advertisingContent} />

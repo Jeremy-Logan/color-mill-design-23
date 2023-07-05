@@ -2,6 +2,7 @@ import CaseStudyHeader from "../components/CaseStudyHeader";
 import FullScreenImageSection from "../components/FullScreenImageSection";
 import PageLayout from "../components/PageLayout";
 import StylescapeSection from "../components/StylescapeSection";
+import { getCloudinaryImageUrl } from "../utils/cloudinary";
 
 
 const primaryColor = "#5A261F";
@@ -42,11 +43,20 @@ const logoSectionContent = {
 
 
 const DanielZenefski = () => {
+  const metaData = {
+    "type": "website",
+    "headline": "Daniel Zenefski Case Study",
+    "description": "Daniel's woodworking business needed a distinctive brand to showcase his expertise. We created a strong identity to support his growth and authority.",
+    "slug": "daniel-zenefski",
+    "image": getCloudinaryImageUrl("v1680385379/color-mill-design-2023/Zenefski-Landing-Page_c8k1pi.png"),
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
   return (
     <div>
       <PageLayout
-        title="Daniel Zenefski Case Study"
-        description="Daniel's woodworking business needed a distinctive brand to showcase his expertise. We created a strong identity to support his growth and authority."
+        {...metaData}
       >
         <CaseStudyHeader {...headerContent} />
         <StylescapeSection {...brandStrategySectionContent}/>

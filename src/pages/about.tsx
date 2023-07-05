@@ -14,7 +14,7 @@ const aspenContent = {
   subHeading: "Giving Back: Volunteerism & Charitable Contributions.",
   description:
     "As the studio project manager, everyday I draw on my experience working at big corporations to help my boutique studio run smoothly and efficiently. Previously, I spent the better part of two decades in software development managing video games for huge companies like Disney, Warner Brothers, Pixar, Dreamworks and LeapFrog. I’m a thoroughly organized person so creating and managing schedules and keeping creative people on task is a natural fit. \n\nI love to travel, read and write murder mysteries and I’m a fanatical vegetable gardener. I also give time to local organizations that are dear to me. Knowing non profits and corporations from all sides has helped me to be a better strategic partner to my clients, allowing me to guide them to well informed solutions.",
- givingBack:"Aspen is the Board President at MendoParks, and has been a dedicated member of the organization for the past 3 years. With her extensive experience in non-profit work, Aspen brings a unique perspective to the table, having seen the organization from both the board and donor side. She is fully committed to her hours of volunteer work and is passionate about making a positive impact on the community through the work of MendoParks. \n\n Aspen is also a Rotarian, was on the board of the local radio station and a big part of Leadership Mendocino, which brings people throughout Mendocino County together to learn about their community. "
+  givingBack:"Aspen is the Board President at MendoParks, and has been a dedicated member of the organization for the past 3 years. With her extensive experience in non-profit work, Aspen brings a unique perspective to the table, having seen the organization from both the board and donor side. She is fully committed to her hours of volunteer work and is passionate about making a positive impact on the community through the work of MendoParks. \n\n Aspen is also a Rotarian, was on the board of the local radio station and a big part of Leadership Mendocino, which brings people throughout Mendocino County together to learn about their community. "
 };
 
 const jeremyContent = {
@@ -30,11 +30,20 @@ const jeremyContent = {
 };
 
 const About = () => {
+  const metaData = {
+    "type": "website",
+    "headline": "About",
+    "description": "Learn about Color Mill Design, our mission, values, and the passionate team of creative experts behind our innovative design solutions for nonprofits and small businesses.",
+    "slug": "about",
+    "image": getCloudinaryImageUrl("v1679965329/color-mill-design-2023/COLORMILL_HEADSHOTS_2020-111-cropped_sqjoyt.jpg"),
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
   return (
     <div>
       <PageLayout
-        title="About"
-        description="Learn about Color Mill Design, our mission, values, and the passionate team of creative experts behind our innovative design solutions for nonprofits and small businesses."
+        {...metaData}
       >
         <div className="relative mx-auto h-24 w-[95vw] sm:w-screen">
           <Img
@@ -46,12 +55,12 @@ const About = () => {
         </div>
         <h2
           style={{ lineHeight: "1.4em" }}
-          className="mx-auto mt-8 mb-4 w-10/12 text-left font-serif text-xl font-black text-black sm:w-2/3 sm:text-2xl md:mt-8 md:mb-16 md:text-center lg:w-10/12 lg:text-2xl xl:mt-24 xl:text-3xl 2xl:text-4xl"
+          className="w-10/12 mx-auto mt-8 mb-4 font-serif text-xl font-black text-left text-black sm:w-2/3 sm:text-2xl md:mt-8 md:mb-16 md:text-center lg:w-10/12 lg:text-2xl xl:mt-24 xl:text-3xl 2xl:text-4xl"
         >
           We are Color Mill Design, a branding and web design studio
           <br className="hidden lg:block" /> based in California and Oregon.{" "}
         </h2>
-        <h3 className="mx-auto mb-12 w-10/12 text-left text-lg font-semibold text-black sm:w-2/3 sm:text-xl md:mt-8 md:mb-36 md:text-center lg:w-10/12 lg:text-xl xl:mt-4 xl:text-2xl 2xl:text-3xl"
+        <h3 className="w-10/12 mx-auto mb-12 text-lg font-semibold text-left text-black sm:w-2/3 sm:text-xl md:mt-8 md:mb-36 md:text-center lg:w-10/12 lg:text-xl xl:mt-4 xl:text-2xl 2xl:text-3xl"
         >Our mission is to help people like you find your story.</h3>
         <div className="relative mx-auto aspect-square w-[95vw] max-w-[860px] sm:w-screen">
           <Image

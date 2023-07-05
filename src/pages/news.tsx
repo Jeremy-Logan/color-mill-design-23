@@ -11,6 +11,7 @@ import { urlForImage } from "../lib/sanity";
 import { sanityClient } from "../lib/sanity-server";
 import type { PageData } from "../lib/types";
 
+
 interface PageProps {
   data: PageData | null;
   preview: boolean;
@@ -31,26 +32,33 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Page(props: PageProps) {
   const posts = _.flatMap(props);
   const firstThreePosts = posts.slice(1, 4);
+  const metaData = {
+    "type": "website",
+    "headline": "News",
+    "description": "Stay informed with the latest insights, trends, and best practices in brand strategy, web design, and graphic design for nonprofits and small businesses on the Color Mill Design blog.",
+    "slug": "news",
+    "image": "/color-mill-logo.jpg",
+    "datePublished": null,
+    "dateModified": null,
+    "author": null
+  }
 
   return (
     <PageLayout
-      title="News"
-      description="Stay informed with the latest insights, trends, and best practices in brand strategy, web design, and graphic design for nonprofits and small businesses on the Color Mill Design blog."
+    {...metaData}
     >
       <main>
         <div className="mx-auto mt-12 mb-24 flex max-w-[1800px] flex-col justify-center md:flex-row">
           <div className="group w-full cursor-pointer bg-white p-4 pb-16 md:m-4 md:w-6/12 md:border-[2px] md:border-rose-300 lg:p-10 xl:mx-12 xl:w-5/12 2xl:w-6/12">
             <Link href={`/posts/${posts[0].slug.current}`} key={posts[0]._id}>
-              <div className="relative aspect-square w-full">
+              <div className="relative w-full aspect-square">
                 {posts[0].mainImage && (
                   <Img
                     src={urlForImage(posts[0].mainImage).url()!}
                     alt={posts[0].title}
                     fill={true}
                     style={{ objectFit: "cover" }}
-                    sizes="(max-width: 768px) 100vw,
-              					(max-width: 1200px) 50vw,
-              					40vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                   />
                 )}
               </div>
@@ -70,9 +78,9 @@ export default function Page(props: PageProps) {
                   </p>
                 ))}
               </div>
-              <div className="mt-4 flex flex-col items-start space-y-2 ">
+              <div className="flex flex-col items-start mt-4 space-y-2 ">
                 {posts[0].author.image && (
-                  <div className="relative h-16 w-16 space-x-2 rounded-full">
+                  <div className="relative w-16 h-16 space-x-2 rounded-full">
                     <Img
                       fill={true}
                       style={{ objectFit: "contain" }}
