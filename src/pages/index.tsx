@@ -97,7 +97,7 @@ const Home = (props: PageProps) => {
                 type="button"
                 className="relative inline-flex items-center px-6 py-3 text-lg font-semibold leading-6 text-white transition duration-150 rounded-md shadow-lg sm:text-xl lg:text-2xl bg-rose-600 lg:px-8 lg:py-5 hover:scale-105 hover:bg-rose-500 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
-                Hire Us!
+                Work with us!
               </button>
             </Link>
           </div>
