@@ -156,8 +156,7 @@ const Policies = () => {
               browsers to prevent them from being placed. However, if you do
               this, you may have to manually adjust some preferences every time
               you visit our website and some features may not work as intended.
-            </p>
-           
+            </p>           
           </section>
         </main>
       </PageLayout>

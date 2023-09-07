@@ -10,74 +10,6 @@ import Link from "next/link";
 import { Fragment, useEffect, useRef, useState } from "react";
 
 import MobileMenu from "./MobileMenu";
-
-const categories = [
-  {
-    name: "Non-Profits",
-    description: "Building brands with purpose",
-    href: "/non-profits",
-    caseStudies: [
-      {
-        name: "Fort Bragg Food Bank",
-        href: "/fort-bragg-food-bank",
-        primaryColor: "#002856",
-      },
-      {
-        name: "Redwood Coast Seniors",
-        href: "/redwood-coast-seniors",
-        primaryColor: "#450265",
-      },
-      {
-        name: "Mendo Parks",
-        href: "/mendo-parks",
-        primaryColor: "#01657D",
-      },
-      {
-        name: "Point Arena Lighthouse",
-        href: "/point-arena-lighthouse",
-        primaryColor: "#008FB1",
-      },
-    ],
-  },
-  {
-    name: "Businesses",
-    description: "Speak directly to your customers",
-    href: "/businesses",
-    caseStudies: [
-      {
-        name: "Mendocino Spirits",
-        href: "/mendocino-spirits",
-        primaryColor: "#008FB1",
-      },
-      {
-        name: "Newberger & Associates",
-        href: "/newberger-and-associates",
-        primaryColor: "#4B6A96",
-      },
-      {
-        name: "Noyo Harbor Inn",
-        href: "/noyo-harbor-inn",
-        primaryColor: "#074B78",
-      },
-      {
-        name: "Daniel Zenefski",
-        href: "/daniel-zenefski",
-        primaryColor: "#5A261F",
-      },
-      // {
-      //   name: "Mendocino High School",
-      //   href: "/mendocino-high-school",
-      //   primaryColor: "#810A1E",
-      // },
-      {
-        name: "Darland Software",
-        href: "/darland-software",
-        primaryColor: "#011F42",
-      },
-    ],
-  },
-];
-
 const inRange = (
   num: number,
   rangeStart: number,
@@ -139,7 +71,7 @@ export default function Header() {
           <motion.button
             initial={{ opacity: 1 }}
             onClick={() => (mobileMenuOpen ? toggleMobileMenuOpen() : null)}
-            className="z-40 flex cursor-pointer flex-col items-center justify-center outline-none focus:outline-none sm:right-4"
+            className="z-40 flex flex-col items-center justify-center outline-none cursor-pointer focus:outline-none sm:right-4"
           >
             <Link href="/">
               <picture ref={pictureRef}>
@@ -166,64 +98,12 @@ export default function Header() {
         </div>
 
         <Popover.Group className="z-30 hidden lg:flex lg:gap-x-12">
-          <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="flex items-center gap-x-1 text-lg font-semibold leading-6 text-gray-900">
-              Work
-              <ChevronDownIcon
-                className="h-5 w-5 flex-none text-[#06b2a0]"
-                aria-hidden="true"
-              />
-            </Menu.Button>
-
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-200"
-              enterFrom="opacity-0 translate-y-1"
-              enterTo="opacity-100 translate-y-0"
-              leave="transition ease-in duration-150"
-              leaveFrom="opacity-100 translate-y-0"
-              leaveTo="opacity-0 translate-y-1"
-            >
-              <Menu.Items className="absolute left-0 z-10 mt-2 w-80 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                <div className="p-4">
-                  {categories.map((item) => (
-                    <Menu.Item key={item.name}>
-                      <div
-                        key={item.name}
-                        className=" relative flex items-center gap-x-6 p-4 text-sm leading-6 hover:bg-gray-50"
-                      >
-                        <div className="flex-auto">
-                          <Link
-                            href={item.href}
-                            className="block font-semibold text-gray-900"
-                          >
-                            {item.name}
-                            <span className="absolute inset-0" />
-                          </Link>
-                          <p className="mt-1 text-gray-600">
-                            {item.description}
-                          </p>
-                          <div className="flex flex-col">
-                            {item.caseStudies &&
-                              item.caseStudies.map((caseStudy) => (
-                                <Link
-                                  href={caseStudy.href}
-                                  key={caseStudy.name}
-                                  className="z-50 my-2 rounded-sm bg-slate-100 p-1 text-sm font-medium hover:bg-slate-200"
-                                  style={{ color: caseStudy.primaryColor }}
-                                >
-                                  {caseStudy.name}
-                                </Link>
-                              ))}
-                          </div>
-                        </div>
-                      </div>
-                    </Menu.Item>
-                  ))}
-                </div>
-              </Menu.Items>
-            </Transition>
-          </Menu>
+          <Link
+            href="/work"
+            className="text-lg font-semibold leading-6 text-gray-900"
+          >
+            Work
+          </Link>
 
           <Link
             href="/about"
@@ -261,7 +141,7 @@ export default function Header() {
         </div>
       </nav>
 
-      <MobileMenu categories={categories} />
+      <MobileMenu/>
     </header>
   );
 }

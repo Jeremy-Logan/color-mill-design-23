@@ -111,48 +111,47 @@ const PointArenaLighthouse = () => {
         <StylescapeSection {...brandStrategySectionContent} />
         <InfoImageSection {...collateralContent} />
         <div className="relative justify-center w-full gap-4 py-2 text-center md:py-8" >
-          <div className='py-8' style={{backgroundColor: primaryColor}}>
-          <div className="mx-auto max-w-[1400px]" >
-            <h1 className="z-10 mx-4 font-serif text-4xl font-black leading-relaxed tracking-wide text-white md:mb-6 md:text-5xl lg:text-6xl">
-              {newsletterSectionContent.title}
-            </h1>
-            <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide text-white md:text-2xl lg:text-4xl">
-              {newsletterSectionContent.subHeading}
-            </h2>
-            <div className="w-[90%] mx-auto mt-4">
+          <div className='py-8' style={{ backgroundColor: primaryColor }}>
+            <div className="mx-auto max-w-[1400px]" >
+              <h1 className="z-10 mx-4 font-serif text-4xl font-black leading-relaxed tracking-wide text-white md:mb-6 md:text-5xl lg:text-6xl">
+                {newsletterSectionContent.title}
+              </h1>
+              <h2 className="z-10 mx-8 text-xl leading-relaxed tracking-wide text-white md:text-2xl lg:text-4xl">
+                {newsletterSectionContent.subHeading}
+              </h2>
+              <div className="w-[90%] mx-auto mt-4">
                 <p className="w-full mt-4 text-sm leading-relaxed tracking-wide text-left text-white whitespace-pre-line md:mb-8 sm:text-base lg:mt-0 lg:text-lg xl:text-xl">
                   {newsletterSectionContent.description}
                 </p>
               </div>
-            
-          </div>
+
+            </div>
           </div>
           <div className="flex w-full flex-col items-center justify-center md:mx-auto md:flex-row md:items-start bg-[#D9FFFF]">
-              <div className="relative h-[250px] w-[350px] sm:w-[420px] sm:h-[300px] xl:w-[630px] xl:h-[450px] lg:w-[525px] lg:h-[375px] 2xl:h-[625px] 2xl:w-[875px]">
-                <Image
-                  src={getCloudinaryImageUrl(
-                    newsletterSectionContent.image1Url
-                  )}
-                  alt={newsletterSectionContent.imageAlt}
-                  fill
-                  style={{ objectFit: "contain" }}
-                  sizes="(max-width: 768px) 45vw,"
-                />
-              </div>
-              <div className="relative h-[250px] w-[350px] sm:w-[420px] sm:h-[300px] xl:w-[630px] xl:h-[450px] lg:w-[525px] lg:h-[375px] 2xl:h-[625px] 2xl:w-[875px] ">
-                <Image
-                  src={getCloudinaryImageUrl(
-                    newsletterSectionContent.image2Url
-                  )}
-                  alt={newsletterSectionContent.imageAlt}
-                  fill
-                  style={{ objectFit: "contain" }}
-                  sizes="(max-width: 768px) 45vw,"
-                />
-              </div>
-             
+            <div className="relative h-[250px] w-[350px] sm:w-[420px] sm:h-[300px] xl:w-[630px] xl:h-[450px] lg:w-[525px] lg:h-[375px] 2xl:h-[625px] 2xl:w-[875px]">
+              <Image
+                src={getCloudinaryImageUrl(
+                  newsletterSectionContent.image1Url
+                )}
+                alt={newsletterSectionContent.imageAlt}
+                fill
+                style={{ objectFit: "contain" }}
+                sizes="(max-width: 768px) 45vw,"
+              />
             </div>
-            <div className="w-full h-4" style={{backgroundColor: primaryColor}}/>
+            <div className="relative h-[250px] w-[350px] sm:w-[420px] sm:h-[300px] xl:w-[630px] xl:h-[450px] lg:w-[525px] lg:h-[375px] 2xl:h-[625px] 2xl:w-[875px] ">
+              <Image
+                src={getCloudinaryImageUrl(
+                  newsletterSectionContent.image2Url
+                )}
+                alt={newsletterSectionContent.imageAlt}
+                fill
+                style={{ objectFit: "contain" }}
+                sizes="(max-width: 768px) 45vw,"
+              />
+            </div>
+          </div>
+          <div className="w-full h-4" style={{ backgroundColor: primaryColor }} />
         </div>
         <WebsiteSection {...websiteSectionContent} />
         <InfoImageSection {...advertisingContent} />
