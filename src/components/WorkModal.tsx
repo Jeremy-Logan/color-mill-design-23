@@ -86,7 +86,7 @@ function WorkModal({ image }: Props) {
                                             <Tab.Group as="div" className="flex flex-col-reverse">
                                                 {/* Image selector */}
                                                 <div className="hidden w-full max-w-2xl mx-auto mt-6 sm:block lg:max-w-none">
-                                                    <Tab.List className={`grid grid-cols-${image.modalImages?.length} gap-6`}>
+                                                    {image.modalImages && <Tab.List className={`grid grid-cols-${image.modalImages?.length} gap-6`}>
                                                         {image.modalImages?.map((image, i) => (
                                                             <Tab
                                                                 key={i}
@@ -112,7 +112,7 @@ function WorkModal({ image }: Props) {
                                                                 )}
                                                             </Tab>
                                                         ))}
-                                                    </Tab.List>
+                                                    </Tab.List>}
                                                 </div>
 
                                                 <Tab.Panels>
