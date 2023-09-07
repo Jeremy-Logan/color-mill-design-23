@@ -1,9 +1,8 @@
-import { Menu, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { Transition } from "@headlessui/react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Fragment, useEffect, useRef, useState } from "react";
+import {  useEffect, useRef, useState } from "react";
 
 
 const inRange = (
