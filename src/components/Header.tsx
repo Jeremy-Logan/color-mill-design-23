@@ -1,5 +1,4 @@
-import { Menu, Popover, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import {  Popover } from "@headlessui/react";
 import {
   motion,
   useCycle,
@@ -7,7 +6,7 @@ import {
   useScroll,
 } from "framer-motion";
 import Link from "next/link";
-import { Fragment, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import MobileMenu from "./MobileMenu";
 const inRange = (
