@@ -70,7 +70,26 @@ const nonProfitImages = [
         alt: "Mendocino High School",
         title: "Mendocino High School",
         description: "Brand Strategy, Logo Design, Print Design",
-        url: "/mendocino-high-school",
+        modalDescription: "Mendocino High School is a public high school located in Mendocino, California. We were approached by the school to help them create a new logo that would represent their school and community. We created a logo that was not only visually appealing, but also helped them communicate their mission and impact in a clear and compelling way.",
+        modalImages: [
+            {
+                src: "v1680385485/color-mill-design-2023/MendoHigh-Landing_ykiifp.png",
+                alt: "Humanity and Inclusion",
+                title: "Humanity and Inclusion",
+                description: "Print Design",
+            },
+            {
+                src: "v1680385485/color-mill-design-2023/MendoHigh-Landing_ykiifp.png",
+                alt: "Humanity and Inclusion",
+                title: "Humanity and Inclusion",
+                description: "Print Design",
+            },
+            {
+                src: "v1680385485/color-mill-design-2023/MendoHigh-Landing_ykiifp.png",
+                alt: "Humanity and Inclusion",
+                title: "Humanity and Inclusion",
+                description: "Print Design",
+            },]
     },
 ];
 
