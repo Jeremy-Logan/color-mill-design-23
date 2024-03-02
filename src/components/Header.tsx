@@ -144,11 +144,11 @@ export default function Header() {
             <Link href="/">
               <picture ref={pictureRef}>
                 <source
-                  srcSet="https://res.cloudinary.com/the-color-mill/image/upload/v1616105305/Color%20Mill%20Design/color-mill-animated-logo_bxjcpm.webp"
+                  srcSet="https://res.cloudinary.com/the-color-mill/image/upload/v1709422611/color-mill-design-2023/color-mill-animated-logo_rxzqao.webp"
                   type="image/webp"
                 />
                 <source
-                  srcSet="https://res.cloudinary.com/the-color-mill/image/upload/v1639014317/Color%20Mill%20Design/ColorMillLogoHeader-NoText_nvtcqj.png"
+                  srcSet="https://res.cloudinary.com/the-color-mill/image/upload/v1709420840/color-mill-design-2023/ColorMillLogoHeader-NoText_ots6cu.png"
                   type="image/png"
                 />
                 <img
@@ -157,7 +157,7 @@ export default function Header() {
                       ? "h-12 sm:h-16 lg:h-20 "
                       : "h-20 sm:h-24 lg:h-36"
                   }`}
-                  srcSet="https://res.cloudinary.com/the-color-mill/image/upload/v1639014317/Color%20Mill%20Design/ColorMillLogoHeader-NoText_nvtcqj.png"
+                  srcSet="https://res.cloudinary.com/the-color-mill/image/upload/v1709420840/color-mill-design-2023/ColorMillLogoHeader-NoText_ots6cu.png"
                   alt="Color Mill logo"
                 />
               </picture>
@@ -245,18 +245,13 @@ export default function Header() {
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-        <Link
-              href="/contact"
-              className=""
+          <Link href="/contact" className="">
+            <button
+              type="button"
+              className="relative inline-flex items-center gap-x-1.5 rounded-md border-2 border-[#625BE4] px-4 py-3 text-lg font-semibold leading-6 text-[#625BE4]  shadow-sm hover:bg-indigo-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
             >
-          <button
-            type="button"
-            className="relative text-lg font-semibold leading-6 text-[#625BE4] inline-flex items-center gap-x-1.5 rounded-md border-2 border-[#625BE4] px-4 py-3  shadow-sm hover:bg-indigo-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-          >
-            
               Contact
-            
-          </button>
+            </button>
           </Link>
         </div>
       </nav>
