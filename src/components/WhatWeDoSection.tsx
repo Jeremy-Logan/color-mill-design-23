@@ -57,9 +57,9 @@ function WhatWeDoSection({}) {
   return (
     <>
       <div className="mx-auto mt-8 lg:mt-20">
-        <h3 className="mb-6 w-full text-center font-sans text-4xl font-medium sm:text-6xl">
+        <h2 className="mb-6 w-full text-center font-sans text-4xl font-medium sm:text-6xl">
           WHAT WE DO
-        </h3>
+        </h2>
       </div>
       <div
         className="relative mx-auto w-[90vw] rounded-bl-3xl rounded-tr-3xl p-0.5 md:w-[70vw] lg:w-[60vw] xl:w-[50vw]"

@@ -26,6 +26,7 @@ export default function Footer() {
               href="https://www.instagram.com/the_colormill/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram"
             >
               <InstagramIcon color="white" />
             </a>
