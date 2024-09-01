@@ -85,20 +85,19 @@ const MobileMenu = ({ categories }: CategoriesProps) => {
           <Link href="/">
             <picture ref={pictureRef}>
               <source
-                srcSet="https://res.cloudinary.com/the-color-mill/image/upload/v1616105305/Color%20Mill%20Design/color-mill-animated-logo_bxjcpm.webp"
+                srcSet="https://res.cloudinary.com/the-color-mill/image/upload/v1709422611/color-mill-design-2023/color-mill-animated-logo_rxzqao.webp"
                 type="image/webp"
               />
               <source
-                srcSet="https://res.cloudinary.com/the-color-mill/image/upload/v1639014317/Color%20Mill%20Design/ColorMillLogoHeader-NoText_nvtcqj.png"
+                srcSet="https://res.cloudinary.com/the-color-mill/image/upload/v1709420840/color-mill-design-2023/ColorMillLogoHeader-NoText_ots6cu.png"
                 type="image/png"
               />
               <img
-                className={`origin-top transition-all duration-300 ${
-                  scrollDirection === "down"
+                className={`origin-top transition-all duration-300 ${scrollDirection === "down"
                     ? "h-12 sm:h-16 lg:h-20 "
                     : "h-20 sm:h-24 lg:h-36"
-                }`}
-                srcSet="https://res.cloudinary.com/the-color-mill/image/upload/v1639014317/Color%20Mill%20Design/ColorMillLogoHeader-NoText_nvtcqj.png"
+                  }`}
+                srcSet="https://res.cloudinary.com/the-color-mill/image/upload/v1709420840/color-mill-design-2023/ColorMillLogoHeader-NoText_ots6cu.png"
                 alt="Color Mill logo"
               />
             </picture>
